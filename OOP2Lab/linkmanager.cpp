@@ -15,3 +15,19 @@ void LinkManager::loadLinks(const std::vector<LinkData>& links)
 {
     m_links = links;
 }
+
+void LinkManager::deleteLink(int index)
+{
+    if (index >= 0 && index < m_links.size())
+    {
+        m_links.erase(m_links.begin() + index);
+    }
+}
+
+void LinkManager::updateLink(int index, const LinkData& updatedData)
+{
+    if (index >= 0 && index < m_links.size())
+    {
+        m_links[index] = updatedData;
+    }
+}

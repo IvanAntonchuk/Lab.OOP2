@@ -24,3 +24,11 @@ LinkData AddLinkDialog::getLinkData() const
 
     return data;
 }
+
+void AddLinkDialog::setLinkData(const LinkData& data)
+{
+    ui->nameLineEdit->setText(QString::fromStdString(data.name));
+    ui->urlLineEdit->setText(QString::fromStdString(data.url));
+    ui->commentTextEdit->setPlainText(QString::fromStdString(data.comment));
+    ui->contextComboBox->setCurrentText(QString::fromStdString(data.context));
+}

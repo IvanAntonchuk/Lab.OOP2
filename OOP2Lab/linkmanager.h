@@ -21,6 +21,8 @@ public:
 
     const std::vector<LinkData>& getLinks() const;
     void loadLinks(const std::vector<LinkData>& links);
+    void deleteLink(int index);
+    void updateLink(int index, const LinkData& updatedData);
 
 
 private:

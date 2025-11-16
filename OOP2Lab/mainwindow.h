@@ -24,6 +24,10 @@ private slots:
     void on_addButton_clicked();
     void updateTable();
 
+    void on_deleteButton_clicked();
+
+    void on_editButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;

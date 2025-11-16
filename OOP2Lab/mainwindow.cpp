@@ -8,6 +8,7 @@
 #include <QJsonObject>
 #include <QStandardPaths>
 #include <QDir>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -145,3 +146,42 @@ void MainWindow::loadLinksFromFile()
 
     m_linkManager.loadLinks(loadedLinks);
 }
+
+void MainWindow::on_deleteButton_clicked()
+{
+    int selectedRow = ui->linksTableWidget->currentRow();
+    if (selectedRow < 0)
+    {
+        return;
+    }
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Підтвердження видалення", "Ви справді хочете видалити це посилання?", QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+    {
+        m_linkManager.deleteLink(selectedRow);
+        updateTable();
+    }
+}
+
+void MainWindow::on_editButton_clicked()
+{
+    int selectedRow = ui->linksTableWidget->currentRow();
+    if (selectedRow < 0)
+    {
+        return;
+    }
+    LinkData currentData = m_linkManager.getLinks()[selectedRow];
+    AddLinkDialog dialog(this);
+    dialog.setLinkData(currentData);
+
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        LinkData updatedData = dialog.getLinkData();
+
+        m_linkManager.updateLink(selectedRow, updatedData);
+
+        updateTable();
+    }
+}
+
