@@ -12,3 +12,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_addButton_clicked()
+{
+    AddLinkDialog dialog(this);
+
+    dialog.exec();
+}
+

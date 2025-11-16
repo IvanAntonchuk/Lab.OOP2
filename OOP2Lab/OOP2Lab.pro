@@ -10,11 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     addlinkdialog.cpp \
+    linkmanager.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     addlinkdialog.h \
+    linkmanager.h \
     mainwindow.h
 
 FORMS += \
