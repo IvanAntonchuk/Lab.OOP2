@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCloseEvent>
 #include "addlinkdialog.h"
+#include "linkmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,8 +22,16 @@ public:
 
 private slots:
     void on_addButton_clicked();
+    void updateTable();
 
 private:
     Ui::MainWindow *ui;
+    LinkManager m_linkManager;
+    QString m_saveFilePath;
+    void saveLinksToFile();
+    void loadLinksFromFile();
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
 };
 #endif // MAINWINDOW_H

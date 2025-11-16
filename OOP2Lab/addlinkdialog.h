@@ -2,6 +2,7 @@
 #define ADDLINKDIALOG_H
 
 #include <QDialog>
+#include "linkmanager.h"
 
 namespace Ui {
 class AddLinkDialog;
@@ -14,6 +15,7 @@ class AddLinkDialog : public QDialog
 public:
     explicit AddLinkDialog(QWidget *parent = nullptr);
     ~AddLinkDialog();
+    LinkData getLinkData() const;
 
 private:
     Ui::AddLinkDialog *ui;

@@ -10,3 +10,8 @@ void LinkManager::addLink(const LinkData& newLink) {
 const std::vector<LinkData>& LinkManager::getLinks() const {
     return m_links;
 }
+
+void LinkManager::loadLinks(const std::vector<LinkData>& links)
+{
+    m_links = links;
+}

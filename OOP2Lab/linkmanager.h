@@ -20,6 +20,7 @@ public:
     void addLink(const LinkData& newLink);
 
     const std::vector<LinkData>& getLinks() const;
+    void loadLinks(const std::vector<LinkData>& links);
 
 
 private:
