@@ -23,7 +23,7 @@ public:
     void loadLinks(const std::vector<LinkData>& links);
     void deleteLink(int index);
     void updateLink(int index, const LinkData& updatedData);
-
+    std::vector<LinkData> searchLinks(const std::string& query) const;
 
 private:
     std::vector<LinkData> m_links;

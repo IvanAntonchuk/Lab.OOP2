@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     loadLinksFromFile();
 
-    updateTable();
+    updateTable(m_linkManager.getLinks());
 }
 
 MainWindow::~MainWindow()
@@ -42,14 +42,12 @@ void MainWindow::on_addButton_clicked()
         LinkData newData = dialog.getLinkData();
 
         m_linkManager.addLink(newData);
-        updateTable();
+        updateTable(m_linkManager.getLinks());
     }
 }
 
-void MainWindow::updateTable()
+void MainWindow::updateTable(const std::vector<LinkData>& links)
 {
-    const std::vector<LinkData>& links = m_linkManager.getLinks();
-
     ui->linksTableWidget->clearContents();
     ui->linksTableWidget->setRowCount(0);
 
@@ -160,7 +158,7 @@ void MainWindow::on_deleteButton_clicked()
     if (reply == QMessageBox::Yes)
     {
         m_linkManager.deleteLink(selectedRow);
-        updateTable();
+        updateTable(m_linkManager.getLinks());
     }
 }
 
@@ -181,7 +179,21 @@ void MainWindow::on_editButton_clicked()
 
         m_linkManager.updateLink(selectedRow, updatedData);
 
-        updateTable();
+        updateTable(m_linkManager.getLinks());
     }
+}
+
+
+void MainWindow::on_searchButton_clicked()
+{
+    std::string query = ui->searchLineEdit->text().toStdString();
+    std::vector<LinkData> searchResults = m_linkManager.searchLinks(query);
+    updateTable(searchResults);
+}
+
+
+void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
+{
+    on_searchButton_clicked();
 }
 

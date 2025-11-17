@@ -31,3 +31,24 @@ void LinkManager::updateLink(int index, const LinkData& updatedData)
         m_links[index] = updatedData;
     }
 }
+
+// ↓↓↓ КОПІЮЙТЕ ЦЕ В КІНЕЦЬ ФАЙЛУ ↓↓↓
+std::vector<LinkData> LinkManager::searchLinks(const std::string& query) const
+{
+    std::vector<LinkData> results;
+
+    if (query.empty()) {
+        return m_links;
+    }
+    for (const auto& link : m_links)
+    {
+        if (link.name.find(query) != std::string::npos ||
+            link.url.find(query) != std::string::npos ||
+            link.comment.find(query) != std::string::npos)
+        {
+            results.push_back(link);
+        }
+    }
+
+    return results;
+}
