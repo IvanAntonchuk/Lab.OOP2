@@ -9,6 +9,8 @@
 #include <QStandardPaths>
 #include <QDir>
 #include <QMessageBox>
+#include <QDesktopServices>
+#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -195,5 +197,12 @@ void MainWindow::on_searchButton_clicked()
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 {
     on_searchButton_clicked();
+}
+
+
+void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
+{
+    QString urlString = ui->linksTableWidget->item(row, 1)->text();
+    QDesktopServices::openUrl(QUrl(urlString));
 }
 

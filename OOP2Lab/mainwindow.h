@@ -29,6 +29,8 @@ private slots:
 
     void on_searchLineEdit_textChanged(const QString &arg1);
 
+    void on_linksTableWidget_cellDoubleClicked(int row, int column);
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
