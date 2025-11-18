@@ -10,17 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     addlinkdialog.cpp \
+    exportdialog.cpp \
     linkmanager.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     addlinkdialog.h \
+    exportdialog.h \
     linkmanager.h \
     mainwindow.h
 
 FORMS += \
     addlinkdialog.ui \
+    exportdialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

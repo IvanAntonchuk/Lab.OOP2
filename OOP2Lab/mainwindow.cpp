@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>
+#include "exportdialog.h"
 
+#include <QDebug>
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonArray>
@@ -205,4 +206,14 @@ void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
     QString urlString = ui->linksTableWidget->item(row, 1)->text();
     QDesktopServices::openUrl(QUrl(urlString));
 }
+
+
+void MainWindow::on_exportButton_clicked()
+{
+    ExportDialog dialog(this);
+    dialog.setLinks(m_linkManager.getLinks());
+
+    dialog.exec();
+}
+
 

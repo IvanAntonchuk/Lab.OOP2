@@ -31,6 +31,8 @@ private slots:
 
     void on_linksTableWidget_cellDoubleClicked(int row, int column);
 
+    void on_exportButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
