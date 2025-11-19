@@ -64,6 +64,13 @@
       </item>
      </layout>
     </item>
+    <item>
+     <widget class="QPushButton" name="manageContextsButton">
+      <property name="text">
+       <string>Папки/Контексти</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">

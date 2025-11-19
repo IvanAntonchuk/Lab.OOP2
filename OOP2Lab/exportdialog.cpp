@@ -43,6 +43,26 @@ void ExportDialog::on_generateButton_clicked()
             result += "  note = {" + QString::fromStdString(link.comment) + "}\n";
             result += "}\n\n";
         }
+        else if (format == "DSTU 8302:2015")
+        {
+            result += QString::fromStdString(link.name) + " [Електронний ресурс]. – Режим доступу: " +
+                      QString::fromStdString(link.url) + ".";
+            if (!link.comment.empty()) {
+                result += " – Прим.: " + QString::fromStdString(link.comment);
+            }
+            result += "\n";
+        }
+        else if (format == "Harvard")
+        {
+            result += QString::fromStdString(link.name) + ". Available at: " +
+                      QString::fromStdString(link.url) + ".";
+
+            if (!link.comment.empty()) {
+                result += " (Notes: " + QString::fromStdString(link.comment) + ").";
+            }
+            result += "\n";
+        }
     }
+
     ui->resultTextEdit->setText(result);
 }

@@ -32,3 +32,15 @@ void AddLinkDialog::setLinkData(const LinkData& data)
     ui->commentTextEdit->setPlainText(QString::fromStdString(data.comment));
     ui->contextComboBox->setCurrentText(QString::fromStdString(data.context));
 }
+
+void AddLinkDialog::setContexts(const std::vector<std::string>& contexts)
+{
+    QString currentText = ui->contextComboBox->currentText();
+    ui->contextComboBox->clear();
+    ui->contextComboBox->addItem("");
+    for (const auto& ctx : contexts) {
+        ui->contextComboBox->addItem(QString::fromStdString(ctx));
+    }
+
+    ui->contextComboBox->setCurrentText(currentText);
+}

@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     addlinkdialog.cpp \
+    contextmanagerdialog.cpp \
     exportdialog.cpp \
     linkmanager.cpp \
     main.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     addlinkdialog.h \
+    contextmanagerdialog.h \
     exportdialog.h \
     linkmanager.h \
     mainwindow.h
 
 FORMS += \
     addlinkdialog.ui \
+    contextmanagerdialog.ui \
     exportdialog.ui \
     mainwindow.ui
 

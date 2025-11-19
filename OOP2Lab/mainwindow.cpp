@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "exportdialog.h"
+#include "contextmanagerdialog.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -14,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->linksTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     QDir dir(configPath);
@@ -33,6 +35,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_addButton_clicked()
 {
     AddLinkDialog dialog(this);
+    dialog.setContexts(m_linkManager.getContexts());
 
     if (dialog.exec() == QDialog::Accepted)
     {
@@ -101,6 +104,7 @@ void MainWindow::on_editButton_clicked()
     LinkData currentData = m_linkManager.getLinks()[selectedRow];
     AddLinkDialog dialog(this);
     dialog.setLinkData(currentData);
+    dialog.setContexts(m_linkManager.getContexts());
 
     if (dialog.exec() == QDialog::Accepted)
     {
@@ -129,8 +133,11 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 
 void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
 {
-    QString urlString = ui->linksTableWidget->item(row, 1)->text();
-    QDesktopServices::openUrl(QUrl(urlString));
+    if (column == 1)
+    {
+        QString urlString = ui->linksTableWidget->item(row, 1)->text();
+        QDesktopServices::openUrl(QUrl(urlString));
+    }
 }
 
 
@@ -142,4 +149,12 @@ void MainWindow::on_exportButton_clicked()
     dialog.exec();
 }
 
+
+
+void MainWindow::on_manageContextsButton_clicked()
+{
+    ContextManagerDialog dialog(&m_linkManager, this);
+    dialog.exec();
+    updateTable(m_linkManager.getLinks());
+}
 

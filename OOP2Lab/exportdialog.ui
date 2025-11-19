@@ -35,6 +35,16 @@
          <string>BibTeX</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>DSTU 8302:2015</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Harvard</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>

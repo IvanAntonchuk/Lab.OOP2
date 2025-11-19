@@ -133,3 +133,12 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
     }
     return true;
 }
+
+void LinkManager::clearLinksContext(const std::string& contextName)
+{
+    for (auto& link : m_links) {
+        if (link.context == contextName) {
+            link.context = "";
+        }
+    }
+}

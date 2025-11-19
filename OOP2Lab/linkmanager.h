@@ -25,6 +25,7 @@ public:
     void addContext(const std::string& contextName);
     const std::vector<std::string>& getContexts() const;
     void removeContext(const std::string& contextName);
+    void clearLinksContext(const std::string& contextName);
     bool hasContext(const std::string& contextName) const;
     bool saveToFile(const std::string& filePath) const;
     bool loadFromFile(const std::string& filePath);
