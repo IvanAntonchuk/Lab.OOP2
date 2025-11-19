@@ -3,10 +3,6 @@
 #include "exportdialog.h"
 
 #include <QDebug>
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QJsonObject>
 #include <QStandardPaths>
 #include <QDir>
 #include <QMessageBox>
@@ -25,9 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         dir.mkpath(".");
     }
     m_saveFilePath = configPath + "/links.json";
-
-    loadLinksFromFile();
-
+    m_linkManager.loadFromFile(m_saveFilePath.toStdString());
     updateTable(m_linkManager.getLinks());
 }
 
@@ -75,78 +69,10 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    saveLinksToFile();
+    m_linkManager.saveToFile(m_saveFilePath.toStdString());
     event->accept();
 }
 
-void MainWindow::saveLinksToFile()
-{
-    QJsonArray linksArray;
-
-    const auto& links = m_linkManager.getLinks();
-
-    for (const auto& link : links)
-    {
-        QJsonObject linkObject;
-        linkObject["name"]    = QString::fromStdString(link.name);
-        linkObject["url"]     = QString::fromStdString(link.url);
-        linkObject["context"] = QString::fromStdString(link.context);
-        linkObject["comment"] = QString::fromStdString(link.comment);
-
-        linksArray.append(linkObject);
-    }
-    QJsonDocument doc(linksArray);
-    QFile file(m_saveFilePath);
-    if (!file.open(QIODevice::WriteOnly)) {
-        qWarning("Couldn't open save file.");
-        return;
-    }
-
-    file.write(doc.toJson());
-    file.close();
-}
-
-
-void MainWindow::loadLinksFromFile()
-{
-    QFile file(m_saveFilePath);
-    if (!file.open(QIODevice::ReadOnly)) {
-        qDebug("No save file found.");
-        return;
-    }
-
-    QByteArray data = file.readAll();
-    file.close();
-
-    QJsonDocument doc = QJsonDocument::fromJson(data);
-
-    if (!doc.isArray()) {
-        qWarning("Save file is corrupted.");
-        return;
-    }
-
-    QJsonArray linksArray = doc.array();
-    std::vector<LinkData> loadedLinks;
-
-    for (const QJsonValue& value : linksArray)
-    {
-        if (!value.isObject()) {
-            continue;
-        }
-
-        QJsonObject obj = value.toObject();
-        LinkData link;
-
-        link.name    = obj["name"].toString().toStdString();
-        link.url     = obj["url"].toString().toStdString();
-        link.context = obj["context"].toString().toStdString();
-        link.comment = obj["comment"].toString().toStdString();
-
-        loadedLinks.push_back(link);
-    }
-
-    m_linkManager.loadLinks(loadedLinks);
-}
 
 void MainWindow::on_deleteButton_clicked()
 {

@@ -37,8 +37,6 @@ private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
     QString m_saveFilePath;
-    void saveLinksToFile();
-    void loadLinksFromFile();
     void updateTable(const std::vector<LinkData>& links);
 protected:
     void closeEvent(QCloseEvent *event) override;
