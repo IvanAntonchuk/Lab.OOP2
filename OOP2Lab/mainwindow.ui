@@ -65,9 +65,9 @@
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="manageContextsButton">
+     <widget class="QPushButton" name="manageFoldersButton">
       <property name="text">
-       <string>Папки/Контексти</string>
+       <string>Папки</string>
       </property>
      </widget>
     </item>

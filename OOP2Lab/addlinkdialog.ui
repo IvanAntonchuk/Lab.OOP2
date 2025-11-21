@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>625</width>
-    <height>464</height>
+    <width>760</width>
+    <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,26 +39,36 @@
      <item row="2" column="0">
       <widget class="QLabel" name="contextLabel">
        <property name="text">
-        <string>Контескт</string>
+        <string>Папка:</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QComboBox" name="contextComboBox">
+      <widget class="QComboBox" name="folderComboBox">
        <property name="editable">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
+     <item row="4" column="0">
       <widget class="QLabel" name="commentLabel">
        <property name="text">
         <string>Коментар</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
+     <item row="4" column="1">
       <widget class="QTextEdit" name="commentTextEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Контекст:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="contextComboBox"/>
      </item>
     </layout>
    </item>

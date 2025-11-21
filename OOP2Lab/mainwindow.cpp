@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "exportdialog.h"
-#include "contextmanagerdialog.h"
+#include "foldermanagerdialog.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -35,6 +35,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_addButton_clicked()
 {
     AddLinkDialog dialog(this);
+    dialog.setFolders(m_linkManager.getFolders());
     dialog.setContexts(m_linkManager.getContexts());
 
     if (dialog.exec() == QDialog::Accepted)
@@ -50,21 +51,20 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
 {
     ui->linksTableWidget->clearContents();
     ui->linksTableWidget->setRowCount(0);
-
-    if (ui->linksTableWidget->columnCount() < 4) {
-        ui->linksTableWidget->setColumnCount(4);
-        ui->linksTableWidget->setHorizontalHeaderLabels({"Назва", "URL", "Контекст", "Коментар"});
+    if (ui->linksTableWidget->columnCount() < 5) {
+        ui->linksTableWidget->setColumnCount(5);
+        ui->linksTableWidget->setHorizontalHeaderLabels({"Назва", "URL", "Папка", "Контекст", "Коментар"});
     }
 
     for (const LinkData& link : links)
     {
         int newRow = ui->linksTableWidget->rowCount();
         ui->linksTableWidget->insertRow(newRow);
-
         ui->linksTableWidget->setItem(newRow, 0, new QTableWidgetItem(QString::fromStdString(link.name)));
         ui->linksTableWidget->setItem(newRow, 1, new QTableWidgetItem(QString::fromStdString(link.url)));
-        ui->linksTableWidget->setItem(newRow, 2, new QTableWidgetItem(QString::fromStdString(link.context)));
-        ui->linksTableWidget->setItem(newRow, 3, new QTableWidgetItem(QString::fromStdString(link.comment)));
+        ui->linksTableWidget->setItem(newRow, 2, new QTableWidgetItem(QString::fromStdString(link.folder)));
+        ui->linksTableWidget->setItem(newRow, 3, new QTableWidgetItem(QString::fromStdString(link.context)));
+        ui->linksTableWidget->setItem(newRow, 4, new QTableWidgetItem(QString::fromStdString(link.comment)));
     }
 
     ui->linksTableWidget->resizeColumnsToContents();
@@ -104,6 +104,7 @@ void MainWindow::on_editButton_clicked()
     LinkData currentData = m_linkManager.getLinks()[selectedRow];
     AddLinkDialog dialog(this);
     dialog.setLinkData(currentData);
+    dialog.setFolders(m_linkManager.getFolders());
     dialog.setContexts(m_linkManager.getContexts());
 
     if (dialog.exec() == QDialog::Accepted)
@@ -151,9 +152,9 @@ void MainWindow::on_exportButton_clicked()
 
 
 
-void MainWindow::on_manageContextsButton_clicked()
+void MainWindow::on_manageFoldersButton_clicked()
 {
-    ContextManagerDialog dialog(&m_linkManager, this);
+    FolderManagerDialog dialog(&m_linkManager, this);
     dialog.exec();
     updateTable(m_linkManager.getLinks());
 }

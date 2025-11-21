@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ContextManagerDialog</class>
- <widget class="QDialog" name="ContextManagerDialog">
+ <class>FolderManagerDialog</class>
+ <widget class="QDialog" name="FolderManagerDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,10 +17,10 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLineEdit" name="newContextLineEdit"/>
+      <widget class="QLineEdit" name="newFolderLineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="createContextButton">
+      <widget class="QPushButton" name="createFolderButton">
        <property name="text">
         <string>Створити папку</string>
        </property>
@@ -29,7 +29,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTreeWidget" name="contextTreeWidget">
+    <widget class="QTreeWidget" name="folderTreeWidget">
      <column>
       <property name="text">
        <string/>
@@ -47,7 +47,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="deleteContextButton">
+      <widget class="QPushButton" name="deleteFolderButton">
        <property name="text">
         <string>Видалити папку</string>
        </property>
@@ -72,7 +72,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>ContextManagerDialog</receiver>
+   <receiver>FolderManagerDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -88,7 +88,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>ContextManagerDialog</receiver>
+   <receiver>FolderManagerDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

@@ -17,6 +17,7 @@ public:
     ~AddLinkDialog();
     LinkData getLinkData() const;
     void setLinkData(const LinkData& data);
+    void setFolders(const std::vector<std::string>& folders);
     void setContexts(const std::vector<std::string>& contexts);
 
 private:

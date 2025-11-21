@@ -24,16 +24,11 @@ private slots:
     void on_addButton_clicked();
     void on_deleteButton_clicked();
     void on_editButton_clicked();
-
     void on_searchButton_clicked();
-
     void on_searchLineEdit_textChanged(const QString &arg1);
-
     void on_linksTableWidget_cellDoubleClicked(int row, int column);
-
     void on_exportButton_clicked();
-
-    void on_manageContextsButton_clicked();
+    void on_manageFoldersButton_clicked();
 
 private:
     Ui::MainWindow *ui;
