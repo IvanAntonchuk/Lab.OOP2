@@ -34,6 +34,8 @@ private slots:
 
     void on_filterButton_clicked();
 
+    void on_searchOnlineButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;

@@ -41,6 +41,13 @@
      </layout>
     </item>
     <item>
+     <widget class="QPushButton" name="searchOnlineButton">
+      <property name="text">
+       <string>Знайти в Google</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QTableWidget" name="linksTableWidget"/>
     </item>
     <item>

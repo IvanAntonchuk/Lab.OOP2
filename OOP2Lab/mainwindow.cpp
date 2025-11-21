@@ -131,6 +131,7 @@ void MainWindow::on_searchButton_clicked()
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 {
+    Q_UNUSED(arg1);
     on_searchButton_clicked();
 }
 
@@ -186,5 +187,19 @@ void MainWindow::on_filterButton_clicked()
         std::vector<LinkData> filteredLinks = m_linkManager.filterLinks(m_checkedFolders, m_checkedContexts);
         updateTable(filteredLinks);
     }
+}
+
+
+void MainWindow::on_searchOnlineButton_clicked()
+{
+    int selectedRow = ui->linksTableWidget->currentRow();
+    if (selectedRow < 0) {
+        QMessageBox::information(this, "Інфо", "Оберіть посилання, яке хочете знайти.");
+        return;
+    }
+    QString name = ui->linksTableWidget->item(selectedRow, 0)->text();
+    if (name.isEmpty()) return;
+    QString searchUrl = "https://www.google.com/search?q=" + QUrl::toPercentEncoding(name);
+    QDesktopServices::openUrl(QUrl(searchUrl));
 }
 
