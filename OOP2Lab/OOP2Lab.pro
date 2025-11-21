@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     addlinkdialog.cpp \
+    contextmanagerdialog.cpp \
     exportdialog.cpp \
     foldermanagerdialog.cpp \
     linkmanager.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     addlinkdialog.h \
+    contextmanagerdialog.h \
     exportdialog.h \
     foldermanagerdialog.h \
     linkmanager.h \
@@ -25,6 +27,7 @@ HEADERS += \
 
 FORMS += \
     addlinkdialog.ui \
+    contextmanagerdialog.ui \
     exportdialog.ui \
     foldermanagerdialog.ui \
     mainwindow.ui

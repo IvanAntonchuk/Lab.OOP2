@@ -65,11 +65,22 @@
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="manageFoldersButton">
-      <property name="text">
-       <string>Папки</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="manageContextsButton">
+        <property name="text">
+         <string>Контексти</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="manageFoldersButton">
+        <property name="text">
+         <string>Папки</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

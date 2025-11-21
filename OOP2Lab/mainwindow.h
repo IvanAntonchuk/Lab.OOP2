@@ -30,6 +30,8 @@ private slots:
     void on_exportButton_clicked();
     void on_manageFoldersButton_clicked();
 
+    void on_manageContextsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;

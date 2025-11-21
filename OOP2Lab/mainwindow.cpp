@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "exportdialog.h"
 #include "foldermanagerdialog.h"
+#include "contextmanagerdialog.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -155,6 +156,14 @@ void MainWindow::on_exportButton_clicked()
 void MainWindow::on_manageFoldersButton_clicked()
 {
     FolderManagerDialog dialog(&m_linkManager, this);
+    dialog.exec();
+    updateTable(m_linkManager.getLinks());
+}
+
+
+void MainWindow::on_manageContextsButton_clicked()
+{
+    ContextManagerDialog dialog(&m_linkManager, this);
     dialog.exec();
     updateTable(m_linkManager.getLinks());
 }
