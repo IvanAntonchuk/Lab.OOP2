@@ -32,11 +32,16 @@ private slots:
 
     void on_manageContextsButton_clicked();
 
+    void on_filterButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
     QString m_saveFilePath;
     void updateTable(const std::vector<LinkData>& links);
+    std::vector<std::string> m_checkedFolders;
+    std::vector<std::string> m_checkedContexts;
+    bool m_isFilterInitialized;
 protected:
     void closeEvent(QCloseEvent *event) override;
 

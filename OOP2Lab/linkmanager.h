@@ -37,6 +37,8 @@ public:
     bool saveToFile(const std::string& filePath) const;
     bool loadFromFile(const std::string& filePath);
 
+    std::vector<LinkData> filterLinks(const std::vector<std::string>& allowedFolders, const std::vector<std::string>& allowedContexts) const;
+
 private:
     std::vector<LinkData> m_links;
     std::vector<std::string> m_folders;

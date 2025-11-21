@@ -12,6 +12,7 @@ SOURCES += \
     addlinkdialog.cpp \
     contextmanagerdialog.cpp \
     exportdialog.cpp \
+    filterdialog.cpp \
     foldermanagerdialog.cpp \
     linkmanager.cpp \
     main.cpp \
@@ -21,6 +22,7 @@ HEADERS += \
     addlinkdialog.h \
     contextmanagerdialog.h \
     exportdialog.h \
+    filterdialog.h \
     foldermanagerdialog.h \
     linkmanager.h \
     mainwindow.h
@@ -29,6 +31,7 @@ FORMS += \
     addlinkdialog.ui \
     contextmanagerdialog.ui \
     exportdialog.ui \
+    filterdialog.ui \
     foldermanagerdialog.ui \
     mainwindow.ui
 

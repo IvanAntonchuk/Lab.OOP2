@@ -16,16 +16,27 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QLineEdit" name="searchLineEdit"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="searchButton">
+       <widget class="QPushButton" name="filterButton">
         <property name="text">
-         <string>Шукати</string>
+         <string>Фільтр</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="searchLineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchButton">
+          <property name="text">
+           <string>Шукати</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -67,16 +78,16 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QPushButton" name="manageContextsButton">
+       <widget class="QPushButton" name="manageFoldersButton">
         <property name="text">
-         <string>Контексти</string>
+         <string>Папки</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="manageFoldersButton">
+       <widget class="QPushButton" name="manageContextsButton">
         <property name="text">
-         <string>Папки</string>
+         <string>Контексти</string>
         </property>
        </widget>
       </item>

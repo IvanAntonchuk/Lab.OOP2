@@ -155,3 +155,31 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
     }
     return true;
 }
+
+std::vector<LinkData> LinkManager::filterLinks(const std::vector<std::string>& allowedFolders, const std::vector<std::string>& allowedContexts) const
+{
+    std::vector<LinkData> results;
+
+    for (const auto& link : m_links) {
+        bool folderOk = false;
+        for (const auto& f : allowedFolders) {
+            if (link.folder == f) {
+                folderOk = true;
+                break;
+            }
+        }
+
+        bool contextOk = false;
+        for (const auto& c : allowedContexts) {
+            if (link.context == c) {
+                contextOk = true;
+                break;
+            }
+        }
+
+        if (folderOk && contextOk) {
+            results.push_back(link);
+        }
+    }
+    return results;
+}

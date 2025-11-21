@@ -3,6 +3,7 @@
 #include "exportdialog.h"
 #include "foldermanagerdialog.h"
 #include "contextmanagerdialog.h"
+#include "filterdialog.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -24,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
         dir.mkpath(".");
     }
     m_saveFilePath = configPath + "/links.json";
+    m_isFilterInitialized = false;
     m_linkManager.loadFromFile(m_saveFilePath.toStdString());
     updateTable(m_linkManager.getLinks());
 }
@@ -166,5 +168,23 @@ void MainWindow::on_manageContextsButton_clicked()
     ContextManagerDialog dialog(&m_linkManager, this);
     dialog.exec();
     updateTable(m_linkManager.getLinks());
+}
+
+
+void MainWindow::on_filterButton_clicked()
+{
+    FilterDialog dialog(&m_linkManager, this);
+
+    if (m_isFilterInitialized) {
+        dialog.setSelection(m_checkedFolders, m_checkedContexts);
+    }
+
+    if (dialog.exec() == QDialog::Accepted) {
+        m_checkedFolders = dialog.getSelectedFolders();
+        m_checkedContexts = dialog.getSelectedContexts();
+        m_isFilterInitialized = true;
+        std::vector<LinkData> filteredLinks = m_linkManager.filterLinks(m_checkedFolders, m_checkedContexts);
+        updateTable(filteredLinks);
+    }
 }
 
