@@ -9,7 +9,7 @@ struct LinkData {
     std::string name;
     std::string url;
     std::string folder;
-    std::string context;
+    std::vector<std::string> contexts;
     std::string relatedUrl;
     std::string comment;
 };
@@ -18,7 +18,6 @@ class LinkManager {
 public:
     LinkManager();
 
-    // --- Посилання ---
     void addLink(const LinkData& newLink);
     const std::vector<LinkData>& getLinks() const;
     void deleteLink(int index);

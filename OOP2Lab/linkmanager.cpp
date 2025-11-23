@@ -15,7 +15,9 @@ LinkManager::LinkManager() {
 void LinkManager::addLink(const LinkData& newLink) {
     m_links.push_back(newLink);
     if (!newLink.folder.empty()) addFolder(newLink.folder);
-    if (!newLink.context.empty()) addContext(newLink.context);
+    for (const auto& ctx : newLink.contexts) {
+        if (!ctx.empty()) addContext(ctx);
+    }
 }
 
 const std::vector<LinkData>& LinkManager::getLinks() const { return m_links; }
@@ -28,7 +30,10 @@ void LinkManager::updateLink(int index, const LinkData& updatedData) {
     if (index >= 0 && index < (int)m_links.size()) {
         m_links[index] = updatedData;
         if (!updatedData.folder.empty()) addFolder(updatedData.folder);
-        if (!updatedData.context.empty()) addContext(updatedData.context);
+
+        for (const auto& ctx : updatedData.contexts) {
+            if (!ctx.empty()) addContext(ctx);
+        }
     }
 }
 
@@ -36,11 +41,19 @@ std::vector<LinkData> LinkManager::searchLinks(const std::string& query) const {
     std::vector<LinkData> results;
     if (query.empty()) return m_links;
     for (const auto& link : m_links) {
+        bool contextFound = false;
+        for (const auto& ctx : link.contexts) {
+            if (ctx.find(query) != std::string::npos) {
+                contextFound = true;
+                break;
+            }
+        }
+
         if (link.name.find(query) != std::string::npos ||
             link.url.find(query) != std::string::npos ||
             link.comment.find(query) != std::string::npos ||
             link.folder.find(query) != std::string::npos ||
-            link.context.find(query) != std::string::npos) {
+            contextFound) {
             results.push_back(link);
         }
     }
@@ -85,19 +98,21 @@ bool LinkManager::saveToFile(const std::string& filePath) const {
         obj["name"] = QString::fromStdString(link.name);
         obj["url"] = QString::fromStdString(link.url);
         obj["folder"] = QString::fromStdString(link.folder);
-        obj["context"] = QString::fromStdString(link.context);
+        QJsonArray ctxArray;
+        for (const auto& c : link.contexts) {
+            ctxArray.append(QString::fromStdString(c));
+        }
+        obj["contexts"] = ctxArray;
         obj["relatedUrl"] = QString::fromStdString(link.relatedUrl);
         obj["comment"] = QString::fromStdString(link.comment);
         linksArray.append(obj);
     }
     rootObject["links"] = linksArray;
 
-    // 2. Папки
     QJsonArray foldersArray;
     for (const auto& f : m_folders) foldersArray.append(QString::fromStdString(f));
     rootObject["folders"] = foldersArray;
 
-    // 3. Контексти
     QJsonArray contextsArray;
     for (const auto& c : m_contexts) contextsArray.append(QString::fromStdString(c));
     rootObject["contexts"] = contextsArray;
@@ -121,7 +136,6 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
         for (const auto& val : root["folders"].toArray())
             m_folders.push_back(val.toString().toStdString());
     } else if (root.contains("contexts")) {
-
         for (const auto& val : root["contexts"].toArray())
             m_folders.push_back(val.toString().toStdString());
     }
@@ -140,14 +154,28 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
         for (const auto& val : root["links"].toArray()) {
             QJsonObject obj = val.toObject();
             LinkData link;
+
             link.name = obj["name"].toString().toStdString();
             link.url = obj["url"].toString().toStdString();
-            if (obj.contains("folder")) link.folder = obj["folder"].toString().toStdString();
-            else if (obj.contains("context")) link.folder = obj["context"].toString().toStdString();
 
-            if (obj.contains("type")) link.context = obj["type"].toString().toStdString();
-            else if (obj.contains("context") && obj.contains("folder")) {
-                link.context = obj["context"].toString().toStdString();
+            if (obj.contains("folder")) {
+                link.folder = obj["folder"].toString().toStdString();
+            }
+
+            else if (obj.contains("context") && !obj["context"].isArray()) {
+                link.folder = obj["context"].toString().toStdString();
+            }
+
+            if (obj.contains("contexts") && obj["contexts"].isArray()) {
+                for (const auto& val : obj["contexts"].toArray()) {
+                    link.contexts.push_back(val.toString().toStdString());
+                }
+            }
+            else if (obj.contains("context") && !obj["context"].isArray()) {
+                std::string oldCtx = obj["context"].toString().toStdString();
+                if (oldCtx != link.folder) {
+                    link.contexts.push_back(oldCtx);
+                }
             }
 
             if (obj.contains("relatedUrl")) {
@@ -175,10 +203,19 @@ std::vector<LinkData> LinkManager::filterLinks(const std::vector<std::string>& a
         }
 
         bool contextOk = false;
-        for (const auto& c : allowedContexts) {
-            if (link.context == c) {
-                contextOk = true;
-                break;
+        if (link.contexts.empty()) {
+            for (const auto& c : allowedContexts) {
+                if (c.empty()) { contextOk = true; break; }
+            }
+        } else {
+            for (const auto& linkCtx : link.contexts) {
+                for (const auto& allowed : allowedContexts) {
+                    if (linkCtx == allowed) {
+                        contextOk = true;
+                        break;
+                    }
+                }
+                if (contextOk) break;
             }
         }
 

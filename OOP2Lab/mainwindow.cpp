@@ -73,7 +73,14 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
         ui->linksTableWidget->setItem(newRow, 0, new QTableWidgetItem(QString::fromStdString(link.name)));
         ui->linksTableWidget->setItem(newRow, 1, new QTableWidgetItem(QString::fromStdString(link.url)));
         ui->linksTableWidget->setItem(newRow, 2, new QTableWidgetItem(QString::fromStdString(link.folder)));
-        ui->linksTableWidget->setItem(newRow, 3, new QTableWidgetItem(QString::fromStdString(link.context)));
+
+        QString contextStr;
+        for (const auto& c : link.contexts) {
+            if (!contextStr.isEmpty()) contextStr += ", ";
+            contextStr += QString::fromStdString(c);
+        }
+        ui->linksTableWidget->setItem(newRow, 3, new QTableWidgetItem(contextStr));
+
         ui->linksTableWidget->setItem(newRow, 4, new QTableWidgetItem(QString::fromStdString(link.relatedUrl)));
         ui->linksTableWidget->setItem(newRow, 5, new QTableWidgetItem(QString::fromStdString(link.comment)));
     }
@@ -112,17 +119,16 @@ void MainWindow::on_editButton_clicked()
         return;
     }
     LinkData currentData = m_linkManager.getLinks()[selectedRow];
+
     AddLinkDialog dialog(this);
-    dialog.setLinkData(currentData);
     dialog.setFolders(m_linkManager.getFolders());
     dialog.setContexts(m_linkManager.getContexts());
+    dialog.setLinkData(currentData);
 
     if (dialog.exec() == QDialog::Accepted)
     {
         LinkData updatedData = dialog.getLinkData();
-
         m_linkManager.updateLink(selectedRow, updatedData);
-
         updateTable(m_linkManager.getLinks());
     }
 }
@@ -257,7 +263,9 @@ void MainWindow::on_importButton_clicked()
                 link.name = parts[0].trimmed().toStdString();
                 link.url = parts[1].trimmed().toStdString();
                 if (parts.size() > 2) link.folder = parts[2].trimmed().toStdString();
-                if (parts.size() > 3) link.context = parts[3].trimmed().toStdString();
+
+                if (parts.size() > 3) link.contexts.push_back(parts[3].trimmed().toStdString());
+
                 if (parts.size() > 4) link.comment = parts[4].trimmed().toStdString();
 
                 m_linkManager.addLink(link);
@@ -280,8 +288,16 @@ void MainWindow::on_importButton_clicked()
                     link.name = obj["name"].toString().toStdString();
                     link.url = obj["url"].toString().toStdString();
                     if (obj.contains("folder")) link.folder = obj["folder"].toString().toStdString();
-                    if (obj.contains("context")) link.context = obj["context"].toString().toStdString();
-                    if (obj.contains("type")) link.context = obj["type"].toString().toStdString();
+
+                    if (obj.contains("contexts") && obj["contexts"].isArray()) {
+                        for (const auto& c : obj["contexts"].toArray()) {
+                            link.contexts.push_back(c.toString().toStdString());
+                        }
+                    } else if (obj.contains("context")) {
+                        link.contexts.push_back(obj["context"].toString().toStdString());
+                    } else if (obj.contains("type")) {
+                        link.contexts.push_back(obj["type"].toString().toStdString());
+                    }
 
                     link.comment = obj["comment"].toString().toStdString();
 
@@ -296,4 +312,3 @@ void MainWindow::on_importButton_clicked()
     updateTable(m_linkManager.getLinks());
     QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
 }
-
