@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setAcceptDrops(true);
     ui->linksTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
@@ -311,4 +312,39 @@ void MainWindow::on_importButton_clicked()
     file.close();
     updateTable(m_linkManager.getLinks());
     QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
+}
+
+void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (event->mimeData()->hasUrls()) {
+        event->acceptProposedAction();
+    }
+}
+
+void MainWindow::dropEvent(QDropEvent *event)
+{
+    const QList<QUrl> urls = event->mimeData()->urls();
+
+    if (urls.isEmpty()) return;
+
+    QString urlStr = urls.first().toString();
+
+    AddLinkDialog dialog(this);
+
+    dialog.setFolders(m_linkManager.getFolders());
+    dialog.setContexts(m_linkManager.getContexts());
+
+    LinkData data;
+    data.url = urlStr.toStdString();
+
+    dialog.setLinkData(data);
+
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        LinkData newData = dialog.getLinkData();
+        m_linkManager.addLink(newData);
+        updateTable(m_linkManager.getLinks());
+
+        QMessageBox::information(this, "Успіх", "Посилання додано через Drag&Drop!");
+    }
 }

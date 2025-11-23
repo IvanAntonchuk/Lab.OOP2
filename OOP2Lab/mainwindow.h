@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QMimeData>
+
 #include "addlinkdialog.h"
 #include "linkmanager.h"
 
@@ -50,6 +54,8 @@ private:
     bool m_isFilterInitialized;
 protected:
     void closeEvent(QCloseEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 
 };
 #endif // MAINWINDOW_H
