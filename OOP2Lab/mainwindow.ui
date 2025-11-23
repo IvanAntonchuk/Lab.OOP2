@@ -80,6 +80,13 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="importButton">
+        <property name="text">
+         <string>Імпортувати</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>

@@ -12,6 +12,11 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QFileDialog>
+#include <QTextStream>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -222,4 +227,70 @@ void MainWindow::on_actionSaveAs_triggered()
     }
 }
 
+
+
+void MainWindow::on_importButton_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this, "Імпортувати посилання", "", "Data Files (*.csv *.json);;CSV Files (*.csv);;JSON Files (*.json)");
+
+    if (fileName.isEmpty()) return;
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "Помилка", "Не вдалося відкрити файл");
+        return;
+    }
+
+    int count = 0;
+    if (fileName.endsWith(".csv", Qt::CaseInsensitive))
+    {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            if (line.trimmed().isEmpty()) continue;
+            QStringList parts = line.split(';');
+            if (parts.size() >= 2) {
+                LinkData link;
+                link.name = parts[0].trimmed().toStdString();
+                link.url = parts[1].trimmed().toStdString();
+                if (parts.size() > 2) link.folder = parts[2].trimmed().toStdString();
+                if (parts.size() > 3) link.context = parts[3].trimmed().toStdString();
+                if (parts.size() > 4) link.comment = parts[4].trimmed().toStdString();
+
+                m_linkManager.addLink(link);
+                count++;
+            }
+        }
+    }
+    else if (fileName.endsWith(".json", Qt::CaseInsensitive))
+    {
+        QByteArray data = file.readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(data);
+
+        if (!doc.isNull() && doc.isObject()) {
+            QJsonObject root = doc.object();
+            if (root.contains("links") && root["links"].isArray()) {
+                QJsonArray linksArray = root["links"].toArray();
+                for (const auto& val : linksArray) {
+                    QJsonObject obj = val.toObject();
+                    LinkData link;
+                    link.name = obj["name"].toString().toStdString();
+                    link.url = obj["url"].toString().toStdString();
+                    if (obj.contains("folder")) link.folder = obj["folder"].toString().toStdString();
+                    if (obj.contains("context")) link.context = obj["context"].toString().toStdString();
+                    if (obj.contains("type")) link.context = obj["type"].toString().toStdString();
+
+                    link.comment = obj["comment"].toString().toStdString();
+
+                    m_linkManager.addLink(link);
+                    count++;
+                }
+            }
+        }
+    }
+
+    file.close();
+    updateTable(m_linkManager.getLinks());
+    QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
+}
 

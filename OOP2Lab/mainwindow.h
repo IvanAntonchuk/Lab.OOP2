@@ -38,6 +38,8 @@ private slots:
 
     void on_actionSaveAs_triggered();
 
+    void on_importButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
