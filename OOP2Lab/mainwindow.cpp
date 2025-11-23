@@ -60,22 +60,23 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
 {
     ui->linksTableWidget->clearContents();
     ui->linksTableWidget->setRowCount(0);
-    if (ui->linksTableWidget->columnCount() < 5) {
-        ui->linksTableWidget->setColumnCount(5);
-        ui->linksTableWidget->setHorizontalHeaderLabels({"Назва", "URL", "Папка", "Контекст", "Коментар"});
+    if (ui->linksTableWidget->columnCount() < 6) {
+        ui->linksTableWidget->setColumnCount(6);
+        ui->linksTableWidget->setHorizontalHeaderLabels({"Назва", "URL", "Папка", "Контекст", "Пов'язане", "Коментар"});
     }
 
     for (const LinkData& link : links)
     {
         int newRow = ui->linksTableWidget->rowCount();
         ui->linksTableWidget->insertRow(newRow);
+
         ui->linksTableWidget->setItem(newRow, 0, new QTableWidgetItem(QString::fromStdString(link.name)));
         ui->linksTableWidget->setItem(newRow, 1, new QTableWidgetItem(QString::fromStdString(link.url)));
         ui->linksTableWidget->setItem(newRow, 2, new QTableWidgetItem(QString::fromStdString(link.folder)));
         ui->linksTableWidget->setItem(newRow, 3, new QTableWidgetItem(QString::fromStdString(link.context)));
-        ui->linksTableWidget->setItem(newRow, 4, new QTableWidgetItem(QString::fromStdString(link.comment)));
+        ui->linksTableWidget->setItem(newRow, 4, new QTableWidgetItem(QString::fromStdString(link.relatedUrl)));
+        ui->linksTableWidget->setItem(newRow, 5, new QTableWidgetItem(QString::fromStdString(link.comment)));
     }
-
     ui->linksTableWidget->resizeColumnsToContents();
 }
 
@@ -144,10 +145,12 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 
 void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
 {
-    if (column == 1)
+    if (column == 1 || column == 4)
     {
-        QString urlString = ui->linksTableWidget->item(row, 1)->text();
-        QDesktopServices::openUrl(QUrl(urlString));
+        QString urlString = ui->linksTableWidget->item(row, column)->text();
+        if (!urlString.isEmpty()) {
+            QDesktopServices::openUrl(QUrl(urlString));
+        }
     }
 }
 

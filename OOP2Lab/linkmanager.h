@@ -10,6 +10,7 @@ struct LinkData {
     std::string url;
     std::string folder;
     std::string context;
+    std::string relatedUrl;
     std::string comment;
 };
 

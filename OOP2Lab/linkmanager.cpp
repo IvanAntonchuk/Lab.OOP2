@@ -86,6 +86,7 @@ bool LinkManager::saveToFile(const std::string& filePath) const {
         obj["url"] = QString::fromStdString(link.url);
         obj["folder"] = QString::fromStdString(link.folder);
         obj["context"] = QString::fromStdString(link.context);
+        obj["relatedUrl"] = QString::fromStdString(link.relatedUrl);
         obj["comment"] = QString::fromStdString(link.comment);
         linksArray.append(obj);
     }
@@ -147,6 +148,10 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
             if (obj.contains("type")) link.context = obj["type"].toString().toStdString();
             else if (obj.contains("context") && obj.contains("folder")) {
                 link.context = obj["context"].toString().toStdString();
+            }
+
+            if (obj.contains("relatedUrl")) {
+                link.relatedUrl = obj["relatedUrl"].toString().toStdString();
             }
 
             link.comment = obj["comment"].toString().toStdString();

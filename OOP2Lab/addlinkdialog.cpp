@@ -20,7 +20,7 @@ LinkData AddLinkDialog::getLinkData() const
     data.url     = ui->urlLineEdit->text().toStdString();
     data.folder  = ui->folderComboBox->currentText().toStdString();
     data.context = ui->contextComboBox->currentText().toStdString();
-
+    data.relatedUrl = ui->relatedUrlLineEdit->text().toStdString();
     data.comment = ui->commentTextEdit->toPlainText().toStdString();
     return data;
 }
@@ -29,9 +29,10 @@ void AddLinkDialog::setLinkData(const LinkData& data)
 {
     ui->nameLineEdit->setText(QString::fromStdString(data.name));
     ui->urlLineEdit->setText(QString::fromStdString(data.url));
-    ui->commentTextEdit->setPlainText(QString::fromStdString(data.comment));
     ui->folderComboBox->setCurrentText(QString::fromStdString(data.folder));
     ui->contextComboBox->setCurrentText(QString::fromStdString(data.context));
+    ui->relatedUrlLineEdit->setText(QString::fromStdString(data.relatedUrl));
+    ui->commentTextEdit->setPlainText(QString::fromStdString(data.comment));
 }
 
 void AddLinkDialog::setFolders(const std::vector<std::string>& folders)
