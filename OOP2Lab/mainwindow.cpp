@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -202,4 +203,23 @@ void MainWindow::on_searchOnlineButton_clicked()
     QString searchUrl = "https://www.google.com/search?q=" + QUrl::toPercentEncoding(name);
     QDesktopServices::openUrl(QUrl(searchUrl));
 }
+
+
+void MainWindow::on_actionSaveAs_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,"Зберегти посилання як...", "", "JSON Files (*.json);;All Files (*)");
+
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    bool success = m_linkManager.saveToFile(fileName.toStdString());
+
+    if (success) {
+        QMessageBox::information(this, "Успіх", "Файл успішно збережено!");
+    } else {
+        QMessageBox::critical(this, "Помилка", "Не вдалося зберегти файл.");
+    }
+}
+
 

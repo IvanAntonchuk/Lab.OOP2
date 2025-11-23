@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>528</height>
+    <width>781</width>
+    <height>525</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -107,7 +107,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>807</width>
+     <width>781</width>
      <height>25</height>
     </rect>
    </property>
@@ -117,8 +117,20 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionSaveAs"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSaveAs">
+   <property name="text">
+    <string>Зберегти як</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

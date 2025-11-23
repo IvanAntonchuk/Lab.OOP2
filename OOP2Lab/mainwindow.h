@@ -36,6 +36,8 @@ private slots:
 
     void on_searchOnlineButton_clicked();
 
+    void on_actionSaveAs_triggered();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;
