@@ -39,3 +39,11 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+SUBDIRS += \
+    ../LinkManagerTest/LinkManagerTest.pro
+
+
+#Lab 3: External Libraries
+HEADERS += httplib.h
+LIBS += -lws2_32

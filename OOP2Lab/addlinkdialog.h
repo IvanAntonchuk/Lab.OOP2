@@ -20,6 +20,9 @@ public:
     void setFolders(const std::vector<std::string>& folders);
     void setContexts(const std::vector<std::string>& contexts);
 
+private slots:
+    void on_fetchTitleButton_clicked();
+
 private:
     Ui::AddLinkDialog *ui;
 };

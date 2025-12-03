@@ -26,58 +26,38 @@
      <item row="0" column="1">
       <widget class="QLineEdit" name="nameLineEdit"/>
      </item>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QLabel" name="urlLabel">
        <property name="text">
         <string>URL:</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item row="2" column="1">
       <widget class="QLineEdit" name="urlLineEdit"/>
      </item>
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="contextLabel">
        <property name="text">
         <string>Папка:</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="3" column="1">
       <widget class="QComboBox" name="folderComboBox">
        <property name="editable">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
+     <item row="4" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Контекст:</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Пов'язане:</string>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="relatedUrlLineEdit"/>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="commentLabel">
-       <property name="text">
-        <string>Коментар</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QTextEdit" name="commentTextEdit"/>
-     </item>
-     <item row="3" column="1">
       <widget class="QListWidget" name="contextListWidget">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
@@ -96,6 +76,33 @@
          <width>16777215</width>
          <height>100</height>
         </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Пов'язане:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="relatedUrlLineEdit"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="commentLabel">
+       <property name="text">
+        <string>Коментар</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QTextEdit" name="commentTextEdit"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="fetchTitleButton">
+       <property name="text">
+        <string>Отримати назву з посилання</string>
        </property>
       </widget>
      </item>
