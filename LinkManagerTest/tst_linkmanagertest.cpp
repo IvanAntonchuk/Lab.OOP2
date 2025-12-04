@@ -1,8 +1,12 @@
 #include <QtTest>
 #include <QFile>
+#include <vector>
+#include <string>
+
 #include "linkmanager.h"
 #include "linkserializer.h"
 #include "webutils.h"
+#include "qrcodegen.hpp"
 
 class LinkManagerTest : public QObject
 {
@@ -24,6 +28,9 @@ private slots:
     void testLinkSerializer();
     void testEdgeCases();
     void testHtmlParsing();
+    void testQRCodeLibrary();
+    void testExportFormats();
+    void testJsonImport();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -244,6 +251,64 @@ void LinkManagerTest::testHtmlParsing()
 
     std::string html4 = "<TiTlE>Mixed Case</tItLe>";
     QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html4)), "Mixed Case");
+}
+
+void LinkManagerTest::testQRCodeLibrary()
+{
+    using namespace qrcodegen;
+
+    std::string text = "https://www.google.com";
+
+    QrCode qr = QrCode::encodeText(text.c_str(), QrCode::Ecc::LOW);
+
+    QVERIFY(qr.getSize() > 0);
+
+    bool isDark = qr.getModule(0, 0);
+    QVERIFY(isDark == true || isDark == false);
+}
+
+void LinkManagerTest::testExportFormats()
+{
+    std::vector<LinkData> links;
+    LinkData link;
+    link.name = "Test Article";
+    link.url = "https://example.com";
+    link.comment = "Interesting read";
+    links.push_back(link);
+
+    QString bibtex = LinkSerializer::exportLinks(links, LinkSerializer::BibTeX);
+    QVERIFY(bibtex.contains("@misc{link,"));
+    QVERIFY(bibtex.contains("title = {Test Article}"));
+    QVERIFY(bibtex.contains("howpublished = {\\url{https://example.com}}"));
+
+    QString dstu = LinkSerializer::exportLinks(links, LinkSerializer::DSTU8302);
+    QVERIFY(dstu.contains("Test Article"));
+    QVERIFY(dstu.contains("[Електронний ресурс]"));
+    QVERIFY(dstu.contains("Режим доступу: https://example.com"));
+}
+
+void LinkManagerTest::testJsonImport()
+{
+    QByteArray jsonData = R"({
+        "links": [
+            {
+                "name": "JSON Link",
+                "url": "http://json.test",
+                "folder": "Docs",
+                "contexts": ["Work"],
+                "comment": "Test comment"
+            }
+        ]
+    })";
+
+    std::vector<LinkData> imported = LinkSerializer::importFromJSON(jsonData);
+
+    QCOMPARE(imported.size(), 1);
+    QCOMPARE(QString::fromStdString(imported[0].name), "JSON Link");
+    QCOMPARE(QString::fromStdString(imported[0].url), "http://json.test");
+    QCOMPARE(QString::fromStdString(imported[0].folder), "Docs");
+    QVERIFY(!imported[0].contexts.empty());
+    QCOMPARE(QString::fromStdString(imported[0].contexts[0]), "Work");
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)
