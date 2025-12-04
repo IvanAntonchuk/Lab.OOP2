@@ -5,6 +5,7 @@
 #include <QMessageBox>
 
 #include <regex>
+#define CPPHTTPLIB_OPENSSL_SUPPORT
 #include "httplib.h"
 
 AddLinkDialog::AddLinkDialog(QWidget *parent)

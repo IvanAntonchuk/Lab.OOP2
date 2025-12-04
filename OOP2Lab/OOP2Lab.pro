@@ -46,4 +46,5 @@ SUBDIRS += \
 
 #Lab 3: External Libraries
 HEADERS += httplib.h
-LIBS += -lws2_32
+INCLUDEPATH += "D:/NewQt/Tools/mingw1310_64/opt/include"
+LIBS += -L"D:/NewQt/Tools/mingw1310_64/opt/lib" -lws2_32 -lssl -lcrypto -lcrypt32
