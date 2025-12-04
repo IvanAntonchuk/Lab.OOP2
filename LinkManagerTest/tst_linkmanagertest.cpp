@@ -2,6 +2,7 @@
 #include <QFile>
 #include "linkmanager.h"
 #include "linkserializer.h"
+#include "webutils.h"
 
 class LinkManagerTest : public QObject
 {
@@ -22,6 +23,7 @@ private slots:
     void testPersistence();
     void testLinkSerializer();
     void testEdgeCases();
+    void testHtmlParsing();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -228,6 +230,20 @@ void LinkManagerTest::testEdgeCases()
     manager.addContext("MyTag");
     manager.addContext("MyTag");
     QCOMPARE(manager.getContexts().size(), 5);
+}
+
+void LinkManagerTest::testHtmlParsing()
+{
+    std::string html1 = "<html><head><title>Test Page</title></head><body></body></html>";
+    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html1)), "Test Page");
+
+    std::string html2 = "<TITLE>\nMulti-line\nTitle\n</TITLE>";
+
+    std::string html3 = "<html><body>No title here</body></html>";
+    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html3)), "");
+
+    std::string html4 = "<TiTlE>Mixed Case</tItLe>";
+    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html4)), "Mixed Case");
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)
