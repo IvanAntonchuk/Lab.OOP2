@@ -15,6 +15,7 @@ SOURCES += \
     filterdialog.cpp \
     foldermanagerdialog.cpp \
     linkmanager.cpp \
+    linkserializer.cpp \
     main.cpp \
     mainwindow.cpp \
     qrcodegen.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
     filterdialog.h \
     foldermanagerdialog.h \
     linkmanager.h \
+    linkserializer.h \
     mainwindow.h \
     qrcodegen.hpp \
     qrdialog.h \
