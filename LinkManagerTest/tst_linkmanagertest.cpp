@@ -21,6 +21,7 @@ private slots:
     void testContextManagement();
     void testPersistence();
     void testLinkSerializer();
+    void testEdgeCases();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -199,6 +200,34 @@ void LinkManagerTest::testLinkSerializer()
     QString harvardStr = LinkSerializer::exportLinks(originalLinks, LinkSerializer::Harvard);
     QString expectedHarvard = "Google. Available at: https://google.com. (Notes: Main search engine).\n";
     QCOMPARE(harvardStr, expectedHarvard);
+}
+
+void LinkManagerTest::testEdgeCases()
+{
+    LinkManager manager;
+    LinkData link;
+    link.name = "Test";
+    manager.addLink(link);
+
+    manager.deleteLink(100);
+    manager.deleteLink(-1);
+    QCOMPARE(manager.getLinks().size(), 1);
+
+    LinkData newData;
+    newData.name = "Updated";
+    manager.updateLink(100, newData);
+    QCOMPARE(QString::fromStdString(manager.getLinks()[0].name), "Test");
+
+    std::vector<LinkData> searchRes = manager.searchLinks("");
+    QCOMPARE(searchRes.size(), 1);
+
+    manager.addFolder("MyFolder");
+    manager.addFolder("MyFolder");
+    QCOMPARE(manager.getFolders().size(), 1);
+
+    manager.addContext("MyTag");
+    manager.addContext("MyTag");
+    QCOMPARE(manager.getContexts().size(), 5);
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)
