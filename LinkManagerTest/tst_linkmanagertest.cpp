@@ -1,6 +1,7 @@
 #include <QtTest>
 #include <QFile>
 #include "linkmanager.h"
+#include "linkserializer.h"
 
 class LinkManagerTest : public QObject
 {
@@ -19,6 +20,7 @@ private slots:
     void testFolderManagement();
     void testContextManagement();
     void testPersistence();
+    void testLinkSerializer();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -168,6 +170,35 @@ void LinkManagerTest::testPersistence()
     QVERIFY(managerToLoad.hasContext("Important"));
 
     QFile::remove(tempFileName);
+}
+
+void LinkManagerTest::testLinkSerializer()
+{
+    std::vector<LinkData> originalLinks;
+    LinkData l1;
+    l1.name = "Google";
+    l1.url = "https://google.com";
+    l1.folder = "Search";
+    l1.contexts = {"Web", "Tool"};
+    l1.comment = "Main search engine";
+    originalLinks.push_back(l1);
+
+    QString csvData = "Google;https://google.com;Search;Web;Main search engine\n";
+
+    std::vector<LinkData> importedLinks = LinkSerializer::importFromCSV(csvData);
+
+    QCOMPARE(importedLinks.size(), 1);
+    QCOMPARE(QString::fromStdString(importedLinks[0].name), "Google");
+    QCOMPARE(QString::fromStdString(importedLinks[0].url), "https://google.com");
+    QCOMPARE(QString::fromStdString(importedLinks[0].folder), "Search");
+    QCOMPARE(QString::fromStdString(importedLinks[0].comment), "Main search engine");
+
+    QVERIFY(!importedLinks[0].contexts.empty());
+    QCOMPARE(QString::fromStdString(importedLinks[0].contexts[0]), "Web");
+
+    QString harvardStr = LinkSerializer::exportLinks(originalLinks, LinkSerializer::Harvard);
+    QString expectedHarvard = "Google. Available at: https://google.com. (Notes: Main search engine).\n";
+    QCOMPARE(harvardStr, expectedHarvard);
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)
