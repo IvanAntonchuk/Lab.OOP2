@@ -1,0 +1,41 @@
+<map id="OOP2Lab/exportdialog.cpp" name="OOP2Lab/exportdialog.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="168,5,346,32"/>
+<area shape="rect" id="Node000002" href="$exportdialog_8h.html" title=" " alt="" coords="78,80,180,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,34,166,74,163,70,236,31"/>
+<area shape="rect" id="Node000008" href="$ui__exportdialog_8h.html" title=" " alt="" coords="973,80,1092,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="346,26,959,83,957,87,346,31"/>
+<area shape="rect" id="Node000018" href="$linkserializer_8h.html" title="Клас для серіалізації та десеріалізації даних посилань." alt="" coords="205,80,309,107"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="258,30,259,65,254,63,256,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,74,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,109,69,147,65,143,115,105"/>
+<area shape="rect" id="Node000004" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="98,155,200,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="133,105,144,140,139,139,131,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="33,229,86,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="136,181,88,222,85,217,131,183"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="208,229,266,256"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="165,179,213,219,207,220,163,184"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="110,229,185,256"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="150,180,150,215,146,212,147,184"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="365,155,482,181"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="970,101,767,124,498,157,497,152,766,119,975,100"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="507,155,668,181"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="975,104,681,154,680,149,970,105"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="692,155,854,181"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="990,107,834,153,833,147,985,108"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="878,155,1012,181"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="1020,106,973,147,971,142,1015,108"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1036,155,1206,181"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="1049,105,1097,145,1091,144,1047,110"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1230,155,1358,181"/>
+<area shape="poly" id="edge13_Node000008_Node000014" title=" " alt="" coords="1079,105,1236,150,1231,150,1078,110"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1382,155,1548,181"/>
+<area shape="poly" id="edge14_Node000008_Node000015" title=" " alt="" coords="1093,102,1377,151,1371,152,1093,107"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1572,155,1718,181"/>
+<area shape="poly" id="edge15_Node000008_Node000016" title=" " alt="" coords="1093,98,1560,154,1554,155,1093,104"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1742,155,1910,181"/>
+<area shape="poly" id="edge16_Node000008_Node000017" title=" " alt="" coords="1093,96,1363,118,1729,154,1724,154,1363,123,1093,102"/>
+<area shape="poly" id="edge20_Node000018_Node000004" title=" " alt="" coords="240,106,182,148,179,143,236,109"/>
+<area shape="poly" id="edge19_Node000018_Node000006" title=" " alt="" coords="257,106,243,215,238,213,253,109"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="275,155,340,181"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="267,105,293,142,288,142,265,110"/>
+</map>

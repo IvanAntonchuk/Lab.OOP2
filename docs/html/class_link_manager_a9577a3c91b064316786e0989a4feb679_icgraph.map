@@ -1,0 +1,11 @@
+<map id="LinkManager::addContext" name="LinkManager::addContext">
+<area shape="rect" id="Node000001" title="Додає новий контекст (тег)." alt="" coords="232,81,402,108"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="20,5,169,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,76,183,47,147,35,147,30,185,41,270,74"/>
+<area shape="rect" id="Node000003" href="$class_link_manager.html#a20c709614593252405c980f7ea3811ae" title="Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти." alt="" coords="6,56,183,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,84,184,82,183,77,219,83"/>
+<area shape="rect" id="Node000004" href="$class_link_manager.html#a444fe949f0a3fa0df9a5086c551ded85" title="Завантажує дані з JSON файлу." alt="" coords="5,107,184,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,107,185,112,184,107,219,105"/>
+<area shape="rect" id="Node000005" href="$class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="11,157,178,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="270,114,185,148,148,159,146,154,183,143,265,115"/>
+</map>

@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Клас LinkManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_link_manager.html','','class_link_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Клас LinkManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клас для управління списком посилань.  
+ <a href="#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="linkmanager_8h_source.html">linkmanager.h</a>&gt;</code></p>
+<div class="dynheader">
+Діаграма зв'язків класу LinkManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager__coll__graph.png" border="0" usemap="#a_link_manager_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_link_manager_coll__map" id="a_link_manager_coll__map">
+<area shape="rect" title="Клас для управління списком посилань." alt="" coords="5,5,116,288"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a20c709614593252405c980f7ea3811ae" id="r_a20c709614593252405c980f7ea3811ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c709614593252405c980f7ea3811ae">LinkManager</a> ()</td></tr>
+<tr class="memdesc:a20c709614593252405c980f7ea3811ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти.  <br /></td></tr>
+<tr class="memitem:ab7e763df0270fcadeb3dbabb7e7ec223" id="r_ab7e763df0270fcadeb3dbabb7e7ec223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7e763df0270fcadeb3dbabb7e7ec223">addLink</a> (const <a class="el" href="struct_link_data.html">LinkData</a> &amp;newLink)</td></tr>
+<tr class="memdesc:ab7e763df0270fcadeb3dbabb7e7ec223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає нове посилання до колекції.  <br /></td></tr>
+<tr class="memitem:ae9900029cc29dafe79cbc3c98e8cfdf1" id="r_ae9900029cc29dafe79cbc3c98e8cfdf1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9900029cc29dafe79cbc3c98e8cfdf1">getLinks</a> () const</td></tr>
+<tr class="memdesc:ae9900029cc29dafe79cbc3c98e8cfdf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отримує список всіх посилань.  <br /></td></tr>
+<tr class="memitem:a77c4ddf626891a5c65740d35a04dd567" id="r_a77c4ddf626891a5c65740d35a04dd567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c4ddf626891a5c65740d35a04dd567">deleteLink</a> (int index)</td></tr>
+<tr class="memdesc:a77c4ddf626891a5c65740d35a04dd567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє посилання за індексом.  <br /></td></tr>
+<tr class="memitem:a31d9e88eddeaca193c2be1c7c84e93c1" id="r_a31d9e88eddeaca193c2be1c7c84e93c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31d9e88eddeaca193c2be1c7c84e93c1">updateLink</a> (int index, const <a class="el" href="struct_link_data.html">LinkData</a> &amp;updatedData)</td></tr>
+<tr class="memdesc:a31d9e88eddeaca193c2be1c7c84e93c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оновлює дані існуючого посилання.  <br /></td></tr>
+<tr class="memitem:a488d4b69221e34bd5a0c10c1e35eefff" id="r_a488d4b69221e34bd5a0c10c1e35eefff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a488d4b69221e34bd5a0c10c1e35eefff">searchLinks</a> (const std::string &amp;query) const</td></tr>
+<tr class="memdesc:a488d4b69221e34bd5a0c10c1e35eefff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шукає посилання за запитом. Пошук здійснюється по назві, URL, коментарю, папці та контекстах.  <br /></td></tr>
+<tr class="memitem:acaffca7c4d20158dee299eb0233e41f4" id="r_acaffca7c4d20158dee299eb0233e41f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaffca7c4d20158dee299eb0233e41f4">addFolder</a> (const std::string &amp;folderName)</td></tr>
+<tr class="memdesc:acaffca7c4d20158dee299eb0233e41f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає нову папку (категорію).  <br /></td></tr>
+<tr class="memitem:ae889dd303f95d26fedbeb9f1c7ab1c22" id="r_ae889dd303f95d26fedbeb9f1c7ab1c22"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae889dd303f95d26fedbeb9f1c7ab1c22">getFolders</a> () const</td></tr>
+<tr class="memdesc:ae889dd303f95d26fedbeb9f1c7ab1c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отримує список існуючих папок.  <br /></td></tr>
+<tr class="memitem:a1bba27197d667db84a826e4b64d97e9e" id="r_a1bba27197d667db84a826e4b64d97e9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bba27197d667db84a826e4b64d97e9e">removeFolder</a> (const std::string &amp;folderName)</td></tr>
+<tr class="memdesc:a1bba27197d667db84a826e4b64d97e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє папку зі списку.  <br /></td></tr>
+<tr class="memitem:aea93ca0b1086aa0be353af197053857e" id="r_aea93ca0b1086aa0be353af197053857e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea93ca0b1086aa0be353af197053857e">hasFolder</a> (const std::string &amp;folderName) const</td></tr>
+<tr class="memdesc:aea93ca0b1086aa0be353af197053857e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевіряє наявність папки.  <br /></td></tr>
+<tr class="memitem:abb435880358b919c0a7e30a11ad5a520" id="r_abb435880358b919c0a7e30a11ad5a520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb435880358b919c0a7e30a11ad5a520">clearLinksFolder</a> (const std::string &amp;folderName)</td></tr>
+<tr class="memdesc:abb435880358b919c0a7e30a11ad5a520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очищає прив'язку посилань до видаленої папки. Встановлює поле folder у посиланнях в пустий рядок.  <br /></td></tr>
+<tr class="memitem:a9577a3c91b064316786e0989a4feb679" id="r_a9577a3c91b064316786e0989a4feb679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9577a3c91b064316786e0989a4feb679">addContext</a> (const std::string &amp;contextName)</td></tr>
+<tr class="memdesc:a9577a3c91b064316786e0989a4feb679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає новий контекст (тег).  <br /></td></tr>
+<tr class="memitem:a32e23e3cf7e577ba2e60a7c7f4a31bc7" id="r_a32e23e3cf7e577ba2e60a7c7f4a31bc7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32e23e3cf7e577ba2e60a7c7f4a31bc7">getContexts</a> () const</td></tr>
+<tr class="memdesc:a32e23e3cf7e577ba2e60a7c7f4a31bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отримує список всіх контекстів.  <br /></td></tr>
+<tr class="memitem:a32d74106ed208f4c718f8692a1f965ab" id="r_a32d74106ed208f4c718f8692a1f965ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d74106ed208f4c718f8692a1f965ab">removeContext</a> (const std::string &amp;contextName)</td></tr>
+<tr class="memdesc:a32d74106ed208f4c718f8692a1f965ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє контекст зі списку.  <br /></td></tr>
+<tr class="memitem:a036d1d9ed2cc05e09f21c5115da49723" id="r_a036d1d9ed2cc05e09f21c5115da49723"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a036d1d9ed2cc05e09f21c5115da49723">hasContext</a> (const std::string &amp;contextName) const</td></tr>
+<tr class="memdesc:a036d1d9ed2cc05e09f21c5115da49723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевіряє існування контексту.  <br /></td></tr>
+<tr class="memitem:aead385274c0399686f0e868286ecff32" id="r_aead385274c0399686f0e868286ecff32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aead385274c0399686f0e868286ecff32">saveToFile</a> (const std::string &amp;filePath) const</td></tr>
+<tr class="memdesc:aead385274c0399686f0e868286ecff32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зберігає дані у JSON файл.  <br /></td></tr>
+<tr class="memitem:a444fe949f0a3fa0df9a5086c551ded85" id="r_a444fe949f0a3fa0df9a5086c551ded85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a444fe949f0a3fa0df9a5086c551ded85">loadFromFile</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a444fe949f0a3fa0df9a5086c551ded85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завантажує дані з JSON файлу.  <br /></td></tr>
+<tr class="memitem:aad2e210868e9de73aa0d54a3826a5240" id="r_aad2e210868e9de73aa0d54a3826a5240"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad2e210868e9de73aa0d54a3826a5240">filterLinks</a> (const std::vector&lt; std::string &gt; &amp;allowedFolders, const std::vector&lt; std::string &gt; &amp;allowedContexts) const</td></tr>
+<tr class="memdesc:aad2e210868e9de73aa0d54a3826a5240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фільтрує посилання за папками та контекстами.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Клас для управління списком посилань. </p>
+<p>Забезпечує додавання, видалення, редагування, пошук та фільтрацію посилань, а також управління папками та контекстами. Підтримує збереження та завантаження даних. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a id="a20c709614593252405c980f7ea3811ae" name="a20c709614593252405c980f7ea3811ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c709614593252405c980f7ea3811ae">&#9670;&#160;</a></span>LinkManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinkManager::LinkManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти. </p>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a20c709614593252405c980f7ea3811ae_cgraph.png" border="0" usemap="#aclass_link_manager_a20c709614593252405c980f7ea3811ae_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a20c709614593252405c980f7ea3811ae_cgraph" id="aclass_link_manager_a20c709614593252405c980f7ea3811ae_cgraph">
+<area shape="rect" title="Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти." alt="" coords="5,5,183,32"/>
+<area shape="rect" href="class_link_manager.html#a9577a3c91b064316786e0989a4feb679" title="Додає новий контекст (тег)." alt="" coords="231,5,401,32"/>
+<area shape="poly" title=" " alt="" coords="183,16,218,19,212,19,183,21"/>
+<area shape="rect" href="class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="449,5,619,32"/>
+<area shape="poly" title=" " alt="" coords="401,16,436,19,431,19,401,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
+<a id="a9577a3c91b064316786e0989a4feb679" name="a9577a3c91b064316786e0989a4feb679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9577a3c91b064316786e0989a4feb679">&#9670;&#160;</a></span>addContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::addContext </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>contextName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Додає новий контекст (тег). </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contextName</td><td>Назва контексту. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a9577a3c91b064316786e0989a4feb679_cgraph.png" border="0" usemap="#aclass_link_manager_a9577a3c91b064316786e0989a4feb679_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a9577a3c91b064316786e0989a4feb679_cgraph" id="aclass_link_manager_a9577a3c91b064316786e0989a4feb679_cgraph">
+<area shape="rect" title="Додає новий контекст (тег)." alt="" coords="5,5,176,32"/>
+<area shape="rect" href="class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="224,5,394,32"/>
+<area shape="poly" title=" " alt="" coords="176,16,211,19,205,19,176,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a9577a3c91b064316786e0989a4feb679_icgraph.png" border="0" usemap="#aclass_link_manager_a9577a3c91b064316786e0989a4feb679_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a9577a3c91b064316786e0989a4feb679_icgraph" id="aclass_link_manager_a9577a3c91b064316786e0989a4feb679_icgraph">
+<area shape="rect" title="Додає новий контекст (тег)." alt="" coords="232,81,402,108"/>
+<area shape="rect" href="class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="20,5,169,32"/>
+<area shape="poly" title=" " alt="" coords="265,76,183,47,147,35,147,30,185,41,270,74"/>
+<area shape="rect" href="class_link_manager.html#a20c709614593252405c980f7ea3811ae" title="Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти." alt="" coords="6,56,183,83"/>
+<area shape="poly" title=" " alt="" coords="213,84,184,82,183,77,219,83"/>
+<area shape="rect" href="class_link_manager.html#a444fe949f0a3fa0df9a5086c551ded85" title="Завантажує дані з JSON файлу." alt="" coords="5,107,184,133"/>
+<area shape="poly" title=" " alt="" coords="214,107,185,112,184,107,219,105"/>
+<area shape="rect" href="class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="11,157,178,184"/>
+<area shape="poly" title=" " alt="" coords="270,114,185,148,148,159,146,154,183,143,265,115"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acaffca7c4d20158dee299eb0233e41f4" name="acaffca7c4d20158dee299eb0233e41f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaffca7c4d20158dee299eb0233e41f4">&#9670;&#160;</a></span>addFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::addFolder </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>folderName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Додає нову папку (категорію). </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folderName</td><td>Назва папки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_acaffca7c4d20158dee299eb0233e41f4_cgraph.png" border="0" usemap="#aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_cgraph" id="aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_cgraph">
+<area shape="rect" title="Додає нову папку (категорію)." alt="" coords="5,5,166,32"/>
+<area shape="rect" href="class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє наявність папки." alt="" coords="214,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="166,16,201,19,195,19,166,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_acaffca7c4d20158dee299eb0233e41f4_icgraph.png" border="0" usemap="#aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_icgraph" id="aclass_link_manager_acaffca7c4d20158dee299eb0233e41f4_icgraph">
+<area shape="rect" title="Додає нову папку (категорію)." alt="" coords="220,31,380,57"/>
+<area shape="rect" href="class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="14,5,163,32"/>
+<area shape="poly" title=" " alt="" coords="201,33,163,30,163,25,206,32"/>
+<area shape="rect" href="class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="5,56,172,83"/>
+<area shape="poly" title=" " alt="" coords="201,56,173,62,172,57,207,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7e763df0270fcadeb3dbabb7e7ec223" name="ab7e763df0270fcadeb3dbabb7e7ec223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e763df0270fcadeb3dbabb7e7ec223">&#9670;&#160;</a></span>addLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::addLink </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_link_data.html">LinkData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>newLink</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Додає нове посилання до колекції. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newLink</td><td>Об'єкт <a class="el" href="struct_link_data.html" title="Структура для зберігання даних про одне посилання.">LinkData</a> з даними нового посилання. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_ab7e763df0270fcadeb3dbabb7e7ec223_cgraph.png" border="0" usemap="#aclass_link_manager_ab7e763df0270fcadeb3dbabb7e7ec223_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_ab7e763df0270fcadeb3dbabb7e7ec223_cgraph" id="aclass_link_manager_ab7e763df0270fcadeb3dbabb7e7ec223_cgraph">
+<area shape="rect" title="Додає нове посилання до колекції." alt="" coords="5,31,154,57"/>
+<area shape="rect" href="class_link_manager.html#a9577a3c91b064316786e0989a4feb679" title="Додає новий контекст (тег)." alt="" coords="202,5,372,32"/>
+<area shape="poly" title=" " alt="" coords="154,32,189,30,183,32,155,38"/>
+<area shape="rect" href="class_link_manager.html#acaffca7c4d20158dee299eb0233e41f4" title="Додає нову папку (категорію)." alt="" coords="207,56,367,83"/>
+<area shape="poly" title=" " alt="" coords="154,50,194,57,188,58,154,56"/>
+<area shape="rect" href="class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="420,5,590,32"/>
+<area shape="poly" title=" " alt="" coords="372,16,407,18,402,19,372,21"/>
+<area shape="rect" href="class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє наявність папки." alt="" coords="425,56,585,83"/>
+<area shape="poly" title=" " alt="" coords="367,67,412,69,407,69,367,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb435880358b919c0a7e30a11ad5a520" name="abb435880358b919c0a7e30a11ad5a520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb435880358b919c0a7e30a11ad5a520">&#9670;&#160;</a></span>clearLinksFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::clearLinksFolder </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>folderName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очищає прив'язку посилань до видаленої папки. Встановлює поле folder у посиланнях в пустий рядок. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folderName</td><td>Назва видаленої папки. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77c4ddf626891a5c65740d35a04dd567" name="a77c4ddf626891a5c65740d35a04dd567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c4ddf626891a5c65740d35a04dd567">&#9670;&#160;</a></span>deleteLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::deleteLink </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Видаляє посилання за індексом. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Індекс посилання у списку (починаючи з 0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad2e210868e9de73aa0d54a3826a5240" name="aad2e210868e9de73aa0d54a3826a5240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2e210868e9de73aa0d54a3826a5240">&#9670;&#160;</a></span>filterLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; LinkManager::filterLinks </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>allowedFolders</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>allowedContexts</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Фільтрує посилання за папками та контекстами. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allowedFolders</td><td>Список дозволених папок. </td></tr>
+    <tr><td class="paramname">allowedContexts</td><td>Список дозволених контекстів. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>Вектор посилань, що відповідають критеріям. </dd></dl>
+
+</div>
+</div>
+<a id="a32e23e3cf7e577ba2e60a7c7f4a31bc7" name="a32e23e3cf7e577ba2e60a7c7f4a31bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e23e3cf7e577ba2e60a7c7f4a31bc7">&#9670;&#160;</a></span>getContexts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; &amp; LinkManager::getContexts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отримує список всіх контекстів. </p>
+<dl class="section return"><dt>Повертає</dt><dd>Константне посилання на вектор назв контекстів. </dd></dl>
+
+</div>
+</div>
+<a id="ae889dd303f95d26fedbeb9f1c7ab1c22" name="ae889dd303f95d26fedbeb9f1c7ab1c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae889dd303f95d26fedbeb9f1c7ab1c22">&#9670;&#160;</a></span>getFolders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; &amp; LinkManager::getFolders </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отримує список існуючих папок. </p>
+<dl class="section return"><dt>Повертає</dt><dd>Константне посилання на вектор назв папок. </dd></dl>
+
+</div>
+</div>
+<a id="ae9900029cc29dafe79cbc3c98e8cfdf1" name="ae9900029cc29dafe79cbc3c98e8cfdf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9900029cc29dafe79cbc3c98e8cfdf1">&#9670;&#160;</a></span>getLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; &amp; LinkManager::getLinks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отримує список всіх посилань. </p>
+<dl class="section return"><dt>Повертає</dt><dd>Посилання на константний вектор об'єктів <a class="el" href="struct_link_data.html" title="Структура для зберігання даних про одне посилання.">LinkData</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a036d1d9ed2cc05e09f21c5115da49723" name="a036d1d9ed2cc05e09f21c5115da49723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036d1d9ed2cc05e09f21c5115da49723">&#9670;&#160;</a></span>hasContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LinkManager::hasContext </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>contextName</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевіряє існування контексту. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contextName</td><td>Назва контексту. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>true, якщо контекст існує. </dd></dl>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a036d1d9ed2cc05e09f21c5115da49723_icgraph.png" border="0" usemap="#aclass_link_manager_a036d1d9ed2cc05e09f21c5115da49723_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a036d1d9ed2cc05e09f21c5115da49723_icgraph" id="aclass_link_manager_a036d1d9ed2cc05e09f21c5115da49723_icgraph">
+<area shape="rect" title="Перевіряє існування контексту." alt="" coords="450,81,620,108"/>
+<area shape="rect" href="class_link_manager.html#a9577a3c91b064316786e0989a4feb679" title="Додає новий контекст (тег)." alt="" coords="232,81,402,108"/>
+<area shape="poly" title=" " alt="" coords="432,95,403,97,402,92,437,94"/>
+<area shape="rect" href="class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="20,5,169,32"/>
+<area shape="poly" title=" " alt="" coords="265,76,183,47,147,35,147,30,185,41,270,74"/>
+<area shape="rect" href="class_link_manager.html#a20c709614593252405c980f7ea3811ae" title="Конструктор за замовчуванням. Ініціалізує менеджер та додає базові контексти." alt="" coords="6,56,183,83"/>
+<area shape="poly" title=" " alt="" coords="213,84,184,82,183,77,219,83"/>
+<area shape="rect" href="class_link_manager.html#a444fe949f0a3fa0df9a5086c551ded85" title="Завантажує дані з JSON файлу." alt="" coords="5,107,184,133"/>
+<area shape="poly" title=" " alt="" coords="214,107,185,112,184,107,219,105"/>
+<area shape="rect" href="class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="11,157,178,184"/>
+<area shape="poly" title=" " alt="" coords="270,114,185,148,148,159,146,154,183,143,265,115"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aea93ca0b1086aa0be353af197053857e" name="aea93ca0b1086aa0be353af197053857e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea93ca0b1086aa0be353af197053857e">&#9670;&#160;</a></span>hasFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LinkManager::hasFolder </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>folderName</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевіряє наявність папки. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folderName</td><td>Назва папки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>true, якщо папка існує, інакше false. </dd></dl>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_aea93ca0b1086aa0be353af197053857e_icgraph.png" border="0" usemap="#aclass_link_manager_aea93ca0b1086aa0be353af197053857e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_aea93ca0b1086aa0be353af197053857e_icgraph" id="aclass_link_manager_aea93ca0b1086aa0be353af197053857e_icgraph">
+<area shape="rect" title="Перевіряє наявність папки." alt="" coords="428,31,588,57"/>
+<area shape="rect" href="class_link_manager.html#acaffca7c4d20158dee299eb0233e41f4" title="Додає нову папку (категорію)." alt="" coords="220,31,380,57"/>
+<area shape="poly" title=" " alt="" coords="410,44,381,47,380,41,415,44"/>
+<area shape="rect" href="class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="14,5,163,32"/>
+<area shape="poly" title=" " alt="" coords="201,33,163,30,163,25,206,32"/>
+<area shape="rect" href="class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="5,56,172,83"/>
+<area shape="poly" title=" " alt="" coords="201,56,173,62,172,57,207,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a444fe949f0a3fa0df9a5086c551ded85" name="a444fe949f0a3fa0df9a5086c551ded85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444fe949f0a3fa0df9a5086c551ded85">&#9670;&#160;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LinkManager::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завантажує дані з JSON файлу. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Шлях до файлу. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>true у разі успіху, інакше false. </dd></dl>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a444fe949f0a3fa0df9a5086c551ded85_cgraph.png" border="0" usemap="#aclass_link_manager_a444fe949f0a3fa0df9a5086c551ded85_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a444fe949f0a3fa0df9a5086c551ded85_cgraph" id="aclass_link_manager_a444fe949f0a3fa0df9a5086c551ded85_cgraph">
+<area shape="rect" title="Завантажує дані з JSON файлу." alt="" coords="5,5,184,32"/>
+<area shape="rect" href="class_link_manager.html#a9577a3c91b064316786e0989a4feb679" title="Додає новий контекст (тег)." alt="" coords="232,5,402,32"/>
+<area shape="poly" title=" " alt="" coords="184,16,219,19,214,19,184,21"/>
+<area shape="rect" href="class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="450,5,620,32"/>
+<area shape="poly" title=" " alt="" coords="402,16,437,19,432,19,402,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a32d74106ed208f4c718f8692a1f965ab" name="a32d74106ed208f4c718f8692a1f965ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d74106ed208f4c718f8692a1f965ab">&#9670;&#160;</a></span>removeContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::removeContext </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>contextName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Видаляє контекст зі списку. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contextName</td><td>Назва контексту. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1bba27197d667db84a826e4b64d97e9e" name="a1bba27197d667db84a826e4b64d97e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bba27197d667db84a826e4b64d97e9e">&#9670;&#160;</a></span>removeFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::removeFolder </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>folderName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Видаляє папку зі списку. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folderName</td><td>Назва папки для видалення. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aead385274c0399686f0e868286ecff32" name="aead385274c0399686f0e868286ecff32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead385274c0399686f0e868286ecff32">&#9670;&#160;</a></span>saveToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LinkManager::saveToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зберігає дані у JSON файл. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Шлях до файлу. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>true у разі успіху, інакше false. </dd></dl>
+
+</div>
+</div>
+<a id="a488d4b69221e34bd5a0c10c1e35eefff" name="a488d4b69221e34bd5a0c10c1e35eefff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488d4b69221e34bd5a0c10c1e35eefff">&#9670;&#160;</a></span>searchLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; LinkManager::searchLinks </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шукає посилання за запитом. Пошук здійснюється по назві, URL, коментарю, папці та контекстах. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>Рядок пошукового запиту. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>Вектор знайдених посилань. </dd></dl>
+
+</div>
+</div>
+<a id="a31d9e88eddeaca193c2be1c7c84e93c1" name="a31d9e88eddeaca193c2be1c7c84e93c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d9e88eddeaca193c2be1c7c84e93c1">&#9670;&#160;</a></span>updateLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LinkManager::updateLink </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_link_data.html">LinkData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>updatedData</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Оновлює дані існуючого посилання. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Індекс посилання, яке потрібно оновити. </td></tr>
+    <tr><td class="paramname">updatedData</td><td>Нові дані для посилання. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_link_manager_a31d9e88eddeaca193c2be1c7c84e93c1_cgraph.png" border="0" usemap="#aclass_link_manager_a31d9e88eddeaca193c2be1c7c84e93c1_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_link_manager_a31d9e88eddeaca193c2be1c7c84e93c1_cgraph" id="aclass_link_manager_a31d9e88eddeaca193c2be1c7c84e93c1_cgraph">
+<area shape="rect" title="Оновлює дані існуючого посилання." alt="" coords="5,31,172,57"/>
+<area shape="rect" href="class_link_manager.html#a9577a3c91b064316786e0989a4feb679" title="Додає новий контекст (тег)." alt="" coords="220,5,390,32"/>
+<area shape="poly" title=" " alt="" coords="171,32,207,30,201,31,172,37"/>
+<area shape="rect" href="class_link_manager.html#acaffca7c4d20158dee299eb0233e41f4" title="Додає нову папку (категорію)." alt="" coords="225,56,385,83"/>
+<area shape="poly" title=" " alt="" coords="172,51,212,58,207,58,172,56"/>
+<area shape="rect" href="class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="438,5,608,32"/>
+<area shape="poly" title=" " alt="" coords="390,16,425,18,420,19,390,21"/>
+<area shape="rect" href="class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє наявність папки." alt="" coords="443,56,603,83"/>
+<area shape="poly" title=" " alt="" coords="385,67,430,69,425,69,385,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>OOP2Lab/<a class="el" href="linkmanager_8h_source.html">linkmanager.h</a></li>
+<li>OOP2Lab/<a class="el" href="linkmanager_8cpp.html">linkmanager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_link_manager.html">LinkManager</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

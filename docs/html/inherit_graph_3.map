@@ -1,0 +1,15 @@
+<map id="Графічна ієрархія класів" name="Графічна ієрархія класів">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,132,74,159"/>
+<area shape="rect" id="Node000001" href="$class_add_link_dialog.html" title=" " alt="" coords="146,5,252,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="54,117,82,78,120,42,148,29,144,33,123,46,86,82,58,120"/>
+<area shape="rect" id="Node000002" href="$class_context_manager_dialog.html" title=" " alt="" coords="122,56,276,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="71,121,120,92,152,81,148,85,123,97,74,125"/>
+<area shape="rect" id="Node000003" href="$class_export_dialog.html" title=" " alt="" coords="151,107,247,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="88,135,152,126,148,130,90,140"/>
+<area shape="rect" id="Node000004" href="$class_filter_dialog.html" title=" " alt="" coords="155,157,242,184"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="88,150,157,162,153,165,89,156"/>
+<area shape="rect" id="Node000005" href="$class_folder_manager_dialog.html" title=" " alt="" coords="127,208,271,235"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="73,165,123,194,152,207,147,208,120,198,72,170"/>
+<area shape="rect" id="Node000006" href="$class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR&#45;коду." alt="" coords="160,259,238,285"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="57,170,86,209,123,244,162,264,157,264,120,249,82,212,55,175"/>
+</map>

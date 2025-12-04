@@ -1,0 +1,5 @@
+<map id="LinkManager::addFolder" name="LinkManager::addFolder">
+<area shape="rect" id="Node000001" title="Додає нову папку (категорію)." alt="" coords="5,5,166,32"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє наявність папки." alt="" coords="214,5,374,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,201,19,195,19,166,21"/>
+</map>

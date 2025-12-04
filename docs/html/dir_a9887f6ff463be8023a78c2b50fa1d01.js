@@ -1,0 +1,25 @@
+var dir_a9887f6ff463be8023a78c2b50fa1d01 =
+[
+    [ "build", "dir_f544e95c1730b6c1585b0962b09109e7.html", "dir_f544e95c1730b6c1585b0962b09109e7" ],
+    [ "addlinkdialog.cpp", "addlinkdialog_8cpp.html", "addlinkdialog_8cpp" ],
+    [ "addlinkdialog.h", "addlinkdialog_8h.html", "addlinkdialog_8h" ],
+    [ "contextmanagerdialog.cpp", "contextmanagerdialog_8cpp.html", null ],
+    [ "contextmanagerdialog.h", "contextmanagerdialog_8h.html", "contextmanagerdialog_8h" ],
+    [ "exportdialog.cpp", "exportdialog_8cpp.html", null ],
+    [ "exportdialog.h", "exportdialog_8h.html", "exportdialog_8h" ],
+    [ "filterdialog.cpp", "filterdialog_8cpp.html", null ],
+    [ "filterdialog.h", "filterdialog_8h.html", "filterdialog_8h" ],
+    [ "foldermanagerdialog.cpp", "foldermanagerdialog_8cpp.html", null ],
+    [ "foldermanagerdialog.h", "foldermanagerdialog_8h.html", "foldermanagerdialog_8h" ],
+    [ "linkmanager.cpp", "linkmanager_8cpp.html", null ],
+    [ "linkmanager.h", "linkmanager_8h.html", "linkmanager_8h" ],
+    [ "linkserializer.cpp", "linkserializer_8cpp.html", null ],
+    [ "linkserializer.h", "linkserializer_8h.html", "linkserializer_8h" ],
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "mainwindow.cpp", "mainwindow_8cpp.html", null ],
+    [ "mainwindow.h", "mainwindow_8h.html", "mainwindow_8h" ],
+    [ "qrdialog.cpp", "qrdialog_8cpp.html", null ],
+    [ "qrdialog.h", "qrdialog_8h.html", "qrdialog_8h" ],
+    [ "webutils.cpp", "webutils_8cpp.html", null ],
+    [ "webutils.h", "webutils_8h.html", "webutils_8h" ]
+];

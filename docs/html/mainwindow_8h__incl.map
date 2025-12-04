@@ -1,0 +1,26 @@
+<map id="OOP2Lab/mainwindow.h" name="OOP2Lab/mainwindow.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="372,5,537,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,112,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,35,128,82,126,77,386,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,80,235,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="405,34,248,78,246,73,410,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="259,80,383,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="434,31,359,75,356,70,429,34"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="408,80,501,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="456,30,457,66,452,63,453,35"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="525,80,616,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="475,30,540,71,534,71,474,35"/>
+<area shape="rect" id="Node000007" href="$addlinkdialog_8h.html" title=" " alt="" coords="641,80,748,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="496,30,640,74,635,75,496,35"/>
+<area shape="rect" id="Node000009" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="734,155,836,181"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="537,24,667,43,724,58,746,67,762,78,773,92,780,107,787,141,782,138,775,109,768,94,758,82,743,72,722,63,666,48,537,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="642,155,710,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="693,105,685,141,681,138,689,109"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="711,105,761,146,755,145,710,110"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="678,229,732,256"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="774,181,731,221,729,217,769,183"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="756,229,814,256"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="787,180,787,215,783,212,783,184"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="837,229,912,256"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="802,179,850,220,845,219,800,184"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="MainWindow::dropEvent" name="MainWindow::dropEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,169,108"/>
+<area shape="rect" id="Node000002" href="$class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39" title=" " alt="" coords="217,5,400,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,78,216,41,242,36,237,38,218,47,122,83"/>
+<area shape="rect" id="Node000003" href="$class_add_link_dialog.html#aeef9dfc70406fc54ed3fedf9eb3f5aca" title=" " alt="" coords="217,56,401,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,83,204,81,199,83,170,88"/>
+<area shape="rect" id="Node000004" href="$class_add_link_dialog.html#a772c7a57f847d7cc0a8f2c639f018f36" title=" " alt="" coords="222,107,396,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,101,209,108,204,109,170,107"/>
+<area shape="rect" id="Node000005" href="$class_add_link_dialog.html#abcd18feaaf38a5a6649ef38c9c4b9dfd" title=" " alt="" coords="217,157,400,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,106,218,143,242,153,237,152,216,148,120,111"/>
+</map>

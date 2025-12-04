@@ -1,0 +1,5 @@
+<map id="LinkManager::addContext" name="LinkManager::addContext">
+<area shape="rect" id="Node000001" title="Додає новий контекст (тег)." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723" title="Перевіряє існування контексту." alt="" coords="224,5,394,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,16,211,19,205,19,176,21"/>
+</map>

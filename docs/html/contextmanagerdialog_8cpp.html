@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Файл OOP2Lab/contextmanagerdialog.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('contextmanagerdialog_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл contextmanagerdialog.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="contextmanagerdialog_8h_source.html">contextmanagerdialog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ui__contextmanagerdialog_8h_source.html">ui_contextmanagerdialog.h</a>&quot;</code><br />
+<code>#include &lt;QMessageBox&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для contextmanagerdialog.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="contextmanagerdialog_8cpp__incl.png" border="0" usemap="#a_o_o_p2_lab_2contextmanagerdialog_8cpp" loading="lazy" alt=""/></div>
+<map name="a_o_o_p2_lab_2contextmanagerdialog_8cpp" id="a_o_o_p2_lab_2contextmanagerdialog_8cpp">
+<area shape="rect" title=" " alt="" coords="898,5,1133,32"/>
+<area shape="rect" href="contextmanagerdialog_8h.html" title=" " alt="" coords="69,80,228,107"/>
+<area shape="poly" title=" " alt="" coords="897,32,244,87,243,81,898,27"/>
+<area shape="rect" href="ui__contextmanagerdialog_8h.html" title=" " alt="" coords="927,80,1104,107"/>
+<area shape="poly" title=" " alt="" coords="1017,31,1018,66,1013,63,1014,35"/>
+<area shape="rect" title=" " alt="" coords="1127,80,1234,107"/>
+<area shape="poly" title=" " alt="" coords="1045,30,1140,73,1135,73,1044,35"/>
+<area shape="rect" title=" " alt="" coords="5,155,74,181"/>
+<area shape="poly" title=" " alt="" coords="128,109,73,148,69,144,131,105"/>
+<area shape="rect" href="linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="98,155,200,181"/>
+<area shape="poly" title=" " alt="" coords="150,105,151,140,146,138,148,110"/>
+<area shape="rect" title=" " alt="" coords="42,229,96,256"/>
+<area shape="poly" title=" " alt="" coords="137,181,95,221,92,217,132,183"/>
+<area shape="rect" title=" " alt="" coords="120,229,178,256"/>
+<area shape="poly" title=" " alt="" coords="151,180,151,215,146,212,147,184"/>
+<area shape="rect" title=" " alt="" coords="201,229,275,256"/>
+<area shape="poly" title=" " alt="" coords="165,179,214,219,208,220,164,184"/>
+<area shape="rect" title=" " alt="" coords="224,155,341,181"/>
+<area shape="poly" title=" " alt="" coords="924,101,675,123,356,157,356,152,674,118,929,100"/>
+<area shape="rect" title=" " alt="" coords="365,155,549,181"/>
+<area shape="poly" title=" " alt="" coords="924,107,565,155,564,150,930,106"/>
+<area shape="rect" title=" " alt="" coords="574,155,735,181"/>
+<area shape="poly" title=" " alt="" coords="955,107,733,154,732,148,950,108"/>
+<area shape="rect" title=" " alt="" coords="759,155,893,181"/>
+<area shape="poly" title=" " alt="" coords="985,107,874,151,873,146,980,108"/>
+<area shape="rect" title=" " alt="" coords="918,155,1113,181"/>
+<area shape="poly" title=" " alt="" coords="1017,105,1018,141,1013,137,1014,109"/>
+<area shape="rect" title=" " alt="" coords="1138,155,1307,181"/>
+<area shape="poly" title=" " alt="" coords="1052,105,1174,149,1169,149,1051,110"/>
+<area shape="rect" title=" " alt="" coords="1331,155,1476,181"/>
+<area shape="poly" title=" " alt="" coords="1084,105,1323,151,1318,151,1083,110"/>
+<area shape="rect" title=" " alt="" coords="1500,155,1659,181"/>
+<area shape="poly" title=" " alt="" coords="1104,103,1487,154,1482,154,1104,109"/>
+<area shape="rect" title=" " alt="" coords="1684,155,1849,181"/>
+<area shape="poly" title=" " alt="" coords="1104,103,1116,104,1391,128,1671,154,1665,154,1390,133,1115,109,1104,108"/>
+<area shape="rect" title=" " alt="" coords="1873,155,2041,181"/>
+<area shape="poly" title=" " alt="" coords="1104,103,1116,104,1323,120,1485,128,1648,136,1860,154,1855,154,1648,141,1485,133,1322,125,1115,109,1104,108"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_a9887f6ff463be8023a78c2b50fa1d01.html">OOP2Lab</a></li><li class="navelem"><a href="contextmanagerdialog_8cpp.html">contextmanagerdialog.cpp</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

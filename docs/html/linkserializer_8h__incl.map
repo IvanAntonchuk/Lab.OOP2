@@ -1,0 +1,14 @@
+<map id="OOP2Lab/linkserializer.h" name="OOP2Lab/linkserializer.h">
+<area shape="rect" id="Node000001" title="Клас для серіалізації та десеріалізації даних посилань." alt="" coords="26,5,191,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,71,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,35,63,71,59,67,98,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="84,155,141,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,31,115,140,109,139,107,34"/>
+<area shape="rect" id="Node000004" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="146,80,248,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,30,172,69,167,71,124,35"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="185,106,140,147,137,142,180,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="167,155,221,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="198,105,197,140,193,138,194,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="245,155,319,181"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="212,105,259,145,253,145,211,110"/>
+</map>

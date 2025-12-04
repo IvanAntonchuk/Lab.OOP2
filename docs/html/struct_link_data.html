@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Структура LinkData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_link_data.html','','struct_link_data-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура LinkData</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура для зберігання даних про одне посилання.  
+ <a href="#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="linkmanager_8h_source.html">linkmanager.h</a>&gt;</code></p>
+<div class="dynheader">
+Діаграма зв'язків класу LinkData:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_link_data__coll__graph.png" border="0" usemap="#a_link_data_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_link_data_coll__map" id="a_link_data_coll__map">
+<area shape="rect" title="Структура для зберігання даних про одне посилання." alt="" coords="5,5,85,203"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Загальнодоступні атрибути</h2></td></tr>
+<tr class="memitem:a2fd268077eb58c43a4a6110a9a33cd8f" id="r_a2fd268077eb58c43a4a6110a9a33cd8f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd268077eb58c43a4a6110a9a33cd8f">name</a></td></tr>
+<tr class="memdesc:a2fd268077eb58c43a4a6110a9a33cd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назва посилання (заголовок).  <br /></td></tr>
+<tr class="memitem:ade3460e08d460a7829e424521d76385a" id="r_ade3460e08d460a7829e424521d76385a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade3460e08d460a7829e424521d76385a">url</a></td></tr>
+<tr class="memdesc:ade3460e08d460a7829e424521d76385a"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL-адреса ресурсу.  <br /></td></tr>
+<tr class="memitem:a0b3d84e25eab8460477930f4d989f4bd" id="r_a0b3d84e25eab8460477930f4d989f4bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3d84e25eab8460477930f4d989f4bd">folder</a></td></tr>
+<tr class="memdesc:a0b3d84e25eab8460477930f4d989f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Категорія (папка), до якої належить посилання.  <br /></td></tr>
+<tr class="memitem:ac7069bb2a87254adb9b036d2bce415d6" id="r_ac7069bb2a87254adb9b036d2bce415d6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7069bb2a87254adb9b036d2bce415d6">contexts</a></td></tr>
+<tr class="memdesc:ac7069bb2a87254adb9b036d2bce415d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Список контекстних тегів (наприклад, "Робота", "Навчання").  <br /></td></tr>
+<tr class="memitem:acbe187450b8b243dc383fe29cb182e45" id="r_acbe187450b8b243dc383fe29cb182e45"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe187450b8b243dc383fe29cb182e45">relatedUrl</a></td></tr>
+<tr class="memdesc:acbe187450b8b243dc383fe29cb182e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пов'язане посилання (якщо є).  <br /></td></tr>
+<tr class="memitem:a0813e777121927d4ab825229d9b273ec" id="r_a0813e777121927d4ab825229d9b273ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0813e777121927d4ab825229d9b273ec">comment</a></td></tr>
+<tr class="memdesc:a0813e777121927d4ab825229d9b273ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коментар користувача.  <br /></td></tr>
+<tr class="memitem:aea310be372f0adebe064ff61dcdb2bab" id="r_aea310be372f0adebe064ff61dcdb2bab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea310be372f0adebe064ff61dcdb2bab">iconData</a></td></tr>
+<tr class="memdesc:aea310be372f0adebe064ff61dcdb2bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дані іконки сайту у форматі Base64 (PNG).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Структура для зберігання даних про одне посилання. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Компонентні дані</h2>
+<a id="a0813e777121927d4ab825229d9b273ec" name="a0813e777121927d4ab825229d9b273ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0813e777121927d4ab825229d9b273ec">&#9670;&#160;</a></span>comment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::comment</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Коментар користувача. </p>
+
+</div>
+</div>
+<a id="ac7069bb2a87254adb9b036d2bce415d6" name="ac7069bb2a87254adb9b036d2bce415d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7069bb2a87254adb9b036d2bce415d6">&#9670;&#160;</a></span>contexts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; LinkData::contexts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Список контекстних тегів (наприклад, "Робота", "Навчання"). </p>
+
+</div>
+</div>
+<a id="a0b3d84e25eab8460477930f4d989f4bd" name="a0b3d84e25eab8460477930f4d989f4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3d84e25eab8460477930f4d989f4bd">&#9670;&#160;</a></span>folder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::folder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Категорія (папка), до якої належить посилання. </p>
+
+</div>
+</div>
+<a id="aea310be372f0adebe064ff61dcdb2bab" name="aea310be372f0adebe064ff61dcdb2bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea310be372f0adebe064ff61dcdb2bab">&#9670;&#160;</a></span>iconData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::iconData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дані іконки сайту у форматі Base64 (PNG). </p>
+
+</div>
+</div>
+<a id="a2fd268077eb58c43a4a6110a9a33cd8f" name="a2fd268077eb58c43a4a6110a9a33cd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd268077eb58c43a4a6110a9a33cd8f">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Назва посилання (заголовок). </p>
+
+</div>
+</div>
+<a id="acbe187450b8b243dc383fe29cb182e45" name="acbe187450b8b243dc383fe29cb182e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe187450b8b243dc383fe29cb182e45">&#9670;&#160;</a></span>relatedUrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::relatedUrl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Пов'язане посилання (якщо є). </p>
+
+</div>
+</div>
+<a id="ade3460e08d460a7829e424521d76385a" name="ade3460e08d460a7829e424521d76385a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3460e08d460a7829e424521d76385a">&#9670;&#160;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LinkData::url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>URL-адреса ресурсу. </p>
+
+</div>
+</div>
+<hr/>Документація цієї структури була створена з файлу:<ul>
+<li>OOP2Lab/<a class="el" href="linkmanager_8h_source.html">linkmanager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_link_data.html">LinkData</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

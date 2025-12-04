@@ -1,0 +1,7 @@
+<map id="LinkManager::addFolder" name="LinkManager::addFolder">
+<area shape="rect" id="Node000001" title="Додає нову папку (категорію)." alt="" coords="220,31,380,57"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#ab7e763df0270fcadeb3dbabb7e7ec223" title="Додає нове посилання до колекції." alt="" coords="14,5,163,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,33,163,30,163,25,206,32"/>
+<area shape="rect" id="Node000003" href="$class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1" title="Оновлює дані існуючого посилання." alt="" coords="5,56,172,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,56,173,62,172,57,207,55"/>
+</map>
