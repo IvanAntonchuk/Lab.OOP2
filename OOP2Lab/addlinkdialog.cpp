@@ -1,6 +1,7 @@
 #include "addlinkdialog.h"
 #include "ui_addlinkdialog.h"
 #include "stb_image.h"
+#include "webutils.h"
 
 #include <QListWidgetItem>
 #include <QMessageBox>
@@ -141,11 +142,9 @@ void AddLinkDialog::on_fetchTitleButton_clicked()
 
         auto res = cli.Get(path.c_str());
         if (res && res->status == 200) {
-            std::string body = res->body;
-            std::regex titleRegex("<title>(.*?)</title>", std::regex_constants::icase);
-            std::smatch match;
-            if (std::regex_search(body, match, titleRegex) && match.size() > 1) {
-                ui->nameLineEdit->setText(QString::fromStdString(match[1].str()));
+            std::string title = WebUtils::extractTitleFromHtml(res->body);
+            if (!title.empty()) {
+                ui->nameLineEdit->setText(QString::fromStdString(title));
             }
         }
 
