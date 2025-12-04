@@ -44,6 +44,8 @@ private slots:
 
     void on_importButton_clicked();
 
+    void on_qrCodeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     LinkManager m_linkManager;

@@ -41,11 +41,22 @@
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="searchOnlineButton">
-      <property name="text">
-       <string>Знайти в Google</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QPushButton" name="searchOnlineButton">
+        <property name="text">
+         <string>Знайти в Google</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="qrCodeButton">
+        <property name="text">
+         <string>QR-код</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QTableWidget" name="linksTableWidget"/>

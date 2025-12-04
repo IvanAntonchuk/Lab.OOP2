@@ -16,7 +16,9 @@ SOURCES += \
     foldermanagerdialog.cpp \
     linkmanager.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qrcodegen.cpp \
+    qrdialog.cpp
 
 HEADERS += \
     addlinkdialog.h \
@@ -25,7 +27,9 @@ HEADERS += \
     filterdialog.h \
     foldermanagerdialog.h \
     linkmanager.h \
-    mainwindow.h
+    mainwindow.h \
+    qrcodegen.hpp \
+    qrdialog.h
 
 FORMS += \
     addlinkdialog.ui \
@@ -33,7 +37,8 @@ FORMS += \
     exportdialog.ui \
     filterdialog.ui \
     foldermanagerdialog.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    qrdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

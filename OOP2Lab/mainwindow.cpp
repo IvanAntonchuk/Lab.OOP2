@@ -4,6 +4,7 @@
 #include "foldermanagerdialog.h"
 #include "contextmanagerdialog.h"
 #include "filterdialog.h"
+#include "qrdialog.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -348,3 +349,24 @@ void MainWindow::dropEvent(QDropEvent *event)
         QMessageBox::information(this, "Успіх", "Посилання додано через Drag&Drop!");
     }
 }
+
+void MainWindow::on_qrCodeButton_clicked()
+{
+    int currentRow = ui->linksTableWidget->currentRow();
+    if (currentRow < 0) {
+        QMessageBox::information(this, "Інфо", "Оберіть посилання зі списку!");
+        return;
+    }
+
+    QString url = ui->linksTableWidget->item(currentRow, 1)->text();
+
+    if (url.isEmpty()) {
+        QMessageBox::warning(this, "Увага", "Посилання порожнє!");
+        return;
+    }
+
+    QRDialog dlg(this);
+    dlg.generateQR(url.toStdString());
+    dlg.exec();
+}
+
