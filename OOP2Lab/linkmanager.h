@@ -12,6 +12,7 @@ struct LinkData {
     std::vector<std::string> contexts;
     std::string relatedUrl;
     std::string comment;
+    std::string iconData;
 };
 
 class LinkManager {

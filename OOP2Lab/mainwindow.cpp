@@ -71,8 +71,16 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
     {
         int newRow = ui->linksTableWidget->rowCount();
         ui->linksTableWidget->insertRow(newRow);
+        QTableWidgetItem* nameItem = new QTableWidgetItem(QString::fromStdString(link.name));
 
-        ui->linksTableWidget->setItem(newRow, 0, new QTableWidgetItem(QString::fromStdString(link.name)));
+        if (!link.iconData.empty()) {
+            QByteArray bytes = QByteArray::fromBase64(QByteArray::fromStdString(link.iconData));
+            QPixmap pix;
+            pix.loadFromData(bytes, "PNG");
+            nameItem->setIcon(QIcon(pix));
+        }
+        ui->linksTableWidget->setItem(newRow, 0, nameItem);
+
         ui->linksTableWidget->setItem(newRow, 1, new QTableWidgetItem(QString::fromStdString(link.url)));
         ui->linksTableWidget->setItem(newRow, 2, new QTableWidgetItem(QString::fromStdString(link.folder)));
 

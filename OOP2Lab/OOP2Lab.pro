@@ -18,7 +18,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     qrcodegen.cpp \
-    qrdialog.cpp
+    qrdialog.cpp \
+    stb_image_impl.cpp
 
 HEADERS += \
     addlinkdialog.h \
@@ -29,7 +30,8 @@ HEADERS += \
     linkmanager.h \
     mainwindow.h \
     qrcodegen.hpp \
-    qrdialog.h
+    qrdialog.h \
+    stb_image.h
 
 FORMS += \
     addlinkdialog.ui \

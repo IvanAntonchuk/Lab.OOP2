@@ -105,6 +105,7 @@ bool LinkManager::saveToFile(const std::string& filePath) const {
         obj["contexts"] = ctxArray;
         obj["relatedUrl"] = QString::fromStdString(link.relatedUrl);
         obj["comment"] = QString::fromStdString(link.comment);
+        obj["iconData"] = QString::fromStdString(link.iconData);
         linksArray.append(obj);
     }
     rootObject["links"] = linksArray;
@@ -183,6 +184,11 @@ bool LinkManager::loadFromFile(const std::string& filePath) {
             }
 
             link.comment = obj["comment"].toString().toStdString();
+
+            if (obj.contains("iconData")) {
+                link.iconData = obj["iconData"].toString().toStdString();
+            }
+
             m_links.push_back(link);
         }
     }
