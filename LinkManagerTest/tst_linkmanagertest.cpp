@@ -1,4 +1,5 @@
 #include <QtTest>
+#include <QFile>
 #include "linkmanager.h"
 
 class LinkManagerTest : public QObject
@@ -17,6 +18,7 @@ private slots:
     void testFilterLinks();
     void testFolderManagement();
     void testContextManagement();
+    void testPersistence();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -119,6 +121,53 @@ void LinkManagerTest::testContextManagement()
 
     manager.removeContext("New Tag");
     QVERIFY(!manager.hasContext("New Tag"));
+}
+
+void LinkManagerTest::testPersistence()
+{
+    QString tempFileName = "test_data.json";
+
+    if (QFile::exists(tempFileName)) {
+        QFile::remove(tempFileName);
+    }
+
+    LinkManager managerToSave;
+
+    managerToSave.addFolder("Work");
+    managerToSave.addContext("Important");
+
+    LinkData link;
+    link.name = "Test Save";
+    link.url = "https://example.com";
+    link.folder = "Work";
+    link.contexts = {"Important"};
+    link.comment = "Persisted comment";
+
+    managerToSave.addLink(link);
+
+    bool saved = managerToSave.saveToFile(tempFileName.toStdString());
+    QVERIFY2(saved, "Failed to save file to disk");
+
+    LinkManager managerToLoad;
+    bool loaded = managerToLoad.loadFromFile(tempFileName.toStdString());
+    QVERIFY2(loaded, "Failed to load file from disk");
+
+    const std::vector<LinkData>& links = managerToLoad.getLinks();
+    QCOMPARE(links.size(), 1);
+
+    const LinkData& loadedLink = links[0];
+    QCOMPARE(QString::fromStdString(loadedLink.name), "Test Save");
+    QCOMPARE(QString::fromStdString(loadedLink.url), "https://example.com");
+    QCOMPARE(QString::fromStdString(loadedLink.folder), "Work");
+    QCOMPARE(QString::fromStdString(loadedLink.comment), "Persisted comment");
+
+    QVERIFY(!loadedLink.contexts.empty());
+    QCOMPARE(QString::fromStdString(loadedLink.contexts[0]), "Important");
+
+    QVERIFY(managerToLoad.hasFolder("Work"));
+    QVERIFY(managerToLoad.hasContext("Important"));
+
+    QFile::remove(tempFileName);
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)
