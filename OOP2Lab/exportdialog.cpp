@@ -1,5 +1,6 @@
 #include "exportdialog.h"
 #include "ui_exportdialog.h"
+#include "linkserializer.h"
 
 ExportDialog::ExportDialog(QWidget *parent)
     : QDialog(parent)
@@ -25,44 +26,14 @@ void ExportDialog::on_closeButton_clicked()
 
 void ExportDialog::on_generateButton_clicked()
 {
-    QString result = "";
-    QString format = ui->formatComboBox->currentText();
+    QString formatStr = ui->formatComboBox->currentText();
+    LinkSerializer::ExportFormat format = LinkSerializer::SimpleList;
 
-    for (const auto& link : m_dataToExport)
-    {
-        if (format == "Simple List")
-        {
-            result += QString::fromStdString(link.name) + " (" +
-                      QString::fromStdString(link.url) + ")\n";
-        }
-        else if (format == "BibTeX")
-        {
-            result += "@misc{link,\n";
-            result += "  title = {" + QString::fromStdString(link.name) + "},\n";
-            result += "  howpublished = {\\url{" + QString::fromStdString(link.url) + "}},\n";
-            result += "  note = {" + QString::fromStdString(link.comment) + "}\n";
-            result += "}\n\n";
-        }
-        else if (format == "DSTU 8302:2015")
-        {
-            result += QString::fromStdString(link.name) + " [Електронний ресурс]. – Режим доступу: " +
-                      QString::fromStdString(link.url) + ".";
-            if (!link.comment.empty()) {
-                result += " – Прим.: " + QString::fromStdString(link.comment);
-            }
-            result += "\n";
-        }
-        else if (format == "Harvard")
-        {
-            result += QString::fromStdString(link.name) + ". Available at: " +
-                      QString::fromStdString(link.url) + ".";
+    if (formatStr == "BibTeX") format = LinkSerializer::BibTeX;
+    else if (formatStr == "DSTU 8302:2015") format = LinkSerializer::DSTU8302;
+    else if (formatStr == "Harvard") format = LinkSerializer::Harvard;
 
-            if (!link.comment.empty()) {
-                result += " (Notes: " + QString::fromStdString(link.comment) + ").";
-            }
-            result += "\n";
-        }
-    }
+    QString result = LinkSerializer::exportLinks(m_dataToExport, format);
 
     ui->resultTextEdit->setText(result);
 }

@@ -5,6 +5,7 @@
 #include "contextmanagerdialog.h"
 #include "filterdialog.h"
 #include "qrdialog.h"
+#include "linkserializer.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -260,65 +261,26 @@ void MainWindow::on_importButton_clicked()
         return;
     }
 
-    int count = 0;
+    QByteArray fileData = file.readAll();
+    file.close();
+
+    std::vector<LinkData> newLinks;
+
     if (fileName.endsWith(".csv", Qt::CaseInsensitive))
     {
-        QTextStream in(&file);
-        while (!in.atEnd()) {
-            QString line = in.readLine();
-            if (line.trimmed().isEmpty()) continue;
-            QStringList parts = line.split(';');
-            if (parts.size() >= 2) {
-                LinkData link;
-                link.name = parts[0].trimmed().toStdString();
-                link.url = parts[1].trimmed().toStdString();
-                if (parts.size() > 2) link.folder = parts[2].trimmed().toStdString();
-
-                if (parts.size() > 3) link.contexts.push_back(parts[3].trimmed().toStdString());
-
-                if (parts.size() > 4) link.comment = parts[4].trimmed().toStdString();
-
-                m_linkManager.addLink(link);
-                count++;
-            }
-        }
+        newLinks = LinkSerializer::importFromCSV(QString::fromUtf8(fileData));
     }
     else if (fileName.endsWith(".json", Qt::CaseInsensitive))
     {
-        QByteArray data = file.readAll();
-        QJsonDocument doc = QJsonDocument::fromJson(data);
-
-        if (!doc.isNull() && doc.isObject()) {
-            QJsonObject root = doc.object();
-            if (root.contains("links") && root["links"].isArray()) {
-                QJsonArray linksArray = root["links"].toArray();
-                for (const auto& val : linksArray) {
-                    QJsonObject obj = val.toObject();
-                    LinkData link;
-                    link.name = obj["name"].toString().toStdString();
-                    link.url = obj["url"].toString().toStdString();
-                    if (obj.contains("folder")) link.folder = obj["folder"].toString().toStdString();
-
-                    if (obj.contains("contexts") && obj["contexts"].isArray()) {
-                        for (const auto& c : obj["contexts"].toArray()) {
-                            link.contexts.push_back(c.toString().toStdString());
-                        }
-                    } else if (obj.contains("context")) {
-                        link.contexts.push_back(obj["context"].toString().toStdString());
-                    } else if (obj.contains("type")) {
-                        link.contexts.push_back(obj["type"].toString().toStdString());
-                    }
-
-                    link.comment = obj["comment"].toString().toStdString();
-
-                    m_linkManager.addLink(link);
-                    count++;
-                }
-            }
-        }
+        newLinks = LinkSerializer::importFromJSON(fileData);
     }
 
-    file.close();
+    int count = 0;
+    for (const auto& link : newLinks) {
+        m_linkManager.addLink(link);
+        count++;
+    }
+
     updateTable(m_linkManager.getLinks());
     QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
 }
