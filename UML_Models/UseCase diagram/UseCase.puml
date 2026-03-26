@@ -1,0 +1,93 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor LightCyan
+  BorderColor DarkBlue
+  ArrowColor DeepSkyBlue
+}
+
+actor "Користувач" as User
+actor "Зовнішній Веб-сервер" as Server
+actor "Файлова система ОС" as FS
+
+package "Колекціонер посилань (Link Manager)" {
+  
+  usecase "Управління посиланнями" as UC_ManageLinks
+  usecase "Управління папками" as UC_ManageFolders
+  usecase "Управління тегами" as UC_ManageTags
+  usecase "Пошук та Фільтрація" as UC_SearchFilter
+  usecase "Імпорт / Експорт даних" as UC_IO
+  
+  usecase "Додати нове посилання" as UC_AddLink
+  usecase "Редагувати посилання" as UC_EditLink
+  usecase "Видалити посилання" as UC_DelLink
+  usecase "Перевірити валідність URL" as UC_ValidateURL
+  usecase "Показати помилку невірного URL" as UC_ErrURL
+  usecase "Автоматично отримати метадані сайту" as UC_FetchMeta
+  usecase "Обробка Timeout/Помилки мережі" as UC_ErrNet
+  usecase "Згенерувати QR-код" as UC_GenQR
+  usecase "Експортувати QR як зображення" as UC_SaveQR
+  
+  usecase "Створити нову папку" as UC_AddFolder
+  usecase "Видалити папку" as UC_DelFolder
+  usecase "Перейменувати папку" as UC_RenameFolder
+  usecase "Перемістити посилання в папку" as UC_MoveLink
+  
+  usecase "Створити тег" as UC_AddTag
+  usecase "Видалити тег" as UC_DelTag
+  usecase "Прив'язати тег до посилання" as UC_AssignTag
+  usecase "Відв'язати тег від посилання" as UC_RemoveTag
+
+  usecase "Шукати за текстом (Назва/URL)" as UC_SearchText
+  usecase "Фільтрувати за обраною папкою" as UC_FilterFolder
+  usecase "Фільтрувати за перетином тегів" as UC_FilterTag
+  
+  usecase "Експортувати колекцію в JSON" as UC_Export
+  usecase "Імпортувати колекцію з JSON" as UC_Import
+  usecase "Помилка пошкодженого файлу" as UC_ErrJSON
+  usecase "Автозбереження при закритті" as UC_AutoSave
+}
+
+User --> UC_ManageLinks
+User --> UC_ManageFolders
+User --> UC_ManageTags
+User --> UC_SearchFilter
+User --> UC_IO
+
+UC_ManageLinks <|-- UC_AddLink
+UC_ManageLinks <|-- UC_EditLink
+UC_ManageLinks <|-- UC_DelLink
+
+UC_ManageFolders <|-- UC_AddFolder
+UC_ManageFolders <|-- UC_DelFolder
+UC_ManageFolders <|-- UC_RenameFolder
+UC_ManageFolders <|-- UC_MoveLink
+
+UC_ManageTags <|-- UC_AddTag
+UC_ManageTags <|-- UC_DelTag
+UC_ManageTags <|-- UC_AssignTag
+UC_ManageTags <|-- UC_RemoveTag
+
+UC_SearchFilter <|-- UC_SearchText
+UC_SearchFilter <|-- UC_FilterFolder
+UC_SearchFilter <|-- UC_FilterTag
+
+UC_IO <|-- UC_Export
+UC_IO <|-- UC_Import
+
+UC_AddLink ..> UC_ValidateURL : <<include>>
+UC_AddLink ..> UC_FetchMeta : <<include>>
+
+UC_ErrURL ..> UC_ValidateURL : <<extend>>
+UC_ErrNet ..> UC_FetchMeta : <<extend>>
+UC_GenQR ..> UC_ManageLinks : <<extend>>
+UC_SaveQR ..> UC_GenQR : <<extend>>
+UC_ErrJSON ..> UC_Import : <<extend>>
+
+UC_FetchMeta <-- Server
+UC_Export --> FS
+UC_Import <-- FS
+FS <-- UC_AutoSave
+
+@enduml
