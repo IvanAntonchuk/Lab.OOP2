@@ -1,0 +1,52 @@
+@startuml
+skinparam maxMessageSize 150
+skinparam sequence {
+  ParticipantPadding 30
+  MessageAlign center
+}
+
+actor "Користувач" as User
+
+participant "ui: MainWindow" as MainWindow
+participant "dialog: AddLinkDialog" as Dialog
+participant "manager: LinkManager" as Manager
+participant "utils: WebUtils" as WebUtils
+
+User -> MainWindow : Натискає кнопку\n"Додати посилання"
+activate MainWindow
+
+MainWindow -> Dialog ** : create()
+MainWindow -> Dialog : exec()
+activate Dialog
+
+User -> Dialog : Вводить URL\nта натискає "OK"
+Dialog --> MainWindow : return QDialog::Accepted
+deactivate Dialog
+
+MainWindow -> Dialog : getUrl()
+activate Dialog
+Dialog --> MainWindow : url
+deactivate Dialog
+
+MainWindow -> Manager : addLink(url, "", folder, tags)
+activate Manager
+
+Manager -> WebUtils : fetchTitle(url)
+activate WebUtils
+WebUtils -> WebUtils : HTTP GET (httplib)
+WebUtils --> Manager : title
+deactivate WebUtils
+
+create "newLink: LinkData" as LinkData
+Manager -> LinkData ** : create(url, title, ...)
+
+Manager -> Manager : links.append(newLink)
+
+Manager --> MainWindow : return
+deactivate Manager
+
+MainWindow -> MainWindow : updateLinkList()
+MainWindow --> User : Відображає нове посилання в таблиці
+deactivate MainWindow
+
+@enduml
