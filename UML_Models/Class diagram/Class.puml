@@ -1,0 +1,96 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor White
+  ArrowColor DarkBlue
+  BorderColor Black
+}
+
+package "UI Components (Графічний інтерфейс)" {
+  class MainWindow {
+    - ui : Ui::MainWindow*
+    - linkManager : LinkManager*
+    + MainWindow(parent: QWidget*)
+    + ~MainWindow()
+    - updateLinkList()
+    - on_addButton_clicked()
+    - on_filterButton_clicked()
+  }
+
+  class AddLinkDialog {
+    - ui : Ui::AddLinkDialog*
+    + getUrl() : QString
+    + getTitle() : QString
+  }
+
+  class QRDialog {
+    - ui : Ui::QRDialog*
+    + setQR(url: QString)
+  }
+
+  class FilterDialog {
+    - ui : Ui::FilterDialog*
+    + getSelectedTags() : QStringList
+  }
+
+  class FolderManagerDialog {
+    - ui : Ui::FolderManagerDialog*
+  }
+  
+  class ExportDialog {
+    - ui : Ui::ExportDialog*
+  }
+  
+  class ContextManagerDialog {
+    - ui : Ui::ContextManagerDialog*
+  }
+}
+
+package "Business Logic (Бізнес-логіка)" {
+  class LinkManager {
+    - links : QList<LinkData>
+    - folders : QStringList
+    - tags : QStringList
+    + addLink(url: QString, title: QString, folder: QString, tags: QStringList)
+    + removeLink(url: QString)
+    + editLink(...)
+    + getLinks() : QList<LinkData>
+    + saveToFile(filename: QString)
+    + loadFromFile(filename: QString)
+  }
+
+  struct LinkData <<struct>> {
+    + url : QString
+    + title : QString
+    + description : QString
+    + folder : QString
+    + tags : QStringList
+  }
+}
+
+package "Utilities (Допоміжні модулі)" {
+  class LinkSerializer {
+    + {static} save(links: QList<LinkData>, path: QString) : bool
+    + {static} load(path: QString) : QList<LinkData>
+  }
+
+  class WebUtils {
+    + {static} fetchTitle(url: QString) : QString
+    + {static} fetchDescription(url: QString) : QString
+  }
+}
+
+' Зв'язки
+MainWindow *-- LinkManager : " manages"
+MainWindow ..> AddLinkDialog : " opens"
+MainWindow ..> QRDialog : " opens"
+MainWindow ..> FilterDialog : " opens"
+MainWindow ..> FolderManagerDialog : " opens"
+MainWindow ..> ExportDialog : " opens"
+MainWindow ..> ContextManagerDialog : " opens"
+
+LinkManager o-- LinkData : " contains >"
+LinkManager ..> LinkSerializer : " uses >"
+LinkManager ..> WebUtils : " uses >"
+
+@enduml
