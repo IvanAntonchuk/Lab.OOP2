@@ -1,0 +1,45 @@
+@startuml
+left to right direction
+skinparam componentStyle rectangle
+skinparam nodesep 50
+skinparam ranksep 60
+skinparam defaultTextAlignment center
+
+rectangle "MainWindow (Composite Object)" as MW {
+  
+  rectangle "ui : Ui::MainWindow" as UI {
+    rectangle "linksTable : QTableWidget" as Table
+    rectangle "controlButtons : QWidget" as Btns
+  }
+  
+  rectangle "manager : LinkManager" as LM {
+    rectangle "links : QList<LinkData>" as LinksList
+    rectangle "folders : QStringList" as FoldersList
+    rectangle "tags : QStringList" as TagsList
+  }
+  
+  rectangle "Active Dialogs" as Dlgs {
+    rectangle "addDialog : AddLinkDialog" as AddDlg
+    rectangle "filterDialog : FilterDialog" as FilterDlg
+  }
+  
+  Btns --> AddDlg : exec()
+  Btns --> FilterDlg : exec()
+  Btns --> Table : взаємодія
+  
+  AddDlg --> LM : addLink(url, title, folder)
+  FilterDlg --> LM : getSelectedTags()
+  
+  LM --> LinksList : append() / remove()
+  LM --> Table : оновлення рядків (updateLinkList)
+  
+  Table --> LM : запит на видалення (removeLink)
+}
+
+rectangle "serializer : LinkSerializer" as Ser
+rectangle "webHelper : WebUtils" as Web
+
+LM --> Ser : saveToFile() \n loadFromFile()
+LM --> Web : fetchTitle(url)
+
+@enduml
