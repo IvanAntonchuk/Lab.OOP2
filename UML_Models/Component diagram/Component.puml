@@ -1,0 +1,58 @@
+@startuml
+skinparam componentStyle uml2
+left to right direction
+
+package "Колекціонер посилань (Link Manager)" {
+  
+  component "Модуль Інтерфейсу (UI)" as UI {
+    [MainWindow.cpp / .h] as MainWindow
+    [Dialogs (*.cpp / *.h / *.ui)] as Dialogs
+  }
+
+  component "Модуль Бізнес-логіки" as Logic {
+    [LinkManager.cpp / .h] as LinkManager
+  }
+
+  component "Модуль Збереження Даних" as Storage {
+    [LinkSerializer.cpp / .h] as LinkSerializer
+  }
+
+  component "Мережевий Модуль" as Network {
+    [WebUtils.cpp / .h] as WebUtils
+  }
+  
+  component "Модуль QR-кодів" as QRModule {
+    [QRDialog.cpp / .h] as QRDialog
+  }
+}
+
+package "Сторонні бібліотеки (Third-party)" {
+  [httplib.h (C++ HTTP Client)] as httplib
+  [qrcodegen.hpp / .cpp] as qrcodegen
+}
+
+package "Qt Framework" {
+  [QtCore]
+  [QtWidgets]
+}
+
+MainWindow --> LinkManager : " Використовує"
+MainWindow --> Dialogs : " Відкриває"
+MainWindow --> QRDialog : " Відкриває"
+
+LinkManager --> LinkSerializer : " Використовує"
+LinkManager --> WebUtils : " Використовує"
+
+WebUtils ..> httplib : " #include"
+QRDialog ..> qrcodegen : " #include"
+
+UI ..> [QtWidgets] : " Наслідування"
+Logic ..> [QtCore] : " QList, QString"
+
+interface "links.json" as JSONFile
+interface "HTTP / HTTPS" as HTTP
+
+LinkSerializer --( JSONFile : " Читання/Запис"
+httplib --( HTTP : " GET Запити"
+
+@enduml

@@ -1,0 +1,60 @@
+@startuml
+skinparam defaultTextAlignment center
+skinparam ActivityBackgroundColor LightYellow
+skinparam ActivityBorderColor DarkBlue
+
+start
+
+partition "ref: Initialization Sequence" {
+  :MainWindow constructor;
+  :LinkManager::loadFromFile("links.json");
+}
+
+:Очікування взаємодії користувача;
+
+split
+  partition "ref: Add Link Sequence" {
+    :AddLinkDialog::exec();
+    if (Accepted?) then (Yes)
+      :WebUtils::fetchTitle();
+      :LinkManager::addLink();
+    else (No)
+    endif
+  }
+split again
+  partition "ref: Filter Sequence" {
+    :FilterDialog::exec();
+    if (Accepted?) then (Yes)
+      :MainWindow::applyFilter();
+    else (No)
+    endif
+  }
+split again
+  partition "ref: Folder Sequence" {
+    :FolderManagerDialog::exec();
+    :LinkManager::updateFolders();
+  }
+split again
+  partition "ref: Export Sequence" {
+    :ExportDialog::exec();
+    if (Valid path?) then (Yes)
+      :LinkSerializer::save();
+    else (No)
+    endif
+  }
+split again
+  partition "ref: Generate QR Sequence" {
+    :QRDialog::setQR(url);
+    :QRDialog::exec();
+  }
+end split
+
+:MainWindow::updateLinkList();
+
+partition "ref: Termination Sequence" {
+  :LinkManager::saveToFile("links.json");
+  :MainWindow destructor;
+}
+
+stop
+@enduml

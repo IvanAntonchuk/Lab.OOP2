@@ -1,0 +1,41 @@
+@startuml
+hide empty description
+
+[*] --> Initialization
+
+state Initialization : Завантаження links.json
+state ErrorState : Помилка файлу
+state Idle : Головне вікно програми
+state FetchingMetadata : HTTP запит (WebUtils)
+state LinkSaved : Запис у список
+state ManagingFolders : Робота з категоріями
+state Filtering : Застосування фільтрів
+state Terminating : Збереження бази у файл
+
+Initialization --> Idle : Успішне завантаження
+Initialization --> ErrorState : Помилка парсингу JSON
+ErrorState --> Idle : Створення порожньої бази
+
+Idle --> AddingLink : Натискання "Додати"
+
+state AddingLink {
+  [*] --> InputData
+  InputData --> Validating : Ввід URL
+  Validating --> InputData : Невалідний URL
+}
+
+AddingLink --> FetchingMetadata : Підтвердження валідного URL
+FetchingMetadata --> LinkSaved : Отримано <title>
+FetchingMetadata --> LinkSaved : Timeout мережі (без <title>)
+LinkSaved --> Idle : Оновлення таблиці UI
+
+Idle --> ManagingFolders : Керування папками/тегами
+ManagingFolders --> Idle : Закриття діалогу
+
+Idle --> Filtering : Пошук за текстом/тегом
+Filtering --> Idle : Скидання фільтру
+
+Idle --> Terminating : Закриття програми
+Terminating --> [*]
+
+@enduml

@@ -1,0 +1,66 @@
+@startuml
+skinparam packageStyle folder
+skinparam nodesep 40
+skinparam ranksep 50
+
+package "LinkManager App" {
+
+  package "UI (Графічний інтерфейс)" as PkgUI {
+    class MainWindow
+    
+    package "Dialogs" as PkgDialogs {
+        class AddLinkDialog
+        class FilterDialog
+        class FolderManagerDialog
+        class ExportDialog
+        class ContextManagerDialog
+        class QRDialog
+    }
+    
+    package "Forms (*.ui)" as PkgForms {
+        class "ui_*.h files" as UiFiles <<generated>>
+    }
+    
+    MainWindow ..> UiFiles : <<use>>
+    PkgDialogs ..> UiFiles : <<use>>
+  }
+
+  package "Core (Бізнес-логіка)" as PkgCore {
+    class LinkManager
+    class LinkData <<struct>>
+    LinkManager *-- LinkData
+  }
+
+  package "Storage (Збереження)" as PkgStorage {
+    class LinkSerializer
+  }
+
+  package "Network (Мережа)" as PkgNetwork {
+    class WebUtils
+  }
+}
+
+package "Third-Party" as Pkg3rdParty {
+  package "cpp-httplib" as LibHttp {}
+  package "qrcodegen" as LibQR {}
+  package "stb_image" as LibSTB {}
+}
+
+package "Qt Framework" as PkgQt {
+  package "QtWidgets" as QtW {}
+  package "QtCore" as QtC {}
+}
+
+PkgUI ..> PkgCore : <<import>>
+PkgCore ..> PkgStorage : <<import>>
+PkgCore ..> PkgNetwork : <<import>>
+
+PkgUI ..> QtW
+PkgCore ..> QtC
+PkgStorage ..> QtC
+
+PkgNetwork ..> LibHttp : <<use>>
+QRDialog ..> LibQR : <<use>>
+QRDialog ..> LibSTB : <<use>>
+
+@enduml

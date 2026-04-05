@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam defaultTextAlignment center
+skinparam object {
+  BackgroundColor LightYellow
+  BorderColor DarkOrange
+  ArrowColor DarkOrange
+}
+
+object "Користувач" as User
+object "ui : MainWindow" as MW
+object "exportDlg : ExportDialog" as Dlg
+object "manager : LinkManager" as Mgr
+object "serializer : LinkSerializer" as Ser
+
+User --> MW : 1: Натискає 'Експорт'
+MW --> Dlg : 2: exec()\n3: getSelectedPath()
+MW --> Mgr : 4: getLinks()\n5: return QList
+MW --> Ser : 6: save(links, path)\n7: return bool
+
+@enduml

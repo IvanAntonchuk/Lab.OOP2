@@ -1,0 +1,40 @@
+@startuml
+robust "MainWindow" as UI
+robust "LinkManager" as Core
+robust "WebUtils" as Net
+
+@0
+UI is Idle
+Core is Idle
+Net is Idle
+
+@10
+UI is Input
+UI -> Core : addLink()
+
+@20
+Core is Processing
+Core -> Net : fetchTitle()
+
+@30
+Net is Requesting
+
+@80
+Net is Waiting
+
+@200
+Net is Parsing
+
+@220
+Net is Idle
+Net -> Core : returnTitle()
+
+@230
+Core is Saving
+Core -> UI : updateTable()
+
+@240
+Core is Idle
+UI is Idle
+
+@enduml
