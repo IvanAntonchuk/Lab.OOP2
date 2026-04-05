@@ -6,10 +6,10 @@
 #include <QListWidgetItem>
 #include <QMessageBox>
 #include <QBuffer>
-
-#include <regex>
-#define CPPHTTPLIB_OPENSSL_SUPPORT
-#include "httplib.h"
+#include <QApplication>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QUrl>
 
 AddLinkDialog::AddLinkDialog(QWidget *parent)
     : QDialog(parent)
@@ -99,66 +99,51 @@ void AddLinkDialog::setContexts(const std::vector<std::string>& contexts)
 
     for (const auto& c : contexts) {
         QListWidgetItem* item = new QListWidgetItem(QString::fromStdString(c), ui->contextListWidget);
-
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-
         item->setCheckState(Qt::Unchecked);
     }
 }
 
 void AddLinkDialog::on_fetchTitleButton_clicked()
 {
-    std::string urlStr = ui->urlLineEdit->text().toStdString();
-    if (urlStr.empty()) {
+    QString urlStr = ui->urlLineEdit->text();
+    if (urlStr.isEmpty()) {
         QMessageBox::warning(this, "Помилка", "Введіть URL адресу!");
         return;
     }
 
-    ui->iconPreviewLabel->clear();
-    ui->iconPreviewLabel->setToolTip("");
+    QFont f = ui->iconPreviewLabel->font();
+    f.setPointSize(16);
+    ui->iconPreviewLabel->setFont(f);
+    ui->iconPreviewLabel->setText("🌐");
+    ui->iconPreviewLabel->setToolTip("Завантаження іконки...");
 
-    std::string host;
-    std::string path = "/";
-    int schemeEnd = 0;
+    ui->nameLineEdit->setText("Завантаження...");
 
-    size_t pos = urlStr.find("://");
-    if (pos != std::string::npos) schemeEnd = pos + 3;
+    WebUtils *webUtils = new WebUtils(this);
+    connect(webUtils, &WebUtils::titleReady, this, [this, webUtils](const QString &url, const QString &title) {
+        ui->nameLineEdit->setText(title);
+        webUtils->deleteLater();
+    });
+    webUtils->fetchTitleAsync(urlStr);
 
-    size_t pathStart = urlStr.find('/', schemeEnd);
-    if (pathStart != std::string::npos) {
-        host = urlStr.substr(schemeEnd, pathStart - schemeEnd);
-        path = urlStr.substr(pathStart);
-    } else {
-        host = urlStr.substr(schemeEnd);
-    }
+    QUrl parsedUrl(urlStr);
+    QString host = parsedUrl.host();
+    if (host.isEmpty()) host = urlStr;
 
-    QApplication::setOverrideCursor(Qt::WaitCursor);
+    QString iconUrl = QString("http://www.google.com/s2/favicons?domain=%1&sz=64").arg(host);
 
-    try {
-        httplib::Client cli(host);
-        cli.set_connection_timeout(5, 0);
-        cli.set_read_timeout(5, 0);
-        cli.set_follow_location(true);
+    QNetworkAccessManager *iconManager = new QNetworkAccessManager(this);
+    QNetworkRequest iconRequest((QUrl(iconUrl)));
 
-        auto res = cli.Get(path.c_str());
-        if (res && res->status == 200) {
-            std::string title = WebUtils::extractTitleFromHtml(res->body);
-            if (!title.empty()) {
-                ui->nameLineEdit->setText(QString::fromStdString(title));
-            }
-        }
+    iconRequest.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
 
-        httplib::Client googleCli("www.google.com");
-        googleCli.set_connection_timeout(5, 0);
-        googleCli.set_follow_location(true);
+    QNetworkReply *iconReply = iconManager->get(iconRequest);
 
-        std::string googlePath = "/s2/favicons?domain=" + host + "&sz=64";
-        auto resIcon = googleCli.Get(googlePath.c_str());
+    connect(iconReply, &QNetworkReply::finished, this, [this, iconReply, iconManager]() {
+        if (iconReply->error() == QNetworkReply::NoError) {
+            QByteArray imgData = iconReply->readAll();
 
-        bool iconLoaded = false;
-
-        if (resIcon && resIcon->status == 200) {
-            std::string imgData = resIcon->body;
             int w, h, channels;
             unsigned char* data = stbi_load_from_memory(
                 reinterpret_cast<const unsigned char*>(imgData.data()),
@@ -170,22 +155,14 @@ void AddLinkDialog::on_fetchTitleButton_clicked()
                 ui->iconPreviewLabel->setPixmap(pixmap.scaled(32, 32, Qt::KeepAspectRatio, Qt::SmoothTransformation));
                 ui->iconPreviewLabel->setToolTip("Іконка сайту");
                 stbi_image_free(data);
-                iconLoaded = true;
+            } else {
+                ui->iconPreviewLabel->setToolTip("Стандартна іконка (оригінал не знайдено)");
             }
+        } else {
+            ui->iconPreviewLabel->setToolTip("Стандартна іконка (помилка мережі)");
         }
 
-        if (!iconLoaded) {
-            QFont f = ui->iconPreviewLabel->font();
-            f.setPointSize(16);
-            ui->iconPreviewLabel->setFont(f);
-            ui->iconPreviewLabel->setText("🌐");
-            ui->iconPreviewLabel->setToolTip("Стандартна іконка (оригінал не знайдено)");
-        }
-
-    } catch (const std::exception& e) {
-        QMessageBox::critical(this, "Помилка", e.what());
-    }
-
-    QApplication::restoreOverrideCursor();
+        iconReply->deleteLater();
+        iconManager->deleteLater();
+    });
 }
-

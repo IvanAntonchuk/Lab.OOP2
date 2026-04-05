@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -56,6 +56,6 @@ SUBDIRS += \
 
 
 #Lab 3: External Libraries
-HEADERS += httplib.h
+HEADERS +=
 INCLUDEPATH += "D:/NewQt/Tools/mingw1310_64/opt/include"
 LIBS += -L"D:/NewQt/Tools/mingw1310_64/opt/lib" -lws2_32 -lssl -lcrypto -lcrypt32

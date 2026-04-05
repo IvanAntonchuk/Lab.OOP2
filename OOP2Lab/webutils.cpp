@@ -1,14 +1,37 @@
 #include "webutils.h"
-#include <regex>
+#include <QNetworkRequest>
+#include <QRegularExpression>
+#include <QDebug>
 
-std::string WebUtils::extractTitleFromHtml(const std::string& htmlBody)
+WebUtils::WebUtils(QObject *parent) : QObject(parent)
 {
-    std::regex titleRegex("<title>(.*?)</title>", std::regex_constants::icase);
-    std::smatch match;
+    netManager = new QNetworkAccessManager(this);
+    connect(netManager, &QNetworkAccessManager::finished, this, &WebUtils::onReplyFinished);
+}
 
-    if (std::regex_search(htmlBody, match, titleRegex) && match.size() > 1) {
-        return match[1].str();
+void WebUtils::fetchTitleAsync(const QString& urlString)
+{
+    QUrl url(urlString);
+    QNetworkRequest request(url);
+    netManager->get(request);
+}
+
+void WebUtils::onReplyFinished(QNetworkReply *reply)
+{
+    QString url = reply->request().url().toString();
+    QString title = url;
+
+    if (reply->error() == QNetworkReply::NoError) {
+        QString html = QString::fromUtf8(reply->readAll());
+        QRegularExpression re("<title>(.*?)</title>", QRegularExpression::CaseInsensitiveOption);
+        QRegularExpressionMatch match = re.match(html);
+        if (match.hasMatch()) {
+            title = match.captured(1).trimmed();
+        }
+    } else {
+        qDebug() << "Помилка мережі:" << reply->errorString();
     }
 
-    return "";
+    reply->deleteLater();
+    emit titleReady(url, title);
 }
