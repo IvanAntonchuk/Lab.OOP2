@@ -1,0 +1,87 @@
+@startuml
+
+' Налаштування стилю для професійного вигляду
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+package "UI Layer" {
+    class MainWindow {
+        - ui : Ui::MainWindow*
+        - manager : LinkManager
+        + MainWindow(QWidget *parent = nullptr)
+        - setupConnections()
+        - updateUI()
+        - on_btnAddLink_clicked()
+        - on_searchLine_textChanged(const QString &text)
+    }
+}
+
+package "Core Logic" {
+    struct LinkData {
+        + name : string
+        + url : string
+        + folder : string
+        + contexts : vector<string>
+        + relatedUrl : string
+        + comment : string
+        + iconData : string
+    }
+
+    class LinkManager {
+        - m_links : vector<LinkData>
+        - m_folders : vector<string>
+        - m_contexts : vector<string>
+        + LinkManager()
+        + addLink(const LinkData& link) : void
+        + deleteLink(int index) : void
+        + updateLink(int index, const LinkData& data) : void
+        + saveToFile(const string& path = "") : bool
+        + loadFromFile(const string& path = "") : bool
+        + addFolder(const string& name) : void
+        + addContext(const string& name) : void
+    }
+}
+
+package "Data Layer (Persistence)" {
+    class DatabaseManager << (S,#FF7700) Singleton >> {
+        - db : QSqlDatabase
+        - {static} _instance : DatabaseManager
+        - DatabaseManager()
+        + {static} instance() : DatabaseManager&
+        + init(const QString& path) : bool
+        + close() : void
+        - createTables() : bool
+    }
+
+    entity "SQLite Database" as DB {
+        + table: links
+        + table: link_contexts
+        + table: folders
+        + table: contexts
+    }
+}
+
+' Зв'язки між класами
+MainWindow "1" *-- "1" LinkManager : володіє
+LinkManager "1" o-- "many" LinkData : керує списком
+LinkManager ..> DatabaseManager : використовує (dependency)
+DatabaseManager --> DB : виконує SQL запити
+
+note right of DatabaseManager
+  **Singleton Pattern**
+  Забезпечує єдине підключення
+  до БД у всьому додатку.
+end note
+
+note top of LinkManager
+  **Adapter Logic**
+  Зберігає старі методи для 
+  сумісності з UI, але працює через БД.
+end note
+
+@enduml
