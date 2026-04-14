@@ -1,4 +1,4 @@
-QT += testlib core
+QT += testlib core sql network
 QT -= gui
 
 CONFIG += qt console warn_on depend_includepath testcase

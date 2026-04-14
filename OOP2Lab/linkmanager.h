@@ -32,7 +32,7 @@ struct LinkData {
  * @brief Клас для управління списком посилань.
  *
  * Забезпечує додавання, видалення, редагування, пошук та фільтрацію посилань,
- * а також управління папками та контекстами. Підтримує збереження та завантаження даних.
+ * а також управління папками та контекстами. Підтримує збереження та завантаження даних через SQLite.
  */
 class LinkManager {
 public:
@@ -133,18 +133,18 @@ public:
     bool hasContext(const std::string& contextName) const;
 
     /**
-     * @brief Зберігає дані у JSON файл.
-     * @param filePath Шлях до файлу.
+     * @brief Зберігає дані у базу даних SQLite.
+     * @param filePath Залишено порожнім для сумісності з попередніми версіями API.
      * @return true у разі успіху, інакше false.
      */
-    bool saveToFile(const std::string& filePath) const;
+    bool saveToFile(const std::string& filePath = "");
 
     /**
-     * @brief Завантажує дані з JSON файлу.
-     * @param filePath Шлях до файлу.
+     * @brief Завантажує дані з бази даних SQLite.
+     * @param filePath Залишено порожнім для сумісності з попередніми версіями API.
      * @return true у разі успіху, інакше false.
      */
-    bool loadFromFile(const std::string& filePath);
+    bool loadFromFile(const std::string& filePath = "");
 
     /**
      * @brief Фільтрує посилання за папками та контекстами.

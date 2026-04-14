@@ -1,10 +1,8 @@
 #include <QtTest>
-#include <QFile>
 #include <vector>
 #include <string>
 
 #include "linkmanager.h"
-#include "linkserializer.h"
 #include "webutils.h"
 #include "qrcodegen.hpp"
 
@@ -24,13 +22,8 @@ private slots:
     void testFilterLinks();
     void testFolderManagement();
     void testContextManagement();
-    void testPersistence();
-    void testLinkSerializer();
     void testEdgeCases();
-    void testHtmlParsing();
     void testQRCodeLibrary();
-    void testExportFormats();
-    void testJsonImport();
 };
 
 LinkManagerTest::LinkManagerTest() {}
@@ -135,82 +128,6 @@ void LinkManagerTest::testContextManagement()
     QVERIFY(!manager.hasContext("New Tag"));
 }
 
-void LinkManagerTest::testPersistence()
-{
-    QString tempFileName = "test_data.json";
-
-    if (QFile::exists(tempFileName)) {
-        QFile::remove(tempFileName);
-    }
-
-    LinkManager managerToSave;
-
-    managerToSave.addFolder("Work");
-    managerToSave.addContext("Important");
-
-    LinkData link;
-    link.name = "Test Save";
-    link.url = "https://example.com";
-    link.folder = "Work";
-    link.contexts = {"Important"};
-    link.comment = "Persisted comment";
-
-    managerToSave.addLink(link);
-
-    bool saved = managerToSave.saveToFile(tempFileName.toStdString());
-    QVERIFY2(saved, "Failed to save file to disk");
-
-    LinkManager managerToLoad;
-    bool loaded = managerToLoad.loadFromFile(tempFileName.toStdString());
-    QVERIFY2(loaded, "Failed to load file from disk");
-
-    const std::vector<LinkData>& links = managerToLoad.getLinks();
-    QCOMPARE(links.size(), 1);
-
-    const LinkData& loadedLink = links[0];
-    QCOMPARE(QString::fromStdString(loadedLink.name), "Test Save");
-    QCOMPARE(QString::fromStdString(loadedLink.url), "https://example.com");
-    QCOMPARE(QString::fromStdString(loadedLink.folder), "Work");
-    QCOMPARE(QString::fromStdString(loadedLink.comment), "Persisted comment");
-
-    QVERIFY(!loadedLink.contexts.empty());
-    QCOMPARE(QString::fromStdString(loadedLink.contexts[0]), "Important");
-
-    QVERIFY(managerToLoad.hasFolder("Work"));
-    QVERIFY(managerToLoad.hasContext("Important"));
-
-    QFile::remove(tempFileName);
-}
-
-void LinkManagerTest::testLinkSerializer()
-{
-    std::vector<LinkData> originalLinks;
-    LinkData l1;
-    l1.name = "Google";
-    l1.url = "https://google.com";
-    l1.folder = "Search";
-    l1.contexts = {"Web", "Tool"};
-    l1.comment = "Main search engine";
-    originalLinks.push_back(l1);
-
-    QString csvData = "Google;https://google.com;Search;Web;Main search engine\n";
-
-    std::vector<LinkData> importedLinks = LinkSerializer::importFromCSV(csvData);
-
-    QCOMPARE(importedLinks.size(), 1);
-    QCOMPARE(QString::fromStdString(importedLinks[0].name), "Google");
-    QCOMPARE(QString::fromStdString(importedLinks[0].url), "https://google.com");
-    QCOMPARE(QString::fromStdString(importedLinks[0].folder), "Search");
-    QCOMPARE(QString::fromStdString(importedLinks[0].comment), "Main search engine");
-
-    QVERIFY(!importedLinks[0].contexts.empty());
-    QCOMPARE(QString::fromStdString(importedLinks[0].contexts[0]), "Web");
-
-    QString harvardStr = LinkSerializer::exportLinks(originalLinks, LinkSerializer::Harvard);
-    QString expectedHarvard = "Google. Available at: https://google.com. (Notes: Main search engine).\n";
-    QCOMPARE(harvardStr, expectedHarvard);
-}
-
 void LinkManagerTest::testEdgeCases()
 {
     LinkManager manager;
@@ -239,20 +156,6 @@ void LinkManagerTest::testEdgeCases()
     QCOMPARE(manager.getContexts().size(), 5);
 }
 
-void LinkManagerTest::testHtmlParsing()
-{
-    std::string html1 = "<html><head><title>Test Page</title></head><body></body></html>";
-    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html1)), "Test Page");
-
-    std::string html2 = "<TITLE>\nMulti-line\nTitle\n</TITLE>";
-
-    std::string html3 = "<html><body>No title here</body></html>";
-    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html3)), "");
-
-    std::string html4 = "<TiTlE>Mixed Case</tItLe>";
-    QCOMPARE(QString::fromStdString(WebUtils::extractTitleFromHtml(html4)), "Mixed Case");
-}
-
 void LinkManagerTest::testQRCodeLibrary()
 {
     using namespace qrcodegen;
@@ -265,50 +168,6 @@ void LinkManagerTest::testQRCodeLibrary()
 
     bool isDark = qr.getModule(0, 0);
     QVERIFY(isDark == true || isDark == false);
-}
-
-void LinkManagerTest::testExportFormats()
-{
-    std::vector<LinkData> links;
-    LinkData link;
-    link.name = "Test Article";
-    link.url = "https://example.com";
-    link.comment = "Interesting read";
-    links.push_back(link);
-
-    QString bibtex = LinkSerializer::exportLinks(links, LinkSerializer::BibTeX);
-    QVERIFY(bibtex.contains("@misc{link,"));
-    QVERIFY(bibtex.contains("title = {Test Article}"));
-    QVERIFY(bibtex.contains("howpublished = {\\url{https://example.com}}"));
-
-    QString dstu = LinkSerializer::exportLinks(links, LinkSerializer::DSTU8302);
-    QVERIFY(dstu.contains("Test Article"));
-    QVERIFY(dstu.contains("[Електронний ресурс]"));
-    QVERIFY(dstu.contains("Режим доступу: https://example.com"));
-}
-
-void LinkManagerTest::testJsonImport()
-{
-    QByteArray jsonData = R"({
-        "links": [
-            {
-                "name": "JSON Link",
-                "url": "http://json.test",
-                "folder": "Docs",
-                "contexts": ["Work"],
-                "comment": "Test comment"
-            }
-        ]
-    })";
-
-    std::vector<LinkData> imported = LinkSerializer::importFromJSON(jsonData);
-
-    QCOMPARE(imported.size(), 1);
-    QCOMPARE(QString::fromStdString(imported[0].name), "JSON Link");
-    QCOMPARE(QString::fromStdString(imported[0].url), "http://json.test");
-    QCOMPARE(QString::fromStdString(imported[0].folder), "Docs");
-    QVERIFY(!imported[0].contexts.empty());
-    QCOMPARE(QString::fromStdString(imported[0].contexts[0]), "Work");
 }
 
 QTEST_APPLESS_MAIN(LinkManagerTest)

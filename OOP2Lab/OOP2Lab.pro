@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui network sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     addlinkdialog.cpp \
     contextmanagerdialog.cpp \
+    databasemanager.cpp \
     exportdialog.cpp \
     filterdialog.cpp \
     foldermanagerdialog.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 HEADERS += \
     addlinkdialog.h \
     contextmanagerdialog.h \
+    databasemanager.h \
     exportdialog.h \
     filterdialog.h \
     foldermanagerdialog.h \
