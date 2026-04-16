@@ -12,11 +12,13 @@ SOURCES += \
     addlinkdialog.cpp \
     contextmanagerdialog.cpp \
     csvexportstrategy.cpp \
+    csvimportstrategy.cpp \
     databasemanager.cpp \
     exportdialog.cpp \
     filterdialog.cpp \
     foldermanagerdialog.cpp \
     htmlexportstrategy.cpp \
+    jsonimportstrategy.cpp \
     linkmanager.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -29,12 +31,15 @@ HEADERS += \
     addlinkdialog.h \
     contextmanagerdialog.h \
     csvexportstrategy.h \
+    csvimportstrategy.h \
     databasemanager.h \
     exportdialog.h \
     filterdialog.h \
     foldermanagerdialog.h \
     htmlexportstrategy.h \
     iexportstrategy.h \
+    iimportstrategy.h \
+    jsonimportstrategy.h \
     linkmanager.h \
     mainwindow.h \
     qrcodegen.hpp \

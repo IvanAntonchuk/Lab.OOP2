@@ -5,6 +5,9 @@
 #include "contextmanagerdialog.h"
 #include "filterdialog.h"
 #include "qrdialog.h"
+#include "csvimportstrategy.h"
+#include "jsonimportstrategy.h"
+#include <memory>
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -250,34 +253,30 @@ void MainWindow::on_actionSaveAs_triggered()
 }
 
 
-
 void MainWindow::on_importButton_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, "Імпортувати посилання", "", "Data Files (*.csv *.json);;CSV Files (*.csv);;JSON Files (*.json)");
+    QString fileName = QFileDialog::getOpenFileName(this, "Імпортувати посилання", "", "Всі підтримувані (*.csv *.json);;CSV Files (*.csv);;JSON Files (*.json)");
 
     if (fileName.isEmpty()) return;
+    std::unique_ptr<IImportStrategy> strategy;
 
-    QFile file(fileName);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "Помилка", "Не вдалося відкрити файл");
-        return;
+    if (fileName.endsWith(".csv", Qt::CaseInsensitive)) {
+        strategy = std::make_unique<CsvImportStrategy>();
+    }
+    else if (fileName.endsWith(".json", Qt::CaseInsensitive)) {
+        strategy = std::make_unique<JsonImportStrategy>();
     }
 
-    QByteArray fileData = file.readAll();
-    file.close();
+    if (!strategy) {
+        QMessageBox::warning(this, "Помилка", "Невідомий формат файлу.");
+        return;
+    }
+    std::vector<LinkData> newLinks = strategy->importData(fileName);
 
-    std::vector<LinkData> newLinks;
-
-    //Тимчасово закоментували стару логіку імпорту
-
-    // if (fileName.endsWith(".csv", Qt::CaseInsensitive))
-    // {
-    //     newLinks = LinkSerializer::importFromCSV(QString::fromUtf8(fileData));
-    // }
-    // else if (fileName.endsWith(".json", Qt::CaseInsensitive))
-    // {
-    //     newLinks = LinkSerializer::importFromJSON(fileData);
-    // }
+    if (newLinks.empty()) {
+        QMessageBox::warning(this, "Увага", "Файл порожній або сталася помилка читання.");
+        return;
+    }
 
     int count = 0;
     for (const auto& link : newLinks) {
@@ -286,9 +285,9 @@ void MainWindow::on_importButton_clicked()
     }
 
     updateTable(m_linkManager.getLinks());
-    // QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
-    QMessageBox::information(this, "Інфо", "Функція імпорту зараз на стадії рефакторингу (Strategy Pattern).");
+    QMessageBox::information(this, "Успіх", QString("Успішно імпортовано %1 посилань.").arg(count));
 }
+
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 {
