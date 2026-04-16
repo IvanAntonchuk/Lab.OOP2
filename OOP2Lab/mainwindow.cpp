@@ -5,7 +5,6 @@
 #include "contextmanagerdialog.h"
 #include "filterdialog.h"
 #include "qrdialog.h"
-#include "linkserializer.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -19,6 +18,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QMimeData>
+#include <QDragEnterEvent>
+#include <QDropEvent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -266,14 +268,16 @@ void MainWindow::on_importButton_clicked()
 
     std::vector<LinkData> newLinks;
 
-    if (fileName.endsWith(".csv", Qt::CaseInsensitive))
-    {
-        newLinks = LinkSerializer::importFromCSV(QString::fromUtf8(fileData));
-    }
-    else if (fileName.endsWith(".json", Qt::CaseInsensitive))
-    {
-        newLinks = LinkSerializer::importFromJSON(fileData);
-    }
+    //Тимчасово закоментували стару логіку імпорту
+
+    // if (fileName.endsWith(".csv", Qt::CaseInsensitive))
+    // {
+    //     newLinks = LinkSerializer::importFromCSV(QString::fromUtf8(fileData));
+    // }
+    // else if (fileName.endsWith(".json", Qt::CaseInsensitive))
+    // {
+    //     newLinks = LinkSerializer::importFromJSON(fileData);
+    // }
 
     int count = 0;
     for (const auto& link : newLinks) {
@@ -282,7 +286,8 @@ void MainWindow::on_importButton_clicked()
     }
 
     updateTable(m_linkManager.getLinks());
-    QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
+    // QMessageBox::information(this, "Успіх", QString("Імпортовано %1 посилань").arg(count));
+    QMessageBox::information(this, "Інфо", "Функція імпорту зараз на стадії рефакторингу (Strategy Pattern).");
 }
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
@@ -339,4 +344,3 @@ void MainWindow::on_qrCodeButton_clicked()
     dlg.generateQR(url.toStdString());
     dlg.exec();
 }
-

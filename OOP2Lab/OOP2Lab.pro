@@ -11,12 +11,13 @@ CONFIG += c++17
 SOURCES += \
     addlinkdialog.cpp \
     contextmanagerdialog.cpp \
+    csvexportstrategy.cpp \
     databasemanager.cpp \
     exportdialog.cpp \
     filterdialog.cpp \
     foldermanagerdialog.cpp \
+    htmlexportstrategy.cpp \
     linkmanager.cpp \
-    linkserializer.cpp \
     main.cpp \
     mainwindow.cpp \
     qrcodegen.cpp \
@@ -27,12 +28,14 @@ SOURCES += \
 HEADERS += \
     addlinkdialog.h \
     contextmanagerdialog.h \
+    csvexportstrategy.h \
     databasemanager.h \
     exportdialog.h \
     filterdialog.h \
     foldermanagerdialog.h \
+    htmlexportstrategy.h \
+    iexportstrategy.h \
     linkmanager.h \
-    linkserializer.h \
     mainwindow.h \
     qrcodegen.hpp \
     qrdialog.h \
