@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultTextAlignment center
+skinparam classBackgroundColor LightCyan
+skinparam packageBackgroundColor White
+
+package "UI Layer" {
+    class MainWindow {
+        + on_actionAdd_triggered() : void
+        + updateLinkList() : void
+    }
+
+    class AddLinkDialog {
+        - ui : Ui::AddLinkDialog*
+        + AddLinkDialog(parent: QWidget*)
+        + ~AddLinkDialog()
+        + getLinkData() : LinkData
+        + setLinkData(data: LinkData) : void
+        - on_fetchTitleButton_clicked() : void <<slot>>
+    }
+}
+
+package "Data Models" {
+    struct LinkData <<struct>> {
+        + name : std::string
+        + url : std::string
+        + iconData : std::string
+        + folder : std::string
+    }
+}
+
+package "Network Controller Layer (Refactored)" {
+    class WebUtils <<Controller>> {
+        - netManager : QNetworkAccessManager*
+        + WebUtils(parent: QObject*)
+        + fetchTitleAsync(url: QString) : void
+        - onReplyFinished(reply: QNetworkReply*) : void <<slot>>
+        --
+        <<signals>>
+        + titleReady(url: QString, title: QString) : void
+    }
+}
+
+package "Qt Core Network" {
+    class QNetworkAccessManager {
+        + get(request: QNetworkRequest) : QNetworkReply*
+    }
+    class QNetworkReply {
+        + readAll() : QByteArray
+        + error() : NetworkError
+    }
+}
+
+MainWindow ..> AddLinkDialog : відкриває >
+AddLinkDialog ..> LinkData : створює та заповнює >
+AddLinkDialog "1" *-- "1" WebUtils : створює для асинхронного запиту
+WebUtils "1" *-- "1" QNetworkAccessManager : керує >
+QNetworkAccessManager ..> QNetworkReply : генерує відповідь >
+WebUtils ..> QNetworkReply : парсить HTML >
+
+@enduml
