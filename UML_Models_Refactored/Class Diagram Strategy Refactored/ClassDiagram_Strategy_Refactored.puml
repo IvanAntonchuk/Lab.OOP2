@@ -1,0 +1,88 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+package "Data Layer" <<Rectangle>> {
+    struct LinkData {
+        + name : std::string
+        + url : std::string
+        + folder : std::string
+        + contexts : std::vector<std::string>
+        + relatedUrl : std::string
+        + comment : std::string
+        + iconData : std::string
+    }
+}
+
+package "Strategy Interfaces (Contracts)" <<Rectangle>> {
+    interface IExportStrategy <<Interface>> {
+        + ~IExportStrategy()
+        + {abstract} exportData(filePath: const QString&, links: const std::vector<LinkData>&) const : bool
+    }
+
+    interface IImportStrategy <<Interface>> {
+        + ~IImportStrategy()
+        + {abstract} importData(filePath: const QString&) const : std::vector<LinkData>
+    }
+}
+
+package "Concrete Export Strategies" <<Rectangle>> {
+    class CsvExportStrategy {
+        + exportData(filePath: const QString&, links: const std::vector<LinkData>&) const : bool
+    }
+
+    class HtmlExportStrategy {
+        + exportData(filePath: const QString&, links: const std::vector<LinkData>&) const : bool
+    }
+}
+
+package "Concrete Import Strategies" <<Rectangle>> {
+    class CsvImportStrategy {
+        + importData(filePath: const QString&) const : std::vector<LinkData>
+    }
+
+    class JsonImportStrategy {
+        + importData(filePath: const QString&) const : std::vector<LinkData>
+    }
+}
+
+package "UI Layer (Context)" <<Rectangle>> {
+    class ExportDialog {
+        - m_dataToExport : std::vector<LinkData>
+        - strategy : std::unique_ptr<IExportStrategy>
+        + setLinks(links: const std::vector<LinkData>&) : void
+        - on_generateButton_clicked() : void
+    }
+
+    class MainWindow {
+        - strategy : std::unique_ptr<IImportStrategy>
+        - on_importButton_clicked() : void
+    }
+}
+
+IExportStrategy <|.. CsvExportStrategy
+IExportStrategy <|.. HtmlExportStrategy
+
+IImportStrategy <|.. CsvImportStrategy
+IImportStrategy <|.. JsonImportStrategy
+
+ExportDialog *-- IExportStrategy : <<owns via unique_ptr>>
+MainWindow *-- IImportStrategy : <<owns via unique_ptr>>
+
+ExportDialog ..> CsvExportStrategy : <<instantiates>>
+ExportDialog ..> HtmlExportStrategy : <<instantiates>>
+
+MainWindow ..> CsvImportStrategy : <<instantiates>>
+MainWindow ..> JsonImportStrategy : <<instantiates>>
+
+IExportStrategy ..> LinkData : <<uses>>
+IImportStrategy ..> LinkData : <<uses>>
+ExportDialog o-- LinkData : <<aggregates>>
+
+@enduml
