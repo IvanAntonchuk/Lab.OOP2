@@ -6,6 +6,7 @@
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QMimeData>
+#include <memory>
 
 #include "addlinkdialog.h"
 #include "linkmanager.h"
@@ -16,6 +17,8 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+class MainController;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -23,6 +26,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void updateTable(const std::vector<LinkData>& links);
 
 private slots:
     void on_addButton_clicked();
@@ -33,31 +38,25 @@ private slots:
     void on_linksTableWidget_cellDoubleClicked(int row, int column);
     void on_exportButton_clicked();
     void on_manageFoldersButton_clicked();
-
     void on_manageContextsButton_clicked();
-
     void on_filterButton_clicked();
-
     void on_searchOnlineButton_clicked();
-
     void on_actionSaveAs_triggered();
-
     void on_importButton_clicked();
-
     void on_qrCodeButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    LinkManager m_linkManager;
-    QString m_saveFilePath;
-    void updateTable(const std::vector<LinkData>& links);
+
+    std::unique_ptr<MainController> m_controller;
+
     std::vector<std::string> m_checkedFolders;
     std::vector<std::string> m_checkedContexts;
     bool m_isFilterInitialized;
+
 protected:
     void closeEvent(QCloseEvent *event) override;
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
-
 };
 #endif // MAINWINDOW_H

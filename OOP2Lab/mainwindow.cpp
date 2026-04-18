@@ -5,23 +5,17 @@
 #include "contextmanagerdialog.h"
 #include "filterdialog.h"
 #include "qrdialog.h"
+#include "maincontroller.h"
+
 #include "csvimportstrategy.h"
 #include "jsonimportstrategy.h"
 #include <memory>
 
 #include <QDebug>
-#include <QStandardPaths>
-#include <QDir>
 #include <QMessageBox>
 #include <QDesktopServices>
 #include <QUrl>
 #include <QFileDialog>
-#include <QTextStream>
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QMimeData>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 
@@ -33,15 +27,11 @@ MainWindow::MainWindow(QWidget *parent)
     setAcceptDrops(true);
     ui->linksTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-    QString configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
-    QDir dir(configPath);
-    if (!dir.exists()) {
-        dir.mkpath(".");
-    }
-    m_saveFilePath = configPath + "/links.json";
     m_isFilterInitialized = false;
-    m_linkManager.loadFromFile(m_saveFilePath.toStdString());
-    updateTable(m_linkManager.getLinks());
+
+    m_controller = std::make_unique<MainController>(this);
+
+    m_controller->initialize();
 }
 
 MainWindow::~MainWindow()
@@ -52,15 +42,13 @@ MainWindow::~MainWindow()
 void MainWindow::on_addButton_clicked()
 {
     AddLinkDialog dialog(this);
-    dialog.setFolders(m_linkManager.getFolders());
-    dialog.setContexts(m_linkManager.getContexts());
+    dialog.setFolders(m_controller->getFolders());
+    dialog.setContexts(m_controller->getContexts());
 
     if (dialog.exec() == QDialog::Accepted)
     {
         LinkData newData = dialog.getLinkData();
-
-        m_linkManager.addLink(newData);
-        updateTable(m_linkManager.getLinks());
+        m_controller->addLink(newData);
     }
 }
 
@@ -105,65 +93,53 @@ void MainWindow::updateTable(const std::vector<LinkData>& links)
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    m_linkManager.saveToFile(m_saveFilePath.toStdString());
     event->accept();
 }
-
 
 void MainWindow::on_deleteButton_clicked()
 {
     int selectedRow = ui->linksTableWidget->currentRow();
-    if (selectedRow < 0)
-    {
-        return;
-    }
+    if (selectedRow < 0) return;
+
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Підтвердження видалення", "Ви справді хочете видалити це посилання?", QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes)
     {
-        m_linkManager.deleteLink(selectedRow);
-        updateTable(m_linkManager.getLinks());
+        m_controller->deleteLink(selectedRow);
     }
 }
 
 void MainWindow::on_editButton_clicked()
 {
     int selectedRow = ui->linksTableWidget->currentRow();
-    if (selectedRow < 0)
-    {
-        return;
-    }
-    LinkData currentData = m_linkManager.getLinks()[selectedRow];
+    if (selectedRow < 0) return;
+
+    LinkData currentData = m_controller->getAllLinks()[selectedRow];
 
     AddLinkDialog dialog(this);
-    dialog.setFolders(m_linkManager.getFolders());
-    dialog.setContexts(m_linkManager.getContexts());
+    dialog.setFolders(m_controller->getFolders());
+    dialog.setContexts(m_controller->getContexts());
     dialog.setLinkData(currentData);
 
     if (dialog.exec() == QDialog::Accepted)
     {
         LinkData updatedData = dialog.getLinkData();
-        m_linkManager.updateLink(selectedRow, updatedData);
-        updateTable(m_linkManager.getLinks());
+        m_controller->updateLink(selectedRow, updatedData);
     }
 }
-
 
 void MainWindow::on_searchButton_clicked()
 {
     std::string query = ui->searchLineEdit->text().toStdString();
-    std::vector<LinkData> searchResults = m_linkManager.searchLinks(query);
-    updateTable(searchResults);
+    m_controller->searchLinks(query);
 }
-
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 {
     Q_UNUSED(arg1);
     on_searchButton_clicked();
 }
-
 
 void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
 {
@@ -176,36 +152,30 @@ void MainWindow::on_linksTableWidget_cellDoubleClicked(int row, int column)
     }
 }
 
-
 void MainWindow::on_exportButton_clicked()
 {
     ExportDialog dialog(this);
-    dialog.setLinks(m_linkManager.getLinks());
-
+    dialog.setLinks(m_controller->getAllLinks());
     dialog.exec();
 }
-
-
 
 void MainWindow::on_manageFoldersButton_clicked()
 {
-    FolderManagerDialog dialog(&m_linkManager, this);
+    FolderManagerDialog dialog(m_controller->getLinkManager(), this);
     dialog.exec();
-    updateTable(m_linkManager.getLinks());
+    updateTable(m_controller->getAllLinks());
 }
-
 
 void MainWindow::on_manageContextsButton_clicked()
 {
-    ContextManagerDialog dialog(&m_linkManager, this);
+    ContextManagerDialog dialog(m_controller->getLinkManager(), this);
     dialog.exec();
-    updateTable(m_linkManager.getLinks());
+    updateTable(m_controller->getAllLinks());
 }
-
 
 void MainWindow::on_filterButton_clicked()
 {
-    FilterDialog dialog(&m_linkManager, this);
+    FilterDialog dialog(m_controller->getLinkManager(), this);
 
     if (m_isFilterInitialized) {
         dialog.setSelection(m_checkedFolders, m_checkedContexts);
@@ -215,11 +185,10 @@ void MainWindow::on_filterButton_clicked()
         m_checkedFolders = dialog.getSelectedFolders();
         m_checkedContexts = dialog.getSelectedContexts();
         m_isFilterInitialized = true;
-        std::vector<LinkData> filteredLinks = m_linkManager.filterLinks(m_checkedFolders, m_checkedContexts);
-        updateTable(filteredLinks);
+
+        m_controller->filterLinks(m_checkedFolders, m_checkedContexts);
     }
 }
-
 
 void MainWindow::on_searchOnlineButton_clicked()
 {
@@ -234,16 +203,13 @@ void MainWindow::on_searchOnlineButton_clicked()
     QDesktopServices::openUrl(QUrl(searchUrl));
 }
 
-
 void MainWindow::on_actionSaveAs_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,"Зберегти посилання як...", "", "JSON Files (*.json);;All Files (*)");
 
-    if (fileName.isEmpty()) {
-        return;
-    }
+    if (fileName.isEmpty()) return;
 
-    bool success = m_linkManager.saveToFile(fileName.toStdString());
+    bool success = m_controller->getLinkManager()->saveToFile(fileName.toStdString());
 
     if (success) {
         QMessageBox::information(this, "Успіх", "Файл успішно збережено!");
@@ -252,12 +218,12 @@ void MainWindow::on_actionSaveAs_triggered()
     }
 }
 
-
 void MainWindow::on_importButton_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this, "Імпортувати посилання", "", "Всі підтримувані (*.csv *.json);;CSV Files (*.csv);;JSON Files (*.json)");
 
     if (fileName.isEmpty()) return;
+
     std::unique_ptr<IImportStrategy> strategy;
 
     if (fileName.endsWith(".csv", Qt::CaseInsensitive)) {
@@ -271,6 +237,7 @@ void MainWindow::on_importButton_clicked()
         QMessageBox::warning(this, "Помилка", "Невідомий формат файлу.");
         return;
     }
+
     std::vector<LinkData> newLinks = strategy->importData(fileName);
 
     if (newLinks.empty()) {
@@ -280,14 +247,13 @@ void MainWindow::on_importButton_clicked()
 
     int count = 0;
     for (const auto& link : newLinks) {
-        m_linkManager.addLink(link);
+        m_controller->getLinkManager()->addLink(link);
         count++;
     }
 
-    updateTable(m_linkManager.getLinks());
+    updateTable(m_controller->getAllLinks());
     QMessageBox::information(this, "Успіх", QString("Успішно імпортовано %1 посилань.").arg(count));
 }
-
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 {
@@ -299,27 +265,22 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 void MainWindow::dropEvent(QDropEvent *event)
 {
     const QList<QUrl> urls = event->mimeData()->urls();
-
     if (urls.isEmpty()) return;
 
     QString urlStr = urls.first().toString();
 
     AddLinkDialog dialog(this);
-
-    dialog.setFolders(m_linkManager.getFolders());
-    dialog.setContexts(m_linkManager.getContexts());
+    dialog.setFolders(m_controller->getFolders());
+    dialog.setContexts(m_controller->getContexts());
 
     LinkData data;
     data.url = urlStr.toStdString();
-
     dialog.setLinkData(data);
 
     if (dialog.exec() == QDialog::Accepted)
     {
         LinkData newData = dialog.getLinkData();
-        m_linkManager.addLink(newData);
-        updateTable(m_linkManager.getLinks());
-
+        m_controller->addLink(newData);
         QMessageBox::information(this, "Успіх", "Посилання додано через Drag&Drop!");
     }
 }

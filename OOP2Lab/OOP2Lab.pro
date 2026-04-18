@@ -21,6 +21,7 @@ SOURCES += \
     jsonimportstrategy.cpp \
     linkmanager.cpp \
     main.cpp \
+    maincontroller.cpp \
     mainwindow.cpp \
     qrcodegen.cpp \
     qrdialog.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     iimportstrategy.h \
     jsonimportstrategy.h \
     linkmanager.h \
+    maincontroller.h \
     mainwindow.h \
     qrcodegen.hpp \
     qrdialog.h \
