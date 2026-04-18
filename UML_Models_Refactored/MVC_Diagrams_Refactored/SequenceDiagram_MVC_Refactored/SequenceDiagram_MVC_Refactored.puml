@@ -1,0 +1,65 @@
+@startuml
+
+autonumber
+actor Користувач as User
+participant "ui : MainWindow" as View
+participant "dlg : AddLinkDialog" as Dialog
+participant "ctrl : MainController" as Controller
+participant "model : LinkManager" as Model
+database "db : DatabaseManager" as DB
+
+User -> View : Натискає кнопку "Додати"
+activate View
+
+View -> Controller : getFolders() / getContexts()
+activate Controller
+Controller --> View : Списки тек та контекстів
+deactivate Controller
+
+View -> Dialog ** : Створює діалог
+View -> Dialog : exec()
+activate Dialog
+
+User -> Dialog : Заповнює форму та тисне "Зберегти"
+Dialog --> View : QDialog::Accepted
+deactivate Dialog
+
+View -> Dialog : getLinkData()
+activate Dialog
+Dialog --> View : newData (LinkData)
+deactivate Dialog
+
+== Початок роботи Контролера ==
+
+View -> Controller : addLink(newData)
+activate Controller
+
+Controller -> Model : addLink(newData)
+activate Model
+
+Model -> DB : insertLink(newData)
+activate DB
+DB --> Model : success (bool)
+deactivate DB
+
+Model --> Controller : void
+deactivate Model
+
+== Оновлення Інтерфейсу ==
+
+Controller -> Model : getLinks()
+activate Model
+Model --> Controller : updatedLinks (vector)
+deactivate Model
+
+Controller -> View : updateTable(updatedLinks)
+activate View
+View --> Controller : void
+deactivate View
+
+Controller --> View : void
+deactivate Controller
+
+deactivate View
+
+@enduml
