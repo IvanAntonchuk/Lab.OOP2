@@ -1,0 +1,85 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+package "View Layer (UI)" {
+    class MainWindow {
+        - m_controller : std::unique_ptr<MainController>
+        - ui : Ui::MainWindow*
+        - m_isFilterInitialized : bool
+        + MainWindow(parent: QWidget*)
+        + ~MainWindow()
+        + updateTable(links: const std::vector<LinkData>&) : void
+        - on_addButton_clicked() : void
+        - on_deleteButton_clicked() : void
+        - on_exportButton_clicked() : void
+        - on_importButton_clicked() : void
+    }
+    
+    class AddLinkDialog {
+        + getLinkData() : LinkData
+        + setFolders(folders: const std::vector<std::string>&) : void
+    }
+}
+
+package "Controller Layer (Logic)" {
+    class MainController {
+        - m_view : MainWindow*
+        - m_linkManager : LinkManager
+        - m_saveFilePath : QString
+        + MainController(view: MainWindow*)
+        + ~MainController()
+        + initialize() : void
+        + addLink(data: const LinkData&) : void
+        + deleteLink(index: int) : void
+        + updateLink(index: int, data: const LinkData&) : void
+        + filterLinks(folders: vector<string>, contexts: vector<string>) : void
+        + getAllLinks() const : const std::vector<LinkData>&
+        + getLinkManager() : LinkManager*
+    }
+}
+
+package "Model Layer (Data)" {
+    class LinkManager {
+        - links : std::vector<LinkData>
+        + addLink(link: const LinkData&) : void
+        + deleteLink(index: int) : void
+        + getLinks() const : const std::vector<LinkData>&
+        + loadFromFile(filename: string) : bool
+        + saveToFile(filename: string) : bool
+    }
+    
+    class DatabaseManager <<Singleton>> {
+        - {static} instance : DatabaseManager*
+        + insertLink(link: const LinkData&) : bool
+        + deleteLink(id: int) : bool
+    }
+}
+
+MainWindow *-- MainController : "m_controller\n<<unique_ptr>>"
+MainWindow ..> AddLinkDialog : "<<creates>>"
+
+MainController o-- MainWindow : "m_view\n<<raw_ptr>>"
+MainController *-- LinkManager : "m_linkManager\n<<value>>"
+
+LinkManager ..> DatabaseManager : "<<uses>>"
+
+note right of MainWindow
+  View нічого не знає про
+  базу даних чи файли.
+  Тільки UI та делегування.
+end note
+
+note right of MainController
+  Мозок програми. 
+  Оновлює Модель і смикає 
+  View за метод updateTable()
+end note
+
+@enduml
