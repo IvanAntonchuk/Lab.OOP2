@@ -3,6 +3,7 @@
 #include <QSqlError>
 #include <QVariant>
 #include <QDebug>
+#include <algorithm>
 
 LinkManager::LinkManager() {
     loadFromFile();
@@ -120,17 +121,18 @@ bool LinkManager::hasContext(const std::string& contextName) const {
 
 std::vector<LinkData> LinkManager::filterLinks(const std::vector<std::string>& allowedFolders, const std::vector<std::string>& allowedContexts) const {
     std::vector<LinkData> results;
+
     for (const auto& link : m_links) {
-        bool folderOk = false;
-        for (const auto& f : allowedFolders) {
-            if (link.folder == f) { folderOk = true; break; }
-        }
-        bool contextOk = false;
-        if (link.contexts.empty()) {
-            for (const auto& c : allowedContexts) {
-                if (c.empty()) { contextOk = true; break; }
+        bool folderOk = allowedFolders.empty();
+
+        if (!folderOk) {
+            for (const auto& f : allowedFolders) {
+                if (link.folder == f) { folderOk = true; break; }
             }
-        } else {
+        }
+        bool contextOk = allowedContexts.empty();
+
+        if (!contextOk) {
             for (const auto& linkCtx : link.contexts) {
                 for (const auto& allowed : allowedContexts) {
                     if (linkCtx == allowed) { contextOk = true; break; }
@@ -138,7 +140,9 @@ std::vector<LinkData> LinkManager::filterLinks(const std::vector<std::string>& a
                 if (contextOk) break;
             }
         }
-        if (folderOk && contextOk) results.push_back(link);
+        if (folderOk && contextOk) {
+            results.push_back(link);
+        }
     }
     return results;
 }
