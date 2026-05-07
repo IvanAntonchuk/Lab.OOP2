@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['linkdata_0',['LinkData',['../struct_link_data.html',1,'']]],
-  ['linkmanager_1',['LinkManager',['../class_link_manager.html',1,'']]],
-  ['linkserializer_2',['LinkSerializer',['../class_link_serializer.html',1,'']]]
+  ['filterdialog_0',['FilterDialog',['../class_filter_dialog.html',1,'FilterDialog'],['../class_ui_1_1_filter_dialog.html',1,'Ui::FilterDialog']]],
+  ['foldermanagerdialog_1',['FolderManagerDialog',['../class_folder_manager_dialog.html',1,'FolderManagerDialog'],['../class_ui_1_1_folder_manager_dialog.html',1,'Ui::FolderManagerDialog']]]
 ];

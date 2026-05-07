@@ -1,7 +1,9 @@
 <map id="OOP2Lab/webutils.h" name="OOP2Lab/webutils.h">
-<area shape="rect" id="Node000001" title="Допоміжний клас для роботи з веб&#45;ресурсами." alt="" coords="5,5,147,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="8,80,61,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,31,51,68,47,65,67,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="86,80,151,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,30,106,67,101,67,82,35"/>
+<area shape="rect" id="Node000001" title="Заголовочний файл утиліти для асинхронної роботи з мережею." alt="" coords="115,5,256,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,75,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,35,80,75,78,70,159,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,80,272,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,31,188,66,183,63,184,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="296,80,410,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,30,313,73,307,74,214,35"/>
 </map>

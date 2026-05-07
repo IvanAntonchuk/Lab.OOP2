@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['q_5fconstinit_0',['Q_CONSTINIT',['../moc__addlinkdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_addlinkdialog.cpp'],['../moc__contextmanagerdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_contextmanagerdialog.cpp'],['../moc__exportdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_exportdialog.cpp'],['../moc__filterdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_filterdialog.cpp'],['../moc__foldermanagerdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_foldermanagerdialog.cpp'],['../moc__mainwindow_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_mainwindow.cpp'],['../moc__qrdialog_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_qrdialog.cpp']]]
+  ['win32_0',['WIN32',['../moc__predefs_8h.html#a6402e8b8594280624585b8fd643bfb65',1,'moc_predefs.h']]],
+  ['win64_1',['WIN64',['../moc__predefs_8h.html#a951ed972d2606d55ee009c69fe06672a',1,'moc_predefs.h']]],
+  ['winnt_2',['WINNT',['../moc__predefs_8h.html#a3e2be49a2ed02cf3eaf2b8ff2ff76afd',1,'moc_predefs.h']]]
 ];

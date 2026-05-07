@@ -1,9 +1,23 @@
 var searchData=
 [
-  ['webutils_0',['WebUtils',['../class_web_utils.html',1,'']]],
-  ['webutils_2ecpp_1',['webutils.cpp',['../webutils_8cpp.html',1,'']]],
-  ['webutils_2eh_2',['webutils.h',['../webutils_8h.html',1,'']]],
-  ['win32_3',['WIN32',['../moc__predefs_8h.html#a6402e8b8594280624585b8fd643bfb65',1,'moc_predefs.h']]],
-  ['win64_4',['WIN64',['../moc__predefs_8h.html#a951ed972d2606d55ee009c69fe06672a',1,'moc_predefs.h']]],
-  ['winnt_5',['WINNT',['../moc__predefs_8h.html#a3e2be49a2ed02cf3eaf2b8ff2ff76afd',1,'moc_predefs.h']]]
+  ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
+  ['ui_5faddlinkdialog_1',['Ui_AddLinkDialog',['../class_ui___add_link_dialog.html',1,'']]],
+  ['ui_5faddlinkdialog_2eh_2',['ui_addlinkdialog.h',['../ui__addlinkdialog_8h.html',1,'']]],
+  ['ui_5fcontextmanagerdialog_3',['Ui_ContextManagerDialog',['../class_ui___context_manager_dialog.html',1,'']]],
+  ['ui_5fcontextmanagerdialog_2eh_4',['ui_contextmanagerdialog.h',['../ui__contextmanagerdialog_8h.html',1,'']]],
+  ['ui_5fexportdialog_5',['Ui_ExportDialog',['../class_ui___export_dialog.html',1,'']]],
+  ['ui_5fexportdialog_2eh_6',['ui_exportdialog.h',['../ui__exportdialog_8h.html',1,'']]],
+  ['ui_5ffilterdialog_7',['Ui_FilterDialog',['../class_ui___filter_dialog.html',1,'']]],
+  ['ui_5ffilterdialog_2eh_8',['ui_filterdialog.h',['../ui__filterdialog_8h.html',1,'']]],
+  ['ui_5ffoldermanagerdialog_9',['Ui_FolderManagerDialog',['../class_ui___folder_manager_dialog.html',1,'']]],
+  ['ui_5ffoldermanagerdialog_2eh_10',['ui_foldermanagerdialog.h',['../ui__foldermanagerdialog_8h.html',1,'']]],
+  ['ui_5fmainwindow_11',['Ui_MainWindow',['../class_ui___main_window.html',1,'']]],
+  ['ui_5fmainwindow_2eh_12',['ui_mainwindow.h',['../ui__mainwindow_8h.html',1,'']]],
+  ['ui_5fqrdialog_13',['Ui_QRDialog',['../class_ui___q_r_dialog.html',1,'']]],
+  ['ui_5fqrdialog_2eh_14',['ui_qrdialog.h',['../ui__qrdialog_8h.html',1,'']]],
+  ['updatelink_15',['updateLink',['../class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1',1,'LinkManager::updateLink()'],['../class_main_controller.html#ae9f89fb51798b00c17bed1a301b32c82',1,'MainController::updateLink()']]],
+  ['updatetable_16',['updateTable',['../class_main_window.html#a9b69f07b4af5146ca46b0924f118add1',1,'MainWindow']]],
+  ['url_17',['url',['../struct_link_data.html#ade3460e08d460a7829e424521d76385a',1,'LinkData']]],
+  ['urllabel_18',['urlLabel',['../class_ui___add_link_dialog.html#ab8a8305958163b46bf2866df50e93940',1,'Ui_AddLinkDialog']]],
+  ['urllineedit_19',['urlLineEdit',['../class_ui___add_link_dialog.html#a0e1bb2f9309c4c7fcd651a1e4a67b303',1,'Ui_AddLinkDialog']]]
 ];

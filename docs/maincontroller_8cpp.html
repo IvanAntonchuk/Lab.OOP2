@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Файл OOP2Lab/maincontroller.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('maincontroller_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл maincontroller.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="maincontroller_8h_source.html">maincontroller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&quot;</code><br />
+<code>#include &lt;QStandardPaths&gt;</code><br />
+<code>#include &lt;QDir&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для maincontroller.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="maincontroller_8cpp__incl.png" border="0" usemap="#a_o_o_p2_lab_2maincontroller_8cpp" loading="lazy" alt=""/></div>
+<map name="a_o_o_p2_lab_2maincontroller_8cpp" id="a_o_o_p2_lab_2maincontroller_8cpp">
+<area shape="rect" title=" " alt="" coords="770,5,958,32"/>
+<area shape="rect" href="maincontroller_8h.html" title=" " alt="" coords="916,155,1029,181"/>
+<area shape="poly" title=" " alt="" coords="858,30,841,68,838,87,844,105,869,131,904,151,898,150,866,135,839,108,833,88,836,66,853,34"/>
+<area shape="rect" href="mainwindow_8h.html" title=" " alt="" coords="521,80,624,107"/>
+<area shape="poly" title=" " alt="" coords="811,34,639,78,637,73,816,32"/>
+<area shape="rect" title=" " alt="" coords="854,80,971,107"/>
+<area shape="poly" title=" " alt="" coords="874,30,898,68,893,66,872,35"/>
+<area shape="rect" title=" " alt="" coords="995,80,1043,107"/>
+<area shape="poly" title=" " alt="" coords="892,30,983,74,978,74,891,35"/>
+<area shape="rect" href="linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="729,229,832,256"/>
+<area shape="poly" title=" " alt="" coords="941,181,829,226,827,221,936,182"/>
+<area shape="rect" title=" " alt="" coords="842,304,895,331"/>
+<area shape="poly" title=" " alt="" coords="952,181,923,204,897,231,883,260,874,291,871,287,878,258,893,228,919,200,947,183"/>
+<area shape="rect" title=" " alt="" coords="950,304,1008,331"/>
+<area shape="poly" title=" " alt="" coords="977,180,987,229,985,290,981,287,982,230,974,184"/>
+<area shape="rect" title=" " alt="" coords="906,229,972,256"/>
+<area shape="poly" title=" " alt="" coords="969,180,953,217,949,213,964,183"/>
+<area shape="poly" title=" " alt="" coords="797,254,844,295,839,293,795,259"/>
+<area shape="poly" title=" " alt="" coords="815,254,939,301,933,300,814,259"/>
+<area shape="rect" title=" " alt="" coords="743,304,818,331"/>
+<area shape="poly" title=" " alt="" coords="782,255,782,290,778,287,778,258"/>
+<area shape="poly" title=" " alt="" coords="625,104,676,123,725,153,752,182,771,216,766,214,747,186,721,157,674,128,624,110"/>
+<area shape="rect" title=" " alt="" coords="786,155,892,181"/>
+<area shape="poly" title=" " alt="" coords="619,105,780,150,775,150,619,110"/>
+<area shape="rect" title=" " alt="" coords="137,155,237,181"/>
+<area shape="poly" title=" " alt="" coords="519,106,253,157,252,151,522,102"/>
+<area shape="rect" title=" " alt="" coords="261,155,385,181"/>
+<area shape="poly" title=" " alt="" coords="526,108,382,152,381,147,531,106"/>
+<area shape="rect" title=" " alt="" coords="410,155,503,181"/>
+<area shape="poly" title=" " alt="" coords="555,106,491,148,488,144,550,108"/>
+<area shape="rect" title=" " alt="" coords="527,155,618,181"/>
+<area shape="poly" title=" " alt="" coords="574,105,575,140,570,138,571,109"/>
+<area shape="rect" title=" " alt="" coords="642,155,710,181"/>
+<area shape="poly" title=" " alt="" coords="591,105,649,146,643,145,590,110"/>
+<area shape="rect" href="addlinkdialog_8h.html" title=" " alt="" coords="5,155,113,181"/>
+<area shape="poly" title=" " alt="" coords="518,102,351,125,129,157,127,152,350,120,523,100"/>
+<area shape="poly" title=" " alt="" coords="112,177,126,179,291,199,456,215,716,236,711,238,455,220,291,204,125,184,114,182"/>
+<area shape="rect" title=" " alt="" coords="25,229,93,256"/>
+<area shape="poly" title=" " alt="" coords="60,179,62,214,56,213,58,184"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_a9887f6ff463be8023a78c2b50fa1d01.html">OOP2Lab</a></li><li class="navelem"><a href="maincontroller_8cpp.html">maincontroller.cpp</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

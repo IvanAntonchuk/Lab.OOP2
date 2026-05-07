@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,55,57"/>
+<area shape="rect" id="Node000002" href="$class_database_manager.html#a79132b0f1161ea2f385eda883e98bd3c" title="Ініціалізує з&#39;єднання з базою даних. Відкриває базу даних за вказаним шляхом та автоматично створює н..." alt="" coords="119,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,38,105,31,101,35,56,43"/>
+<area shape="rect" id="Node000003" href="$class_database_manager.html#a4abb527066e28f3928ef45af856e134c" title="Отримує єдиний екземпляр класу DatabaseManager." alt="" coords="103,56,287,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,45,91,52,87,54,55,50"/>
+</map>

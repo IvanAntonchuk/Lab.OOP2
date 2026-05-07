@@ -1,8 +1,24 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_link_data.html#a2fd268077eb58c43a4a6110a9a33cd8f',1,'LinkData']]],
-  ['namelabel_1',['nameLabel',['../class_ui___add_link_dialog.html#a0887f30f2e6c4a5382757e1a77e5db8d',1,'Ui_AddLinkDialog']]],
-  ['namelineedit_2',['nameLineEdit',['../class_ui___add_link_dialog.html#abcf3aebaf95052420cbf6057b91cedea',1,'Ui_AddLinkDialog']]],
-  ['newcontextlineedit_3',['newContextLineEdit',['../class_ui___context_manager_dialog.html#a50037d729bd79e0d15285bf59b4cfbe1',1,'Ui_ContextManagerDialog']]],
-  ['newfolderlineedit_4',['newFolderLineEdit',['../class_ui___folder_manager_dialog.html#a6be2b961096fffa6a5c021c50edc4b57',1,'Ui_FolderManagerDialog']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['maincontroller_2',['MainController',['../class_main_controller.html',1,'MainController'],['../class_main_controller.html#aa51f3b7138de19b34ee6c585c36aad1a',1,'MainController::MainController()']]],
+  ['maincontroller_2ecpp_3',['maincontroller.cpp',['../maincontroller_8cpp.html',1,'']]],
+  ['maincontroller_2eh_4',['maincontroller.h',['../maincontroller_8h.html',1,'']]],
+  ['mainwindow_5',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_ui_1_1_main_window.html',1,'Ui::MainWindow'],['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
+  ['mainwindow_2ecpp_6',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
+  ['mainwindow_2eh_7',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
+  ['managecontextsbutton_8',['manageContextsButton',['../class_ui___main_window.html#addd83644c9bd6ba3cff0a0292814b51a',1,'Ui_MainWindow']]],
+  ['managefoldersbutton_9',['manageFoldersButton',['../class_ui___main_window.html#a4ba76a40a4f6bd8dd1298aa18a7395f2',1,'Ui_MainWindow']]],
+  ['menu_10',['menu',['../class_ui___main_window.html#abe2eb1a23c01639b2a6ba0e562c28c4d',1,'Ui_MainWindow']]],
+  ['menubar_11',['menubar',['../class_ui___main_window.html#adf43d9a67adaec750aaa956b5e082f09',1,'Ui_MainWindow']]],
+  ['moc_5faddlinkdialog_2ecpp_12',['moc_addlinkdialog.cpp',['../moc__addlinkdialog_8cpp.html',1,'']]],
+  ['moc_5fcontextmanagerdialog_2ecpp_13',['moc_contextmanagerdialog.cpp',['../moc__contextmanagerdialog_8cpp.html',1,'']]],
+  ['moc_5fexportdialog_2ecpp_14',['moc_exportdialog.cpp',['../moc__exportdialog_8cpp.html',1,'']]],
+  ['moc_5ffilterdialog_2ecpp_15',['moc_filterdialog.cpp',['../moc__filterdialog_8cpp.html',1,'']]],
+  ['moc_5ffoldermanagerdialog_2ecpp_16',['moc_foldermanagerdialog.cpp',['../moc__foldermanagerdialog_8cpp.html',1,'']]],
+  ['moc_5fmainwindow_2ecpp_17',['moc_mainwindow.cpp',['../moc__mainwindow_8cpp.html',1,'']]],
+  ['moc_5fpredefs_2eh_18',['moc_predefs.h',['../moc__predefs_8h.html',1,'']]],
+  ['moc_5fqrdialog_2ecpp_19',['moc_qrdialog.cpp',['../moc__qrdialog_8cpp.html',1,'']]],
+  ['moc_5fwebutils_2ecpp_20',['moc_webutils.cpp',['../moc__webutils_8cpp.html',1,'']]]
 ];

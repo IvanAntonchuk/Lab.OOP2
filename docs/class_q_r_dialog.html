@@ -120,15 +120,15 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Загальнодоступні елементи</h2></td></tr>
 <tr class="memitem:a928462044ba7e86da956b81d4ef4481f" id="r_a928462044ba7e86da956b81d4ef4481f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928462044ba7e86da956b81d4ef4481f">QRDialog</a> (QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a928462044ba7e86da956b81d4ef4481f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор діалогового вікна.  <br /></td></tr>
+<tr class="memdesc:a928462044ba7e86da956b81d4ef4481f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор діалогового вікна <a class="el" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR-коду.">QRDialog</a>.  <br /></td></tr>
 <tr class="memitem:a0820ab8d3744d5f3813a9f42308b473a" id="r_a0820ab8d3744d5f3813a9f42308b473a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0820ab8d3744d5f3813a9f42308b473a">~QRDialog</a> ()</td></tr>
-<tr class="memdesc:a0820ab8d3744d5f3813a9f42308b473a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор.  <br /></td></tr>
+<tr class="memdesc:a0820ab8d3744d5f3813a9f42308b473a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класу <a class="el" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR-коду.">QRDialog</a>. Звільняє ресурси, виділені під графічний інтерфейс.  <br /></td></tr>
 <tr class="memitem:a9d625c7f5212d1d9818f75f5c9e8e512" id="r_a9d625c7f5212d1d9818f75f5c9e8e512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d625c7f5212d1d9818f75f5c9e8e512">generateQR</a> (const std::string &amp;text)</td></tr>
-<tr class="memdesc:a9d625c7f5212d1d9818f75f5c9e8e512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерує QR-код із заданого тексту та відображає його.  <br /></td></tr>
+<tr class="memdesc:a9d625c7f5212d1d9818f75f5c9e8e512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерує QR-код із заданого тексту та відображає його на екрані.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
 <div class="textblock"><p>Діалогове вікно для генерації та показу QR-коду. </p>
-<p>Використовує бібліотеку qrcodegen для створення матриці QR-коду та відмальовує її на віджеті QLabel. </p>
+<p>Цей клас є частиною графічного інтерфейсу (View) і відповідає за візуалізацію текстових даних (зокрема URL-посилань) у вигляді двовимірного QR-коду. Використовує сторонню бібліотеку qrcodegen для створення матриці коду та відмальовує її у вигляді зображення (QImage) на віджеті QLabel. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
 <a id="a928462044ba7e86da956b81d4ef4481f" name="a928462044ba7e86da956b81d4ef4481f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a928462044ba7e86da956b81d4ef4481f">&#9670;&#160;</a></span>QRDialog()</h2>
@@ -153,10 +153,10 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
 </table>
 </div><div class="memdoc">
 
-<p>Конструктор діалогового вікна. </p>
+<p>Конструктор діалогового вікна <a class="el" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR-коду.">QRDialog</a>. </p>
 <dl class="params"><dt>Аргументи</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>Батьківський віджет (за замовчуванням nullptr). </td></tr>
+    <tr><td class="paramname">parent</td><td>Вказівник на батьківський віджет (за замовчуванням nullptr). </td></tr>
   </table>
   </dd>
 </dl>
@@ -165,7 +165,7 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
 <div class="dyncontent">
 <div class="center"><img src="class_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_cgraph.png" border="0" usemap="#aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_cgraph" id="aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_cgraph">
-<area shape="rect" title="Конструктор діалогового вікна." alt="" coords="5,29,149,56"/>
+<area shape="rect" title="Конструктор діалогового вікна QRDialog." alt="" coords="5,29,149,56"/>
 <area shape="poly" title=" " alt="" coords="52,28,48,21,51,11,61,5,77,3,95,5,105,14,100,14,93,10,77,8,62,10,55,14,53,20,57,29"/>
 </map>
 </div>
@@ -174,7 +174,7 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
 <div class="dyncontent">
 <div class="center"><img src="class_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_icgraph.png" border="0" usemap="#aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_icgraph" id="aclass_q_r_dialog_a928462044ba7e86da956b81d4ef4481f_icgraph">
-<area shape="rect" title="Конструктор діалогового вікна." alt="" coords="5,29,149,56"/>
+<area shape="rect" title="Конструктор діалогового вікна QRDialog." alt="" coords="5,29,149,56"/>
 <area shape="poly" title=" " alt="" coords="100,14,93,10,77,8,62,10,55,14,53,20,57,29,52,28,48,21,51,11,61,5,77,3,95,5,105,14"/>
 </map>
 </div>
@@ -196,7 +196,7 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
       </table>
 </div><div class="memdoc">
 
-<p>Деструктор. </p>
+<p>Деструктор класу <a class="el" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR-коду.">QRDialog</a>. Звільняє ресурси, виділені під графічний інтерфейс. </p>
 
 </div>
 </div>
@@ -216,11 +216,11 @@ $(function(){initNavTree('class_q_r_dialog.html','','class_q_r_dialog-members');
       </table>
 </div><div class="memdoc">
 
-<p>Генерує QR-код із заданого тексту та відображає його. </p>
-<p>Метод використовує бібліотеку Nayuki QR Code generator для створення об'єкта QrCode, а потім малює його попіксельно на QImage.</p>
+<p>Генерує QR-код із заданого тексту та відображає його на екрані. </p>
+<p>Метод використовує бібліотеку Nayuki QR Code generator для створення об'єкта QrCode із заданим рівнем корекції помилок (ECC). Після цього він створює QImage, попіксельно відмальовуючи темні та світлі модулі матриці, масштабує зображення і виводить його в інтерфейс.</p>
 <dl class="params"><dt>Аргументи</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td>Текст (або URL) для кодування. </td></tr>
+    <tr><td class="paramname">text</td><td>Текст (або URL-адреса) для кодування у QR-формат. </td></tr>
   </table>
   </dd>
 </dl>

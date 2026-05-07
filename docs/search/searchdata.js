@@ -1,14 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghilmnqrsuvw~",
-  1: "aceflmquw",
+  0: "_abcdefghijlmnqrstuvw~",
+  1: "acdefhijlmquw",
   2: "qu",
-  3: "aceflmquw",
-  4: "acdefghilmqrsu~",
+  3: "acdefhijlmquw",
+  4: "acdefghilmqrstuw~",
   5: "abcdefghilmnqrsuv",
-  6: "e",
-  7: "bdhs",
-  8: "_cqw"
+  6: "_qw"
 };
 
 var indexSectionNames =
@@ -19,9 +17,7 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "enums",
-  7: "enumvalues",
-  8: "defines"
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -32,8 +28,6 @@ var indexSectionLabels =
   3: "Файли",
   4: "Функції",
   5: "Змінні",
-  6: "Переліки",
-  7: "Елементи переліків",
-  8: "Макровизначення"
+  6: "Макровизначення"
 };
 

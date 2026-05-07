@@ -12,10 +12,10 @@ var class_link_manager =
     [ "getLinks", "class_link_manager.html#ae9900029cc29dafe79cbc3c98e8cfdf1", null ],
     [ "hasContext", "class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723", null ],
     [ "hasFolder", "class_link_manager.html#aea93ca0b1086aa0be353af197053857e", null ],
-    [ "loadFromFile", "class_link_manager.html#a444fe949f0a3fa0df9a5086c551ded85", null ],
+    [ "loadFromFile", "class_link_manager.html#a036575cd02a7381468c7a51e24ec0eac", null ],
     [ "removeContext", "class_link_manager.html#a32d74106ed208f4c718f8692a1f965ab", null ],
     [ "removeFolder", "class_link_manager.html#a1bba27197d667db84a826e4b64d97e9e", null ],
-    [ "saveToFile", "class_link_manager.html#aead385274c0399686f0e868286ecff32", null ],
+    [ "saveToFile", "class_link_manager.html#a763a79116aa8089843463ee2d870ae01", null ],
     [ "searchLinks", "class_link_manager.html#a488d4b69221e34bd5a0c10c1e35eefff", null ],
     [ "updateLink", "class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1", null ]
 ];

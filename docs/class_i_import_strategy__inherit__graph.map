@@ -1,0 +1,7 @@
+<map id="IImportStrategy" name="IImportStrategy">
+<area shape="rect" id="Node000001" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="74,5,204,96"/>
+<area shape="rect" id="Node000002" href="$class_csv_import_strategy.html" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="5,144,126,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,107,87,146,83,143,104,111"/>
+<area shape="rect" id="Node000003" href="$class_json_import_strategy.html" title="Клас JsonImportStrategy реалізує стратегію імпорту посилань із формату JSON." alt="" coords="150,144,275,213"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,106,196,145,190,144,171,111"/>
+</map>

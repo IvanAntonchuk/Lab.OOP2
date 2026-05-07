@@ -1,0 +1,26 @@
+<map id="OOP2Lab/csvimportstrategy.cpp" name="OOP2Lab/csvimportstrategy.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="221,5,431,32"/>
+<area shape="rect" id="Node000002" href="$csvimportstrategy_8h.html" title=" " alt="" coords="41,80,176,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,35,162,77,160,72,290,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="200,80,252,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="307,34,257,73,254,68,311,31"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="277,80,375,107"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="327,30,328,65,324,63,325,35"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="399,80,469,107"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="345,30,405,71,400,71,345,35"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="492,80,578,107"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="362,30,487,74,482,75,362,35"/>
+<area shape="rect" id="Node000003" href="$iimportstrategy_8h.html" title=" " alt="" coords="50,155,167,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,105,111,140,106,139,108,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,229,71,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,184,63,220,59,217,98,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="84,304,141,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="111,180,115,289,109,288,107,183"/>
+<area shape="rect" id="Node000006" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="146,229,248,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="124,179,172,219,167,220,124,185"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="185,256,140,296,137,291,180,257"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="167,304,221,331"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="198,255,197,290,193,287,194,258"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="245,304,319,331"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="212,254,259,294,253,294,211,259"/>
+</map>

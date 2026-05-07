@@ -1,0 +1,15 @@
+<map id="OOP2Lab/maincontroller.h" name="OOP2Lab/maincontroller.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="77,5,251,32"/>
+<area shape="rect" id="Node000002" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="69,80,171,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,31,138,68,133,65,155,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,59,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="125,34,92,54,59,82,45,110,37,140,32,138,40,108,55,78,89,49,129,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="181,155,238,181"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="169,30,185,79,204,141,199,139,180,81,167,35"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="246,80,311,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,30,248,71,243,72,184,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,106,60,147,57,143,102,108"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="136,105,185,144,179,145,135,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,155,157,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="122,105,122,140,118,138,118,109"/>
+</map>

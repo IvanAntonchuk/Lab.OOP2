@@ -94,132 +94,160 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <div class="textblock">
 <p><a href="hierarchy.html">див. текстову ієрархію</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" usemap="#a_link_data" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_0.png" border="0" usemap="#a_database_manager" loading="lazy" alt=""/>
+<map name="a_database_manager" id="a_database_manager">
+<area shape="rect" href="class_database_manager.html" title="Клас DatabaseManager відповідає за управління з&#39;єднанням з базою даних SQLite." alt="" coords="5,5,133,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_i_export_strategy" loading="lazy" alt=""/>
+<map name="a_i_export_strategy" id="a_i_export_strategy">
+<area shape="rect" href="class_i_export_strategy.html" title="Базовий інтерфейс для всіх стратегій експорту посилань." alt="" coords="5,31,118,57"/>
+<area shape="rect" href="class_csv_export_strategy.html" title="Клас CsvExportStrategy реалізує стратегію експорту посилань у формат CSV." alt="" coords="168,5,300,32"/>
+<area shape="poly" title=" " alt="" coords="132,31,170,28,164,29,134,36"/>
+<area shape="rect" href="class_html_export_strategy.html" title="Клас HtmlExportStrategy реалізує стратегію експорту посилань у формат HTML." alt="" coords="166,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="133,52,168,59,163,60,133,57"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_i_import_strategy" loading="lazy" alt=""/>
+<map name="a_i_import_strategy" id="a_i_import_strategy">
+<area shape="rect" href="class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="5,31,117,57"/>
+<area shape="rect" href="class_csv_import_strategy.html" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="167,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="132,31,169,28,164,29,133,36"/>
+<area shape="rect" href="class_json_import_strategy.html" title="Клас JsonImportStrategy реалізує стратегію імпорту посилань із формату JSON." alt="" coords="165,56,300,83"/>
+<area shape="poly" title=" " alt="" coords="132,52,167,59,161,60,132,57"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_link_data" loading="lazy" alt=""/>
 <map name="a_link_data" id="a_link_data">
-<area shape="rect" href="struct_link_data.html" title="Структура для зберігання даних про одне посилання." alt="" coords="5,5,79,32"/>
+<area shape="rect" href="struct_link_data.html" title="Структура (Data Transfer Object) для зберігання даних про одне посилання." alt="" coords="5,5,79,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_link_manager" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_link_manager" loading="lazy" alt=""/>
 <map name="a_link_manager" id="a_link_manager">
-<area shape="rect" href="class_link_manager.html" title="Клас для управління списком посилань." alt="" coords="5,5,101,32"/>
+<area shape="rect" href="class_link_manager.html" title="Головний клас&#45;менеджер для управління списком посилань." alt="" coords="5,5,101,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_link_serializer" loading="lazy" alt=""/>
-<map name="a_link_serializer" id="a_link_serializer">
-<area shape="rect" href="class_link_serializer.html" title="Статичний клас&#45;помічник для конвертації даних." alt="" coords="5,5,105,32"/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_main_controller" loading="lazy" alt=""/>
+<map name="a_main_controller" id="a_main_controller">
+<area shape="rect" href="class_main_controller.html" title="Клас MainController є Контролером (Controller) у патерні MVC." alt="" coords="5,5,111,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_q_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_q_dialog" loading="lazy" alt=""/>
 <map name="a_q_dialog" id="a_q_dialog">
-<area shape="rect" title=" " alt="" coords="5,132,74,159"/>
-<area shape="rect" href="class_add_link_dialog.html" title=" " alt="" coords="146,5,252,32"/>
-<area shape="poly" title=" " alt="" coords="54,117,82,78,120,42,148,29,144,33,123,46,86,82,58,120"/>
-<area shape="rect" href="class_context_manager_dialog.html" title=" " alt="" coords="122,56,276,83"/>
-<area shape="poly" title=" " alt="" coords="71,121,120,92,152,81,148,85,123,97,74,125"/>
-<area shape="rect" href="class_export_dialog.html" title=" " alt="" coords="151,107,247,133"/>
-<area shape="poly" title=" " alt="" coords="88,135,152,126,148,130,90,140"/>
-<area shape="rect" href="class_filter_dialog.html" title=" " alt="" coords="155,157,242,184"/>
-<area shape="poly" title=" " alt="" coords="88,150,157,162,153,165,89,156"/>
-<area shape="rect" href="class_folder_manager_dialog.html" title=" " alt="" coords="127,208,271,235"/>
-<area shape="poly" title=" " alt="" coords="73,165,123,194,152,207,147,208,120,198,72,170"/>
-<area shape="rect" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR&#45;коду." alt="" coords="160,259,238,285"/>
-<area shape="poly" title=" " alt="" coords="57,170,86,209,123,244,162,264,157,264,120,249,82,212,55,175"/>
+<area shape="rect" title=" " alt="" coords="5,107,74,133"/>
+<area shape="rect" href="class_add_link_dialog.html" title="Клас AddLinkDialog відповідає за графічний інтерфейс додавання та редагування посилань." alt="" coords="141,5,246,32"/>
+<area shape="poly" title=" " alt="" coords="60,94,87,67,120,42,147,31,143,34,123,46,91,71,64,97"/>
+<area shape="rect" href="class_export_dialog.html" title="Клас ExportDialog відповідає за графічний інтерфейс експорту посилань." alt="" coords="146,56,242,83"/>
+<area shape="poly" title=" " alt="" coords="87,102,152,81,149,85,90,106"/>
+<area shape="rect" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань." alt="" coords="150,107,238,133"/>
+<area shape="poly" title=" " alt="" coords="88,117,152,118,148,122,90,123"/>
+<area shape="rect" href="class_folder_manager_dialog.html" title="Клас FolderManagerDialog відповідає за графічний інтерфейс управління папками." alt="" coords="122,157,266,184"/>
+<area shape="poly" title=" " alt="" coords="89,133,153,155,148,158,89,139"/>
+<area shape="rect" href="class_q_r_dialog.html" title="Діалогове вікно для генерації та показу QR&#45;коду." alt="" coords="155,208,233,235"/>
+<area shape="poly" title=" " alt="" coords="63,142,91,169,123,194,157,211,151,211,120,198,87,173,61,147"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_q_main_window" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_q_main_window" loading="lazy" alt=""/>
 <map name="a_q_main_window" id="a_q_main_window">
 <area shape="rect" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" href="class_main_window.html" title=" " alt="" coords="160,5,256,32"/>
+<area shape="rect" href="class_main_window.html" title="Клас MainWindow є головним вікном програми і виступає Представленням (View) у патерні MVC." alt="" coords="160,5,256,32"/>
 <area shape="poly" title=" " alt="" coords="127,16,162,18,157,19,127,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_q_object" loading="lazy" alt=""/>
+<map name="a_q_object" id="a_q_object">
+<area shape="rect" title=" " alt="" coords="5,5,75,32"/>
+<area shape="rect" href="class_web_utils.html" title="Клас WebUtils є допоміжною утилітою для роботи з мережею." alt="" coords="123,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="90,16,125,18,120,19,90,21"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t.html" title=" " alt="" coords="5,5,186,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_export_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_export_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_export_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_export_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_export_dialog_e__t.html" title=" " alt="" coords="5,5,186,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_filter_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_filter_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_filter_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_filter_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n12_filter_dialog_e__t.html" title=" " alt="" coords="5,5,181,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n13_add_link_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n13_add_link_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n13_add_link_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n13_add_link_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n13_add_link_dialog_e__t.html" title=" " alt="" coords="5,5,195,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_folder_manager_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_folder_manager_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_folder_manager_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_folder_manager_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_folder_manager_dialog_e__t.html" title=" " alt="" coords="5,5,234,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t.html" title=" " alt="" coords="5,5,244,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_q_r_dialog_e__t" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_q_r_dialog_e__t" loading="lazy" alt=""/>
 <map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_q_r_dialog_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_q_r_dialog_e__t">
 <area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_q_r_dialog_e__t.html" title=" " alt="" coords="5,5,181,64"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_ui___add_link_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_web_utils_e__t" loading="lazy" alt=""/>
+<map name="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_web_utils_e__t" id="a_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_web_utils_e__t">
+<area shape="rect" href="struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n8_web_utils_e__t.html" title=" " alt="" coords="5,5,181,64"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_ui___add_link_dialog" loading="lazy" alt=""/>
 <map name="a_ui___add_link_dialog" id="a_ui___add_link_dialog">
 <area shape="rect" href="class_ui___add_link_dialog.html" title=" " alt="" coords="5,5,131,32"/>
 <area shape="rect" href="class_ui_1_1_add_link_dialog.html" title=" " alt="" coords="179,5,305,32"/>
 <area shape="poly" title=" " alt="" coords="146,16,181,19,176,19,146,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" usemap="#a_ui___context_manager_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#a_ui___context_manager_dialog" loading="lazy" alt=""/>
 <map name="a_ui___context_manager_dialog" id="a_ui___context_manager_dialog">
 <area shape="rect" href="class_ui___context_manager_dialog.html" title=" " alt="" coords="5,5,180,32"/>
 <area shape="rect" href="class_ui_1_1_context_manager_dialog.html" title=" " alt="" coords="228,5,403,32"/>
 <area shape="poly" title=" " alt="" coords="195,16,230,19,224,19,196,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" usemap="#a_ui___export_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#a_ui___export_dialog" loading="lazy" alt=""/>
 <map name="a_ui___export_dialog" id="a_ui___export_dialog">
 <area shape="rect" href="class_ui___export_dialog.html" title=" " alt="" coords="5,5,122,32"/>
 <area shape="rect" href="class_ui_1_1_export_dialog.html" title=" " alt="" coords="170,5,287,32"/>
 <area shape="poly" title=" " alt="" coords="137,16,172,18,167,19,137,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" usemap="#a_ui___filter_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#a_ui___filter_dialog" loading="lazy" alt=""/>
 <map name="a_ui___filter_dialog" id="a_ui___filter_dialog">
 <area shape="rect" href="class_ui___filter_dialog.html" title=" " alt="" coords="5,5,113,32"/>
 <area shape="rect" href="class_ui_1_1_filter_dialog.html" title=" " alt="" coords="161,5,269,32"/>
 <area shape="poly" title=" " alt="" coords="128,16,163,18,158,19,128,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_ui___folder_manager_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#a_ui___folder_manager_dialog" loading="lazy" alt=""/>
 <map name="a_ui___folder_manager_dialog" id="a_ui___folder_manager_dialog">
 <area shape="rect" href="class_ui___folder_manager_dialog.html" title=" " alt="" coords="5,5,170,32"/>
 <area shape="rect" href="class_ui_1_1_folder_manager_dialog.html" title=" " alt="" coords="218,5,383,32"/>
 <area shape="poly" title=" " alt="" coords="185,16,220,19,215,19,185,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_ui___main_window" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_22.png" border="0" usemap="#a_ui___main_window" loading="lazy" alt=""/>
 <map name="a_ui___main_window" id="a_ui___main_window">
 <area shape="rect" href="class_ui___main_window.html" title=" " alt="" coords="5,5,122,32"/>
 <area shape="rect" href="class_ui_1_1_main_window.html" title=" " alt="" coords="170,5,287,32"/>
 <area shape="poly" title=" " alt="" coords="137,16,172,18,167,19,137,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" usemap="#a_ui___q_r_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_23.png" border="0" usemap="#a_ui___q_r_dialog" loading="lazy" alt=""/>
 <map name="a_ui___q_r_dialog" id="a_ui___q_r_dialog">
 <area shape="rect" href="class_ui___q_r_dialog.html" title=" " alt="" coords="5,5,104,32"/>
 <area shape="rect" href="class_ui_1_1_q_r_dialog.html" title=" " alt="" coords="152,5,251,32"/>
 <area shape="poly" title=" " alt="" coords="119,16,154,18,149,19,119,21"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" usemap="#a_web_utils" loading="lazy" alt=""/>
-<map name="a_web_utils" id="a_web_utils">
-<area shape="rect" href="class_web_utils.html" title="Набір статичних методів для обробки веб&#45;контенту." alt="" coords="5,5,80,32"/>
 </map>
 </td></tr>
 </table>

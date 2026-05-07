@@ -1,0 +1,16 @@
+<map id="OOP2Lab/csvexportstrategy.h" name="OOP2Lab/csvexportstrategy.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="10,5,207,32"/>
+<area shape="rect" id="Node000002" href="$iexportstrategy_8h.html" title=" " alt="" coords="50,80,167,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,30,111,65,106,64,108,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,71,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,110,63,145,59,142,98,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="84,229,141,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="111,106,115,214,109,213,107,109"/>
+<area shape="rect" id="Node000005" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="146,155,248,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="124,105,172,144,167,145,124,110"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="185,181,140,221,137,217,180,183"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="167,229,221,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="198,180,197,215,193,212,194,184"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="245,229,319,256"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="212,179,259,220,253,219,211,184"/>
+</map>

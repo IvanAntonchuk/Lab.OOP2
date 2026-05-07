@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Клас CsvImportStrategy</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_csv_import_strategy.html','','class_csv_import_strategy-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Клас CsvImportStrategy</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клас <a class="el" href="class_csv_import_strategy.html" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV.">CsvImportStrategy</a> реалізує стратегію імпорту посилань із формату CSV.  
+ <a href="#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="csvimportstrategy_8h_source.html">csvimportstrategy.h</a>&gt;</code></p>
+<div class="dynheader">
+Схема успадкувань для CsvImportStrategy</div>
+<div class="dyncontent">
+<div class="center"><img src="class_csv_import_strategy__inherit__graph.png" border="0" usemap="#a_csv_import_strategy_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_csv_import_strategy_inherit__map" id="a_csv_import_strategy_inherit__map">
+<area shape="rect" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="10,144,131,213"/>
+<area shape="rect" href="class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="5,5,135,96"/>
+<area shape="poly" title=" " alt="" coords="72,109,73,145,68,144,69,113"/>
+</map>
+</div>
+<div class="dynheader">
+Діаграма зв'язків класу CsvImportStrategy:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_csv_import_strategy__coll__graph.png" border="0" usemap="#a_csv_import_strategy_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_csv_import_strategy_coll__map" id="a_csv_import_strategy_coll__map">
+<area shape="rect" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="10,144,131,213"/>
+<area shape="rect" href="class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="5,5,135,96"/>
+<area shape="poly" title=" " alt="" coords="72,109,73,145,68,144,69,113"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:ad09dbe38dabda07d39a53a657daedf37" id="r_ad09dbe38dabda07d39a53a657daedf37"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09dbe38dabda07d39a53a657daedf37">importData</a> (const QString &amp;filePath) const override</td></tr>
+<tr class="memdesc:ad09dbe38dabda07d39a53a657daedf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Імпортує список посилань із вказаного CSV-файлу.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_i_import_strategy"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_import_strategy')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Загальнодоступні елементи успадковано з <a class="el" href="class_i_import_strategy.html">IImportStrategy</a></td></tr>
+<tr class="memitem:a5834163e8853ab52393496bbcc1f7595 inherit pub_methods_class_i_import_strategy" id="r_a5834163e8853ab52393496bbcc1f7595"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_import_strategy.html#a5834163e8853ab52393496bbcc1f7595">~IImportStrategy</a> ()=default</td></tr>
+<tr class="memdesc:a5834163e8853ab52393496bbcc1f7595 inherit pub_methods_class_i_import_strategy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Віртуальний деструктор за замовчуванням. Забезпечує коректне очищення ресурсів при видаленні об'єктів похідних класів-стратегій через вказівник на базовий інтерфейс.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Клас <a class="el" href="class_csv_import_strategy.html" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV.">CsvImportStrategy</a> реалізує стратегію імпорту посилань із формату CSV. </p>
+<ul>
+<li>Цей клас є частиною патерну "Стратегія" (Strategy) і відповідає за зчитування даних із текстового файлу з роздільниками (Comma-Separated Values) та їх перетворення у список об'єктів <a class="el" href="struct_link_data.html" title="Структура (Data Transfer Object) для зберігання даних про одне посилання.">LinkData</a>. </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
+<a id="ad09dbe38dabda07d39a53a657daedf37" name="ad09dbe38dabda07d39a53a657daedf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09dbe38dabda07d39a53a657daedf37">&#9670;&#160;</a></span>importData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; CsvImportStrategy::importData </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Імпортує список посилань із вказаного CSV-файлу. </p>
+<ul>
+<li>Перевизначає віртуальний метод базового інтерфейсу <a class="el" href="class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань.">IImportStrategy</a>.</li>
+<li><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Шлях до CSV-файлу, з якого будуть зчитані дані. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>Вектор об'єктів <a class="el" href="struct_link_data.html" title="Структура (Data Transfer Object) для зберігання даних про одне посилання.">LinkData</a>, успішно імпортованих із файлу. Якщо файл не знайдено, його неможливо прочитати або він порожній, повернеться порожній вектор. </dd></dl>
+</li>
+</ul>
+
+<p>Реалізує <a class="el" href="class_i_import_strategy.html#a24c16af2d57c3f0034000a28660aa776">IImportStrategy</a>.</p>
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>OOP2Lab/<a class="el" href="csvimportstrategy_8h_source.html">csvimportstrategy.h</a></li>
+<li>OOP2Lab/<a class="el" href="csvimportstrategy_8cpp.html">csvimportstrategy.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_csv_import_strategy.html">CsvImportStrategy</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

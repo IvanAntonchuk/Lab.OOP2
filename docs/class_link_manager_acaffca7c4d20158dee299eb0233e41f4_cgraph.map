@@ -1,5 +1,7 @@
 <map id="LinkManager::addFolder" name="LinkManager::addFolder">
-<area shape="rect" id="Node000001" title="Додає нову папку (категорію)." alt="" coords="5,5,166,32"/>
-<area shape="rect" id="Node000002" href="$class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє наявність папки." alt="" coords="214,5,374,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,201,19,195,19,166,21"/>
+<area shape="rect" id="Node000001" title="Додає нову папку (категорію) до системи." alt="" coords="5,31,166,57"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#aea93ca0b1086aa0be353af197053857e" title="Перевіряє, чи існує папка з такою назвою." alt="" coords="217,5,377,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,32,204,30,199,31,167,37"/>
+<area shape="rect" id="Node000003" href="$class_link_manager.html#a763a79116aa8089843463ee2d870ae01" title="Зберігає всі поточні дані у базу даних SQLite. Делегує операцію збереження класу DatabaseManager...." alt="" coords="214,56,380,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,51,201,57,195,58,166,56"/>
 </map>

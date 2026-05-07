@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['webutils_0',['WebUtils',['../class_web_utils.html',1,'']]]
+  ['linkdata_0',['LinkData',['../struct_link_data.html',1,'']]],
+  ['linkmanager_1',['LinkManager',['../class_link_manager.html',1,'']]]
 ];

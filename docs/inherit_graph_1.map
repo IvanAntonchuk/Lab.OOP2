@@ -1,3 +1,7 @@
 <map id="Графічна ієрархія класів" name="Графічна ієрархія класів">
-<area shape="rect" id="Node000000" href="$class_link_manager.html" title="Клас для управління списком посилань." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="Node000000" href="$class_i_export_strategy.html" title="Базовий інтерфейс для всіх стратегій експорту посилань." alt="" coords="5,31,118,57"/>
+<area shape="rect" id="Node000001" href="$class_csv_export_strategy.html" title="Клас CsvExportStrategy реалізує стратегію експорту посилань у формат CSV." alt="" coords="168,5,300,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="132,31,170,28,164,29,134,36"/>
+<area shape="rect" id="Node000002" href="$class_html_export_strategy.html" title="Клас HtmlExportStrategy реалізує стратегію експорту посилань у формат HTML." alt="" coords="166,56,302,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="133,52,168,59,163,60,133,57"/>
 </map>

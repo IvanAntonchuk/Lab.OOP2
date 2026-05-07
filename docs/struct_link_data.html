@@ -92,7 +92,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
 </div><!--header-->
 <div class="contents">
 
-<p>Структура для зберігання даних про одне посилання.  
+<p>Структура (Data Transfer Object) для зберігання даних про одне посилання.  
  <a href="#details">Детальніше...</a></p>
 
 <p><code>#include &lt;<a class="el" href="linkmanager_8h_source.html">linkmanager.h</a>&gt;</code></p>
@@ -101,29 +101,29 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
 <div class="dyncontent">
 <div class="center"><img src="struct_link_data__coll__graph.png" border="0" usemap="#a_link_data_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_link_data_coll__map" id="a_link_data_coll__map">
-<area shape="rect" title="Структура для зберігання даних про одне посилання." alt="" coords="5,5,85,203"/>
+<area shape="rect" title="Структура (Data Transfer Object) для зберігання даних про одне посилання." alt="" coords="5,5,85,203"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Загальнодоступні атрибути</h2></td></tr>
 <tr class="memitem:a2fd268077eb58c43a4a6110a9a33cd8f" id="r_a2fd268077eb58c43a4a6110a9a33cd8f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd268077eb58c43a4a6110a9a33cd8f">name</a></td></tr>
-<tr class="memdesc:a2fd268077eb58c43a4a6110a9a33cd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назва посилання (заголовок).  <br /></td></tr>
+<tr class="memdesc:a2fd268077eb58c43a4a6110a9a33cd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назва посилання (заголовок сторінки).  <br /></td></tr>
 <tr class="memitem:ade3460e08d460a7829e424521d76385a" id="r_ade3460e08d460a7829e424521d76385a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade3460e08d460a7829e424521d76385a">url</a></td></tr>
-<tr class="memdesc:ade3460e08d460a7829e424521d76385a"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL-адреса ресурсу.  <br /></td></tr>
+<tr class="memdesc:ade3460e08d460a7829e424521d76385a"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL-адреса веб-ресурсу.  <br /></td></tr>
 <tr class="memitem:a0b3d84e25eab8460477930f4d989f4bd" id="r_a0b3d84e25eab8460477930f4d989f4bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3d84e25eab8460477930f4d989f4bd">folder</a></td></tr>
 <tr class="memdesc:a0b3d84e25eab8460477930f4d989f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Категорія (папка), до якої належить посилання.  <br /></td></tr>
 <tr class="memitem:ac7069bb2a87254adb9b036d2bce415d6" id="r_ac7069bb2a87254adb9b036d2bce415d6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7069bb2a87254adb9b036d2bce415d6">contexts</a></td></tr>
 <tr class="memdesc:ac7069bb2a87254adb9b036d2bce415d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Список контекстних тегів (наприклад, "Робота", "Навчання").  <br /></td></tr>
 <tr class="memitem:acbe187450b8b243dc383fe29cb182e45" id="r_acbe187450b8b243dc383fe29cb182e45"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe187450b8b243dc383fe29cb182e45">relatedUrl</a></td></tr>
-<tr class="memdesc:acbe187450b8b243dc383fe29cb182e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пов'язане посилання (якщо є).  <br /></td></tr>
+<tr class="memdesc:acbe187450b8b243dc383fe29cb182e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пов'язане посилання (додатковий ресурс, якщо є).  <br /></td></tr>
 <tr class="memitem:a0813e777121927d4ab825229d9b273ec" id="r_a0813e777121927d4ab825229d9b273ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0813e777121927d4ab825229d9b273ec">comment</a></td></tr>
-<tr class="memdesc:a0813e777121927d4ab825229d9b273ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коментар користувача.  <br /></td></tr>
+<tr class="memdesc:a0813e777121927d4ab825229d9b273ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текстовий коментар користувача.  <br /></td></tr>
 <tr class="memitem:aea310be372f0adebe064ff61dcdb2bab" id="r_aea310be372f0adebe064ff61dcdb2bab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea310be372f0adebe064ff61dcdb2bab">iconData</a></td></tr>
-<tr class="memdesc:aea310be372f0adebe064ff61dcdb2bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дані іконки сайту у форматі Base64 (PNG).  <br /></td></tr>
+<tr class="memdesc:aea310be372f0adebe064ff61dcdb2bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дані фавіконки (favicon) сайту у форматі Base64 (PNG).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
-<div class="textblock"><p>Структура для зберігання даних про одне посилання. </p>
+<div class="textblock"><p>Структура (Data Transfer Object) для зберігання даних про одне посилання. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Компонентні дані</h2>
 <a id="a0813e777121927d4ab825229d9b273ec" name="a0813e777121927d4ab825229d9b273ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0813e777121927d4ab825229d9b273ec">&#9670;&#160;</a></span>comment</h2>
@@ -137,7 +137,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
       </table>
 </div><div class="memdoc">
 
-<p>Коментар користувача. </p>
+<p>Текстовий коментар користувача. </p>
 
 </div>
 </div>
@@ -185,7 +185,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
       </table>
 </div><div class="memdoc">
 
-<p>Дані іконки сайту у форматі Base64 (PNG). </p>
+<p>Дані фавіконки (favicon) сайту у форматі Base64 (PNG). </p>
 
 </div>
 </div>
@@ -201,7 +201,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
       </table>
 </div><div class="memdoc">
 
-<p>Назва посилання (заголовок). </p>
+<p>Назва посилання (заголовок сторінки). </p>
 
 </div>
 </div>
@@ -217,7 +217,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
       </table>
 </div><div class="memdoc">
 
-<p>Пов'язане посилання (якщо є). </p>
+<p>Пов'язане посилання (додатковий ресурс, якщо є). </p>
 
 </div>
 </div>
@@ -233,7 +233,7 @@ $(function(){initNavTree('struct_link_data.html','','struct_link_data-members');
       </table>
 </div><div class="memdoc">
 
-<p>URL-адреса ресурсу. </p>
+<p>URL-адреса веб-ресурсу. </p>
 
 </div>
 </div>

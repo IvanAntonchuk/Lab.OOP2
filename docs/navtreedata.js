@@ -35,9 +35,7 @@ var NAVTREE =
       [ "Елементи класів", "functions.html", [
         [ "Всі", "functions.html", null ],
         [ "Функції", "functions_func.html", null ],
-        [ "Змінні", "functions_vars.html", null ],
-        [ "Переліки", "functions_enum.html", null ],
-        [ "Елементи переліків", "functions_eval.html", null ]
+        [ "Змінні", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Файли", "files.html", [
@@ -54,9 +52,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "addlinkdialog_8cpp.html",
-"moc__predefs_8h.html#a03e66bc6e427f0c968a7a0daec280729",
-"moc__predefs_8h.html#a84ca4631d4b617a6dcb94faa40235701",
-"ui__contextmanagerdialog_8h_source.html"
+"hierarchy.html",
+"moc__predefs_8h.html#a6d3e36bb5d7e7ce3eda28fb174e404c6",
+"moc__predefs_8h.html#afb1605528772a5b37f1235cb1b7cf5ca"
 ];
 
 var SYNCONMSG = 'клацніть мишкою, щоб заборонити синхронізацію панелі';

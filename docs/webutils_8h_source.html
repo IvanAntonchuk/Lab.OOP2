@@ -96,20 +96,34 @@ $(function(){initNavTree('webutils_8h_source.html','',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef WEBUTILS_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define WEBUTILS_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_web_utils.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_web_utils.html">WebUtils</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_web_utils.html#a7d4e9929d1281f669ef0e1de2c20783c">extractTitleFromHtml</a>(<span class="keyword">const</span> std::string&amp; htmlBody);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QNetworkAccessManager&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QNetworkReply&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_web_utils.html">   21</a></span><span class="keyword">class </span><a class="code hl_function" href="class_web_utils.html#afd35e313adf2b0b5980b720e90adacfe">WebUtils</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Q_OBJECT</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_web_utils.html#afd35e313adf2b0b5980b720e90adacfe">WebUtils</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_web_utils.html#a9fe64b4715f54dcebe31e7fc63c158a2">fetchTitleAsync</a>(<span class="keyword">const</span> QString&amp; url);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>signals:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">titleReady</a>(<span class="keyword">const</span> QString&amp; url, <span class="keyword">const</span> QString&amp; title);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> onReplyFinished(QNetworkReply *reply);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    QNetworkAccessManager *netManager;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">// WEBUTILS_H</span></div>
-<div class="ttc" id="aclass_web_utils_html"><div class="ttname"><a href="class_web_utils.html">WebUtils</a></div><div class="ttdoc">Набір статичних методів для обробки веб-контенту.</div><div class="ttdef"><b>Definition</b> webutils.h:17</div></div>
-<div class="ttc" id="aclass_web_utils_html_a7d4e9929d1281f669ef0e1de2c20783c"><div class="ttname"><a href="class_web_utils.html#a7d4e9929d1281f669ef0e1de2c20783c">WebUtils::extractTitleFromHtml</a></div><div class="ttdeci">static std::string extractTitleFromHtml(const std::string &amp;htmlBody)</div><div class="ttdoc">Витягує заголовок сторінки (&lt;title&gt;) з HTML-коду.</div><div class="ttdef"><b>Definition</b> webutils.cpp:4</div></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">// WEBUTILS_H</span></div>
+<div class="ttc" id="aclass_web_utils_html_a24fba97843d83e87352f14449c59d108"><div class="ttname"><a href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">WebUtils::titleReady</a></div><div class="ttdeci">void titleReady(const QString &amp;url, const QString &amp;title)</div><div class="ttdoc">Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в ...</div><div class="ttdef"><b>Definition</b> moc_webutils.cpp:139</div></div>
+<div class="ttc" id="aclass_web_utils_html_a9fe64b4715f54dcebe31e7fc63c158a2"><div class="ttname"><a href="class_web_utils.html#a9fe64b4715f54dcebe31e7fc63c158a2">WebUtils::fetchTitleAsync</a></div><div class="ttdeci">void fetchTitleAsync(const QString &amp;url)</div><div class="ttdoc">Асинхронно отримує заголовок (&lt;title&gt;) веб-сторінки за URL.</div><div class="ttdef"><b>Definition</b> webutils.cpp:12</div></div>
+<div class="ttc" id="aclass_web_utils_html_afd35e313adf2b0b5980b720e90adacfe"><div class="ttname"><a href="class_web_utils.html#afd35e313adf2b0b5980b720e90adacfe">WebUtils::WebUtils</a></div><div class="ttdeci">WebUtils(QObject *parent=nullptr)</div><div class="ttdoc">Конструктор класу WebUtils. Ініціалізує менеджер мережевих підключень (QNetworkAccessManager).</div><div class="ttdef"><b>Definition</b> webutils.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

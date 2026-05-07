@@ -92,29 +92,49 @@ $(function(){initNavTree('class_web_utils.html','','class_web_utils-members'); }
 </div><!--header-->
 <div class="contents">
 
-<p>Набір статичних методів для обробки веб-контенту.  
+<p>Клас <a class="el" href="class_web_utils.html" title="Клас WebUtils є допоміжною утилітою для роботи з мережею.">WebUtils</a> є допоміжною утилітою для роботи з мережею.  
  <a href="#details">Детальніше...</a></p>
 
 <p><code>#include &lt;<a class="el" href="webutils_8h_source.html">webutils.h</a>&gt;</code></p>
+<div class="dynheader">
+Схема успадкувань для WebUtils</div>
+<div class="dyncontent">
+<div class="center"><img src="class_web_utils__inherit__graph.png" border="0" usemap="#a_web_utils_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_web_utils_inherit__map" id="a_web_utils_inherit__map">
+<area shape="rect" title="Клас WebUtils є допоміжною утилітою для роботи з мережею." alt="" coords="5,123,128,213"/>
+<area shape="rect" title=" " alt="" coords="38,5,96,75"/>
+<area shape="poly" title=" " alt="" coords="68,87,69,124,64,123,66,92"/>
+</map>
+</div>
 <div class="dynheader">
 Діаграма зв'язків класу WebUtils:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_web_utils__coll__graph.png" border="0" usemap="#a_web_utils_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_web_utils_coll__map" id="a_web_utils_coll__map">
-<area shape="rect" title="Набір статичних методів для обробки веб&#45;контенту." alt="" coords="5,5,160,75"/>
+<area shape="rect" title="Клас WebUtils є допоміжною утилітою для роботи з мережею." alt="" coords="5,123,128,213"/>
+<area shape="rect" title=" " alt="" coords="38,5,96,75"/>
+<area shape="poly" title=" " alt="" coords="68,87,69,124,64,123,66,92"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Загальнодоступні статичні елементи</h2></td></tr>
-<tr class="memitem:a7d4e9929d1281f669ef0e1de2c20783c" id="r_a7d4e9929d1281f669ef0e1de2c20783c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d4e9929d1281f669ef0e1de2c20783c">extractTitleFromHtml</a> (const std::string &amp;htmlBody)</td></tr>
-<tr class="memdesc:a7d4e9929d1281f669ef0e1de2c20783c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Витягує заголовок сторінки (&lt;title&gt;) з HTML-коду.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
+Сигнали</h2></td></tr>
+<tr class="memitem:a24fba97843d83e87352f14449c59d108" id="r_a24fba97843d83e87352f14449c59d108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24fba97843d83e87352f14449c59d108">titleReady</a> (const QString &amp;url, const QString &amp;title)</td></tr>
+<tr class="memdesc:a24fba97843d83e87352f14449c59d108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в UI (наприклад, у <a class="el" href="class_add_link_dialog.html" title="Клас AddLinkDialog відповідає за графічний інтерфейс додавання та редагування посилань.">AddLinkDialog</a>), щоб автоматично заповнити поле назви посилання.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:afd35e313adf2b0b5980b720e90adacfe" id="r_afd35e313adf2b0b5980b720e90adacfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd35e313adf2b0b5980b720e90adacfe">WebUtils</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:afd35e313adf2b0b5980b720e90adacfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класу <a class="el" href="class_web_utils.html" title="Клас WebUtils є допоміжною утилітою для роботи з мережею.">WebUtils</a>. Ініціалізує менеджер мережевих підключень (QNetworkAccessManager).  <br /></td></tr>
+<tr class="memitem:a9fe64b4715f54dcebe31e7fc63c158a2" id="r_a9fe64b4715f54dcebe31e7fc63c158a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fe64b4715f54dcebe31e7fc63c158a2">fetchTitleAsync</a> (const QString &amp;url)</td></tr>
+<tr class="memdesc:a9fe64b4715f54dcebe31e7fc63c158a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Асинхронно отримує заголовок (&lt;title&gt;) веб-сторінки за URL.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
-<div class="textblock"><p>Набір статичних методів для обробки веб-контенту. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
-<a id="a7d4e9929d1281f669ef0e1de2c20783c" name="a7d4e9929d1281f669ef0e1de2c20783c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d4e9929d1281f669ef0e1de2c20783c">&#9670;&#160;</a></span>extractTitleFromHtml()</h2>
+<div class="textblock"><p>Клас <a class="el" href="class_web_utils.html" title="Клас WebUtils є допоміжною утилітою для роботи з мережею.">WebUtils</a> є допоміжною утилітою для роботи з мережею. </p>
+<p>Цей клас забезпечує функціонал для виконання асинхронних HTTP-запитів, використовуючи модуль Qt Network. Його основне завдання — завантаження HTML-коду веб-сторінок і парсинг їх заголовків (&lt;title&gt;) у фоновому режимі, що гарантує відсутність блокування головного потоку графічного інтерфейсу (UI). </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a id="afd35e313adf2b0b5980b720e90adacfe" name="afd35e313adf2b0b5980b720e90adacfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd35e313adf2b0b5980b720e90adacfe">&#9670;&#160;</a></span>WebUtils()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,33 +143,103 @@ $(function(){initNavTree('class_web_utils.html','','class_web_utils-members'); }
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string WebUtils::extractTitleFromHtml </td>
+          <td class="memname">WebUtils::WebUtils </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>htmlBody</em></span></td><td>)</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Витягує заголовок сторінки (&lt;title&gt;) з HTML-коду. </p>
-<p>Використовує регулярні вирази для пошуку тегу title.</p>
+<p>Конструктор класу <a class="el" href="class_web_utils.html" title="Клас WebUtils є допоміжною утилітою для роботи з мережею.">WebUtils</a>. Ініціалізує менеджер мережевих підключень (QNetworkAccessManager). </p>
 <dl class="params"><dt>Аргументи</dt><dd>
   <table class="params">
-    <tr><td class="paramname">htmlBody</td><td>Рядок, що містить повний HTML код сторінки. </td></tr>
+    <tr><td class="paramname">parent</td><td>Вказівник на батьківський об'єкт QObject (за замовчуванням nullptr). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Повертає</dt><dd>Знайдений заголовок або порожній рядок, якщо тег не знайдено. </dd></dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
+<a id="a9fe64b4715f54dcebe31e7fc63c158a2" name="a9fe64b4715f54dcebe31e7fc63c158a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe64b4715f54dcebe31e7fc63c158a2">&#9670;&#160;</a></span>fetchTitleAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebUtils::fetchTitleAsync </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>url</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Асинхронно отримує заголовок (&lt;title&gt;) веб-сторінки за URL. </p>
+<ul>
+<li>Функція ініціює HTTP GET запит. Оскільки запит асинхронний, метод завершується миттєво. Після успішного завантаження сторінки або виникнення мережевої помилки клас генерує сигнал <a class="el" href="#a24fba97843d83e87352f14449c59d108" title="Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в ...">titleReady()</a>.</li>
+<li><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>Рядок із повною URL-адресою веб-сторінки (наприклад, "https://google.com"). </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a24fba97843d83e87352f14449c59d108" name="a24fba97843d83e87352f14449c59d108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24fba97843d83e87352f14449c59d108">&#9670;&#160;</a></span>titleReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebUtils::titleReady </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в UI (наприклад, у <a class="el" href="class_add_link_dialog.html" title="Клас AddLinkDialog відповідає за графічний інтерфейс додавання та редагування посилань.">AddLinkDialog</a>), щоб автоматично заповнити поле назви посилання. </p>
+<ul>
+<li><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>Оригінальний URL, на який відправлявся запит. </td></tr>
+    <tr><td class="paramname">title</td><td>Знайдений заголовок сторінки (якщо заголовок відсутній або сталася помилка — повертається сам URL). </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
 
 </div>
 </div>
 <hr/>Документація цих класів була створена з файлів:<ul>
 <li>OOP2Lab/<a class="el" href="webutils_8h_source.html">webutils.h</a></li>
+<li>OOP2Lab/build/Desktop_Qt_6_10_0_MinGW_64_bit-Debug/debug/<a class="el" href="moc__webutils_8cpp.html">moc_webutils.cpp</a></li>
 <li>OOP2Lab/<a class="el" href="webutils_8cpp.html">webutils.cpp</a></li>
 </ul>
 </div><!-- contents -->

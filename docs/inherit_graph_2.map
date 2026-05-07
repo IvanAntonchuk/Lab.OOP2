@@ -1,3 +1,7 @@
 <map id="Графічна ієрархія класів" name="Графічна ієрархія класів">
-<area shape="rect" id="Node000000" href="$class_link_serializer.html" title="Статичний клас&#45;помічник для конвертації даних." alt="" coords="5,5,105,32"/>
+<area shape="rect" id="Node000000" href="$class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="5,31,117,57"/>
+<area shape="rect" id="Node000001" href="$class_csv_import_strategy.html" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="167,5,298,32"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="132,31,169,28,164,29,133,36"/>
+<area shape="rect" id="Node000002" href="$class_json_import_strategy.html" title="Клас JsonImportStrategy реалізує стратегію імпорту посилань із формату JSON." alt="" coords="165,56,300,83"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="132,52,167,59,161,60,132,57"/>
 </map>

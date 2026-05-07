@@ -1,0 +1,5 @@
+<map id="LinkManager::loadFromFile" name="LinkManager::loadFromFile">
+<area shape="rect" id="Node000001" title="Завантажує всі дані з бази даних SQLite в оперативну пам&#39;ять. Делегує операцію читання класу Database..." alt="" coords="231,5,409,32"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#a20c709614593252405c980f7ea3811ae" title="Конструктор за замовчуванням. Ініціалізує менеджер порожніми масивами та додає базові/стандартні конт..." alt="" coords="5,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
+</map>

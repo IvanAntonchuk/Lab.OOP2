@@ -47,8 +47,10 @@ var menudata={children:[
 {text:"q",url:"functions.html#index_q"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
 {text:"v",url:"functions.html#index_v"},
+{text:"w",url:"functions.html#index_w"},
 {text:"~",url:"functions.html#index__7E"}]},
 {text:"Функції",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
@@ -64,7 +66,9 @@ var menudata={children:[
 {text:"q",url:"functions_func.html#index_q"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
+{text:"t",url:"functions_func.html#index_t"},
 {text:"u",url:"functions_func.html#index_u"},
+{text:"w",url:"functions_func.html#index_w"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Змінні",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
@@ -83,21 +87,17 @@ var menudata={children:[
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},
 {text:"u",url:"functions_vars.html#index_u"},
-{text:"v",url:"functions_vars.html#index_v"}]},
-{text:"Переліки",url:"functions_enum.html"},
-{text:"Елементи переліків",url:"functions_eval.html"}]}]},
+{text:"v",url:"functions_vars.html#index_v"}]}]}]},
 {text:"Файли",url:"files.html",children:[
 {text:"Файли",url:"files.html"},
 {text:"Елементи файлу",url:"globals.html",children:[
 {text:"Всі",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
-{text:"c",url:"globals_c.html#index_c"},
 {text:"m",url:"globals_m.html#index_m"},
 {text:"q",url:"globals_q.html#index_q"},
 {text:"w",url:"globals_w.html#index_w"}]},
 {text:"Функції",url:"globals_func.html"},
 {text:"Макровизначення",url:"globals_defs.html",children:[
 {text:"_",url:"globals_defs.html#index__5F"},
-{text:"c",url:"globals_defs_c.html#index_c"},
 {text:"q",url:"globals_defs_q.html#index_q"},
 {text:"w",url:"globals_defs_w.html#index_w"}]}]}]}]}

@@ -1,0 +1,5 @@
+<map id="CsvImportStrategy" name="CsvImportStrategy">
+<area shape="rect" id="Node000001" title="Клас CsvImportStrategy реалізує стратегію імпорту посилань із формату CSV." alt="" coords="10,144,131,213"/>
+<area shape="rect" id="Node000002" href="$class_i_import_strategy.html" title="Базовий інтерфейс для всіх стратегій імпорту посилань." alt="" coords="5,5,135,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,109,73,145,68,144,69,113"/>
+</map>

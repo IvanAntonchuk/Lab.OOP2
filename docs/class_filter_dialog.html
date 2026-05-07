@@ -92,13 +92,16 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
 </div><!--header-->
 <div class="contents">
 
+<p>Клас <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a> відповідає за графічний інтерфейс фільтрації посилань.  
+ <a href="#details">Детальніше...</a></p>
+
 <p><code>#include &lt;<a class="el" href="filterdialog_8h_source.html">filterdialog.h</a>&gt;</code></p>
 <div class="dynheader">
 Схема успадкувань для FilterDialog</div>
 <div class="dyncontent">
 <div class="center"><img src="class_filter_dialog__inherit__graph.png" border="0" usemap="#a_filter_dialog_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="a_filter_dialog_inherit__map" id="a_filter_dialog_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,123,159,277"/>
+<area shape="rect" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань." alt="" coords="5,123,159,277"/>
 <area shape="rect" title=" " alt="" coords="54,5,111,75"/>
 <area shape="poly" title=" " alt="" coords="83,87,85,123,80,123,82,92"/>
 </map>
@@ -108,7 +111,7 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
 <div class="dyncontent">
 <div class="center"><img src="class_filter_dialog__coll__graph.png" border="0" usemap="#a_filter_dialog_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_filter_dialog_coll__map" id="a_filter_dialog_coll__map">
-<area shape="rect" title=" " alt="" coords="5,123,159,277"/>
+<area shape="rect" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань." alt="" coords="5,123,159,277"/>
 <area shape="rect" title=" " alt="" coords="54,5,111,75"/>
 <area shape="poly" title=" " alt="" coords="83,87,85,123,80,123,82,92"/>
 </map>
@@ -117,12 +120,22 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Загальнодоступні елементи</h2></td></tr>
 <tr class="memitem:a179e317e1fb3df90a4b2889f3e927bff" id="r_a179e317e1fb3df90a4b2889f3e927bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a179e317e1fb3df90a4b2889f3e927bff">FilterDialog</a> (<a class="el" href="class_link_manager.html">LinkManager</a> *manager, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a179e317e1fb3df90a4b2889f3e927bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класу <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a>.  <br /></td></tr>
 <tr class="memitem:a021f1e42fa83fd2914aace2b3fcbcf62" id="r_a021f1e42fa83fd2914aace2b3fcbcf62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a021f1e42fa83fd2914aace2b3fcbcf62">~FilterDialog</a> ()</td></tr>
+<tr class="memdesc:a021f1e42fa83fd2914aace2b3fcbcf62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класу <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a>. Звільняє ресурси, виділені під графічний інтерфейс.  <br /></td></tr>
 <tr class="memitem:acd02abf5d815780f27bf1ed27ed9ca00" id="r_acd02abf5d815780f27bf1ed27ed9ca00"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd02abf5d815780f27bf1ed27ed9ca00">getSelectedFolders</a> () const</td></tr>
+<tr class="memdesc:acd02abf5d815780f27bf1ed27ed9ca00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отримує список папок, які користувач виділив для фільтрації.  <br /></td></tr>
 <tr class="memitem:a9232b305c6393f0c9e43215fd95dd220" id="r_a9232b305c6393f0c9e43215fd95dd220"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9232b305c6393f0c9e43215fd95dd220">getSelectedContexts</a> () const</td></tr>
+<tr class="memdesc:a9232b305c6393f0c9e43215fd95dd220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отримує список контекстів, які користувач виділив для фільтрації.  <br /></td></tr>
 <tr class="memitem:aa1d1229e4622166ca39df444ef623c65" id="r_aa1d1229e4622166ca39df444ef623c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1d1229e4622166ca39df444ef623c65">setSelection</a> (const std::vector&lt; std::string &gt; &amp;folders, const std::vector&lt; std::string &gt; &amp;contexts)</td></tr>
+<tr class="memdesc:aa1d1229e4622166ca39df444ef623c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Відновлює попередній вибір користувача у вікні діалогу. Використовується для того, щоб при повторному відкритті фільтра зберігалися раніше встановлені прапорці.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Клас <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a> відповідає за графічний інтерфейс фільтрації посилань. </p>
+<ul>
+<li>Цей діалог дозволяє користувачеві вибирати конкретні папки та контексти, щоб відображати у головному вікні лише ті посилання, які відповідають вибраним критеріям. </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
 <a id="a179e317e1fb3df90a4b2889f3e927bff" name="a179e317e1fb3df90a4b2889f3e927bff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a179e317e1fb3df90a4b2889f3e927bff">&#9670;&#160;</a></span>FilterDialog()</h2>
 
@@ -149,12 +162,21 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Конструктор класу <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a>. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>Вказівник на об'єкт <a class="el" href="class_link_manager.html" title="Головний клас-менеджер для управління списком посилань.">LinkManager</a> для отримання доступних у базі папок та контекстів. </td></tr>
+    <tr><td class="paramname">parent</td><td>Вказівник на батьківський віджет (за замовчуванням nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_cgraph.png" border="0" usemap="#aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_cgraph" id="aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_cgraph">
-<area shape="rect" title=" " alt="" coords="5,29,167,56"/>
+<area shape="rect" title="Конструктор класу FilterDialog." alt="" coords="5,29,167,56"/>
 <area shape="poly" title=" " alt="" coords="58,28,53,21,57,11,68,5,86,3,106,5,117,14,112,14,104,10,86,8,69,10,61,15,58,20,63,29"/>
 </map>
 </div>
@@ -163,7 +185,7 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
 <div class="dyncontent">
 <div class="center"><img src="class_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_icgraph.png" border="0" usemap="#aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_icgraph" id="aclass_filter_dialog_a179e317e1fb3df90a4b2889f3e927bff_icgraph">
-<area shape="rect" title=" " alt="" coords="5,29,167,56"/>
+<area shape="rect" title="Конструктор класу FilterDialog." alt="" coords="5,29,167,56"/>
 <area shape="poly" title=" " alt="" coords="112,14,104,10,86,8,69,10,61,15,58,20,63,29,58,28,53,21,57,11,68,5,86,3,106,5,117,14"/>
 </map>
 </div>
@@ -185,6 +207,8 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
       </table>
 </div><div class="memdoc">
 
+<p>Деструктор класу <a class="el" href="class_filter_dialog.html" title="Клас FilterDialog відповідає за графічний інтерфейс фільтрації посилань.">FilterDialog</a>. Звільняє ресурси, виділені під графічний інтерфейс. </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
@@ -203,6 +227,9 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
       </table>
 </div><div class="memdoc">
 
+<p>Отримує список контекстів, які користувач виділив для фільтрації. </p>
+<dl class="section return"><dt>Повертає</dt><dd>Вектор рядків із назвами вибраних контекстів. </dd></dl>
+
 </div>
 </div>
 <a id="acd02abf5d815780f27bf1ed27ed9ca00" name="acd02abf5d815780f27bf1ed27ed9ca00"></a>
@@ -219,6 +246,9 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Отримує список папок, які користувач виділив для фільтрації. </p>
+<dl class="section return"><dt>Повертає</dt><dd>Вектор рядків із назвами вибраних папок. </dd></dl>
 
 </div>
 </div>
@@ -240,6 +270,15 @@ $(function(){initNavTree('class_filter_dialog.html','','class_filter_dialog-memb
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Відновлює попередній вибір користувача у вікні діалогу. Використовується для того, щоб при повторному відкритті фільтра зберігалися раніше встановлені прапорці. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folders</td><td>Вектор назв папок, які мають бути позначені як вибрані. </td></tr>
+    <tr><td class="paramname">contexts</td><td>Вектор назв контекстів, які мають бути позначені як вибрані. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

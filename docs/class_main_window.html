@@ -92,13 +92,16 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 </div><!--header-->
 <div class="contents">
 
+<p>Клас <a class="el" href="class_main_window.html" title="Клас MainWindow є головним вікном програми і виступає Представленням (View) у патерні MVC.">MainWindow</a> є головним вікном програми і виступає Представленням (View) у патерні MVC.  
+ <a href="#details">Детальніше...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
 <div class="dynheader">
 Схема успадкувань для MainWindow</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_window__inherit__graph.png" border="0" usemap="#a_main_window_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="a_main_window_inherit__map" id="a_main_window_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,123,127,277"/>
+<area shape="rect" title="Клас MainWindow є головним вікном програми і виступає Представленням (View) у патерні MVC." alt="" coords="5,123,127,299"/>
 <area shape="rect" title=" " alt="" coords="18,5,114,75"/>
 <area shape="poly" title=" " alt="" coords="67,87,69,123,64,123,66,92"/>
 </map>
@@ -108,7 +111,7 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 <div class="dyncontent">
 <div class="center"><img src="class_main_window__coll__graph.png" border="0" usemap="#a_main_window_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_main_window_coll__map" id="a_main_window_coll__map">
-<area shape="rect" title=" " alt="" coords="5,123,127,277"/>
+<area shape="rect" title="Клас MainWindow є головним вікном програми і виступає Представленням (View) у патерні MVC." alt="" coords="5,123,127,299"/>
 <area shape="rect" title=" " alt="" coords="18,5,114,75"/>
 <area shape="poly" title=" " alt="" coords="67,87,69,123,64,123,66,92"/>
 </map>
@@ -117,15 +120,27 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Загальнодоступні елементи</h2></td></tr>
 <tr class="memitem:a996c5a2b6f77944776856f08ec30858d" id="r_a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор головного вікна. Ініціалізує UI та створює екземпляр <a class="el" href="class_main_controller.html" title="Клас MainController є Контролером (Controller) у патерні MVC.">MainController</a> для керування логікою.  <br /></td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7" id="r_ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор головного вікна. Очищає виділені ресурси графічного інтерфейсу.  <br /></td></tr>
+<tr class="memitem:a9b69f07b4af5146ca46b0924f118add1" id="r_a9b69f07b4af5146ca46b0924f118add1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b69f07b4af5146ca46b0924f118add1">updateTable</a> (const std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; &amp;links)</td></tr>
+<tr class="memdesc:a9b69f07b4af5146ca46b0924f118add1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оновлює таблицю посилань на екрані. Викликається Контролером для передачі нових або відфільтрованих даних у View.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Захищені елементи</h2></td></tr>
 <tr class="memitem:a05fb9d72c044aa3bb7d187b994704e2f" id="r_a05fb9d72c044aa3bb7d187b994704e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05fb9d72c044aa3bb7d187b994704e2f">closeEvent</a> (QCloseEvent *event) override</td></tr>
+<tr class="memdesc:a05fb9d72c044aa3bb7d187b994704e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перехоплює подію закриття вікна. Може використовуватися для підтвердження виходу або збереження налаштувань.  <br /></td></tr>
 <tr class="memitem:a505572442d73419f3cab4afc8158621c" id="r_a505572442d73419f3cab4afc8158621c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505572442d73419f3cab4afc8158621c">dragEnterEvent</a> (QDragEnterEvent *event) override</td></tr>
+<tr class="memdesc:a505572442d73419f3cab4afc8158621c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обробляє подію входження об'єкта (Drag) у зону вікна. Перевіряє, чи містить перетягуваний об'єкт допустимі дані (наприклад, URL або текст).  <br /></td></tr>
 <tr class="memitem:af809c2679376142b241371e36aedc279" id="r_af809c2679376142b241371e36aedc279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af809c2679376142b241371e36aedc279">dropEvent</a> (QDropEvent *event) override</td></tr>
+<tr class="memdesc:af809c2679376142b241371e36aedc279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обробляє подію скидання об'єкта (Drop) у вікно. Витягує дані з перетягнутого об'єкта та ініціює додавання нового посилання.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Клас <a class="el" href="class_main_window.html" title="Клас MainWindow є головним вікном програми і виступає Представленням (View) у патерні MVC.">MainWindow</a> є головним вікном програми і виступає Представленням (View) у патерні MVC. </p>
+<ul>
+<li>Відповідає за відображення графічного інтерфейсу користувача (GUI), прийом вводу (натискання кнопок, введення тексту, перетягування файлів) та делегування обробки цих подій Контролеру (<a class="el" href="class_main_controller.html" title="Клас MainController є Контролером (Controller) у патерні MVC.">MainController</a>). Не містить бізнес-логіки. </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
 <a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&#160;</a></span>MainWindow()</h2>
 
@@ -140,12 +155,20 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Конструктор головного вікна. Ініціалізує UI та створює екземпляр <a class="el" href="class_main_controller.html" title="Клас MainController є Контролером (Controller) у патерні MVC.">MainController</a> для керування логікою. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Вказівник на батьківський віджет (за замовчуванням nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph.png" border="0" usemap="#aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" id="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,29,185,56"/>
+<area shape="rect" title="Конструктор головного вікна. Ініціалізує UI та створює екземпляр MainController для керування логікою..." alt="" coords="5,29,185,56"/>
 <area shape="poly" title=" " alt="" coords="64,28,59,21,63,11,75,5,95,3,117,5,129,14,124,14,115,10,95,8,76,10,66,15,64,20,69,29"/>
 </map>
 </div>
@@ -154,7 +177,7 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 <div class="dyncontent">
 <div class="center"><img src="class_main_window_a996c5a2b6f77944776856f08ec30858d_icgraph.png" border="0" usemap="#aclass_main_window_a996c5a2b6f77944776856f08ec30858d_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_icgraph" id="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_icgraph">
-<area shape="rect" title=" " alt="" coords="5,29,185,56"/>
+<area shape="rect" title="Конструктор головного вікна. Ініціалізує UI та створює екземпляр MainController для керування логікою..." alt="" coords="5,29,185,56"/>
 <area shape="poly" title=" " alt="" coords="124,14,115,10,95,8,76,10,66,15,64,20,69,29,64,28,59,21,63,11,75,5,95,3,117,5,129,14"/>
 </map>
 </div>
@@ -175,6 +198,8 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Деструктор головного вікна. Очищає виділені ресурси графічного інтерфейсу. </p>
 
 </div>
 </div>
@@ -202,6 +227,14 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 </table>
 </div><div class="memdoc">
 
+<p>Перехоплює подію закриття вікна. Може використовуватися для підтвердження виходу або збереження налаштувань. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Об'єкт події закриття. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a505572442d73419f3cab4afc8158621c" name="a505572442d73419f3cab4afc8158621c"></a>
@@ -227,6 +260,14 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
 </table>
 </div><div class="memdoc">
 
+<p>Обробляє подію входження об'єкта (Drag) у зону вікна. Перевіряє, чи містить перетягуваний об'єкт допустимі дані (наприклад, URL або текст). </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Об'єкт події DragEnter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="af809c2679376142b241371e36aedc279" name="af809c2679376142b241371e36aedc279"></a>
@@ -251,22 +292,55 @@ $(function(){initNavTree('class_main_window.html','','class_main_window-members'
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Обробляє подію скидання об'єкта (Drop) у вікно. Витягує дані з перетягнутого об'єкта та ініціює додавання нового посилання. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Об'єкт події Drop. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_window_af809c2679376142b241371e36aedc279_cgraph.png" border="0" usemap="#aclass_main_window_af809c2679376142b241371e36aedc279_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_main_window_af809c2679376142b241371e36aedc279_cgraph" id="aclass_main_window_af809c2679376142b241371e36aedc279_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,169,108"/>
-<area shape="rect" href="class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39" title=" " alt="" coords="217,5,400,32"/>
+<area shape="rect" title="Обробляє подію скидання об&#39;єкта (Drop) у вікно. Витягує дані з перетягнутого об&#39;єкта та ініціює додав..." alt="" coords="5,81,169,108"/>
+<area shape="rect" href="class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39" title="Отримує дані про посилання, введені користувачем у форму." alt="" coords="217,5,400,32"/>
 <area shape="poly" title=" " alt="" coords="120,78,216,41,242,36,237,38,218,47,122,83"/>
-<area shape="rect" href="class_add_link_dialog.html#aeef9dfc70406fc54ed3fedf9eb3f5aca" title=" " alt="" coords="217,56,401,83"/>
+<area shape="rect" href="class_add_link_dialog.html#aeef9dfc70406fc54ed3fedf9eb3f5aca" title="Встановлює список доступних контекстів у випадаючий список діалогу." alt="" coords="217,56,401,83"/>
 <area shape="poly" title=" " alt="" coords="169,83,204,81,199,83,170,88"/>
-<area shape="rect" href="class_add_link_dialog.html#a772c7a57f847d7cc0a8f2c639f018f36" title=" " alt="" coords="222,107,396,133"/>
+<area shape="rect" href="class_add_link_dialog.html#a772c7a57f847d7cc0a8f2c639f018f36" title="Встановлює список доступних папок у випадаючий список діалогу." alt="" coords="222,107,396,133"/>
 <area shape="poly" title=" " alt="" coords="169,101,209,108,204,109,170,107"/>
-<area shape="rect" href="class_add_link_dialog.html#abcd18feaaf38a5a6649ef38c9c4b9dfd" title=" " alt="" coords="217,157,400,184"/>
+<area shape="rect" href="class_add_link_dialog.html#abcd18feaaf38a5a6649ef38c9c4b9dfd" title="Заповнює поля діалогу даними з існуючого посилання (використовується для редагування)." alt="" coords="217,157,400,184"/>
 <area shape="poly" title=" " alt="" coords="121,106,218,143,242,153,237,152,216,148,120,111"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a9b69f07b4af5146ca46b0924f118add1" name="a9b69f07b4af5146ca46b0924f118add1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b69f07b4af5146ca46b0924f118add1">&#9670;&#160;</a></span>updateTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::updateTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_link_data.html">LinkData</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>links</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Оновлює таблицю посилань на екрані. Викликається Контролером для передачі нових або відфільтрованих даних у View. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">links</td><td>Вектор об'єктів <a class="el" href="struct_link_data.html" title="Структура (Data Transfer Object) для зберігання даних про одне посилання.">LinkData</a>, які потрібно відобразити в QTableWidget. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

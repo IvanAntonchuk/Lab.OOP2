@@ -1,0 +1,5 @@
+<map id="LinkManager::removeContext" name="LinkManager::removeContext">
+<area shape="rect" id="Node000001" title="Видаляє контекст зі списку." alt="" coords="5,5,198,32"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#a763a79116aa8089843463ee2d870ae01" title="Зберігає всі поточні дані у базу даних SQLite. Делегує операцію збереження класу DatabaseManager...." alt="" coords="246,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,16,233,19,227,19,198,21"/>
+</map>

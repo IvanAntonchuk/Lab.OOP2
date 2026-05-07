@@ -1,0 +1,5 @@
+<map id="LinkManager::deleteLink" name="LinkManager::deleteLink">
+<area shape="rect" id="Node000001" title="Видаляє посилання за його індексом у масиві." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="Node000002" href="$class_link_manager.html#a763a79116aa8089843463ee2d870ae01" title="Зберігає всі поточні дані у базу даних SQLite. Делегує операцію збереження класу DatabaseManager...." alt="" coords="216,5,382,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,16,202,19,197,19,168,21"/>
+</map>

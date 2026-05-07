@@ -1,26 +1,28 @@
 <map id="OOP2Lab/mainwindow.h" name="OOP2Lab/mainwindow.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="372,5,537,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="430,5,594,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,112,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,35,128,82,126,77,386,30"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="429,35,128,82,127,77,430,29"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="136,80,235,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="405,34,248,78,246,73,410,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="453,34,251,80,250,75,457,31"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="259,80,383,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="434,31,359,75,356,70,429,34"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="476,34,370,77,368,72,481,31"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="408,80,501,107"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="456,30,457,66,452,63,453,35"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="504,31,475,70,472,66,500,34"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="525,80,616,107"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="475,30,540,71,534,71,474,35"/>
-<area shape="rect" id="Node000007" href="$addlinkdialog_8h.html" title=" " alt="" coords="641,80,748,107"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="496,30,640,74,635,75,496,35"/>
-<area shape="rect" id="Node000009" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="734,155,836,181"/>
-<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="537,24,667,43,724,58,746,67,762,78,773,92,780,107,787,141,782,138,775,109,768,94,758,82,743,72,722,63,666,48,537,29"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="642,155,710,181"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="693,105,685,141,681,138,689,109"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="711,105,761,146,755,145,710,110"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="678,229,732,256"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="774,181,731,221,729,217,769,183"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="756,229,814,256"/>
-<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="787,180,787,215,783,212,783,184"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="837,229,912,256"/>
-<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="802,179,850,220,845,219,800,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="523,30,553,68,548,67,521,35"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="640,80,709,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="540,30,635,73,629,73,540,35"/>
+<area shape="rect" id="Node000008" href="$addlinkdialog_8h.html" title=" " alt="" coords="733,80,840,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="560,30,726,75,721,76,560,35"/>
+<area shape="rect" id="Node000010" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="826,155,928,181"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="594,22,667,29,743,40,809,56,835,66,854,78,865,91,872,107,879,141,874,138,867,109,860,94,850,82,833,71,808,61,742,45,666,34,595,27"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="734,155,802,181"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="785,105,777,141,773,138,781,109"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="803,105,853,146,847,145,802,110"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="770,229,824,256"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="866,181,823,221,821,217,861,183"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="848,229,906,256"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="879,180,879,215,875,212,875,184"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="929,229,1004,256"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="894,179,942,220,937,219,892,184"/>
 </map>

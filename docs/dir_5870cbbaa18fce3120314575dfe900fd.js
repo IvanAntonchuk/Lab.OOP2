@@ -7,5 +7,6 @@ var dir_5870cbbaa18fce3120314575dfe900fd =
     [ "moc_foldermanagerdialog.cpp", "moc__foldermanagerdialog_8cpp.html", "moc__foldermanagerdialog_8cpp" ],
     [ "moc_mainwindow.cpp", "moc__mainwindow_8cpp.html", "moc__mainwindow_8cpp" ],
     [ "moc_predefs.h", "moc__predefs_8h.html", "moc__predefs_8h" ],
-    [ "moc_qrdialog.cpp", "moc__qrdialog_8cpp.html", "moc__qrdialog_8cpp" ]
+    [ "moc_qrdialog.cpp", "moc__qrdialog_8cpp.html", "moc__qrdialog_8cpp" ],
+    [ "moc_webutils.cpp", "moc__webutils_8cpp.html", "moc__webutils_8cpp" ]
 ];
