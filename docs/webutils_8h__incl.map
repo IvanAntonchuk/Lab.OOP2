@@ -1,5 +1,5 @@
-<map id="OOP2Lab/webutils.h" name="OOP2Lab/webutils.h">
-<area shape="rect" id="Node000001" title="Заголовочний файл утиліти для асинхронної роботи з мережею." alt="" coords="115,5,256,32"/>
+<map id="LinkManagerCore/webutils.h" name="LinkManagerCore/webutils.h">
+<area shape="rect" id="Node000001" title="Заголовочний файл утиліти для асинхронної роботи з мережею." alt="" coords="92,5,278,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,75,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,35,80,75,78,70,159,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="98,80,272,107"/>

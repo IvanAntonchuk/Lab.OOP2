@@ -11,43 +11,23 @@ CONFIG += c++17
 SOURCES += \
     addlinkdialog.cpp \
     contextmanagerdialog.cpp \
-    csvexportstrategy.cpp \
-    csvimportstrategy.cpp \
-    databasemanager.cpp \
     exportdialog.cpp \
     filterdialog.cpp \
     foldermanagerdialog.cpp \
-    htmlexportstrategy.cpp \
-    jsonimportstrategy.cpp \
-    linkmanager.cpp \
     main.cpp \
     maincontroller.cpp \
     mainwindow.cpp \
-    qrcodegen.cpp \
-    qrdialog.cpp \
-    stb_image_impl.cpp \
-    webutils.cpp
+    qrdialog.cpp
 
 HEADERS += \
     addlinkdialog.h \
     contextmanagerdialog.h \
-    csvexportstrategy.h \
-    csvimportstrategy.h \
-    databasemanager.h \
     exportdialog.h \
     filterdialog.h \
     foldermanagerdialog.h \
-    htmlexportstrategy.h \
-    iexportstrategy.h \
-    iimportstrategy.h \
-    jsonimportstrategy.h \
-    linkmanager.h \
     maincontroller.h \
     mainwindow.h \
-    qrcodegen.hpp \
-    qrdialog.h \
-    stb_image.h \
-    webutils.h
+    qrdialog.h
 
 FORMS += \
     addlinkdialog.ui \
@@ -58,16 +38,14 @@ FORMS += \
     mainwindow.ui \
     qrdialog.ui
 
+INCLUDEPATH += $$PWD/../LinkManagerCore
+LIBS += -L$$OUT_PWD/../LinkManagerCore/debug -L$$OUT_PWD/../LinkManagerCore/release -lLinkManagerCore
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-SUBDIRS += \
-    ../LinkManagerTest/LinkManagerTest.pro
-
-
 #Lab 3: External Libraries
-HEADERS +=
 INCLUDEPATH += "D:/NewQt/Tools/mingw1310_64/opt/include"
 LIBS += -L"D:/NewQt/Tools/mingw1310_64/opt/lib" -lws2_32 -lssl -lcrypto -lcrypt32

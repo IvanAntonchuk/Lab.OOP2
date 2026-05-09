@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LinkManager: Текст програми OOP2Lab/webutils.h</title>
+<title>LinkManager: Текст програми LinkManagerCore/webutils.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 3</span>
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 1 (Refactoring)</span>
    </div>
   </td>
  </tr>
@@ -110,7 +110,7 @@ $(function(){initNavTree('webutils_8h_source.html','',''); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_web_utils.html#a9fe64b4715f54dcebe31e7fc63c158a2">fetchTitleAsync</a>(<span class="keyword">const</span> QString&amp; url);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>signals:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">titleReady</a>(<span class="keyword">const</span> QString&amp; url, <span class="keyword">const</span> QString&amp; title);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">titleReady</a>(<span class="keyword">const</span> QString&amp; url, <span class="keyword">const</span> QString&amp; title);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span> slots:</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> onReplyFinished(QNetworkReply *reply);</div>
@@ -121,7 +121,7 @@ $(function(){initNavTree('webutils_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">// WEBUTILS_H</span></div>
-<div class="ttc" id="aclass_web_utils_html_a24fba97843d83e87352f14449c59d108"><div class="ttname"><a href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">WebUtils::titleReady</a></div><div class="ttdeci">void titleReady(const QString &amp;url, const QString &amp;title)</div><div class="ttdoc">Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в ...</div><div class="ttdef"><b>Definition</b> moc_webutils.cpp:139</div></div>
+<div class="ttc" id="aclass_web_utils_html_a24fba97843d83e87352f14449c59d108"><div class="ttname"><a href="class_web_utils.html#a24fba97843d83e87352f14449c59d108">WebUtils::titleReady</a></div><div class="ttdeci">void titleReady(const QString &amp;url, const QString &amp;title)</div><div class="ttdoc">Сигнал, що випромінюється після завершення мережевого запиту. Цей сигнал можна підключити до слота в ...</div></div>
 <div class="ttc" id="aclass_web_utils_html_a9fe64b4715f54dcebe31e7fc63c158a2"><div class="ttname"><a href="class_web_utils.html#a9fe64b4715f54dcebe31e7fc63c158a2">WebUtils::fetchTitleAsync</a></div><div class="ttdeci">void fetchTitleAsync(const QString &amp;url)</div><div class="ttdoc">Асинхронно отримує заголовок (&lt;title&gt;) веб-сторінки за URL.</div><div class="ttdef"><b>Definition</b> webutils.cpp:12</div></div>
 <div class="ttc" id="aclass_web_utils_html_afd35e313adf2b0b5980b720e90adacfe"><div class="ttname"><a href="class_web_utils.html#afd35e313adf2b0b5980b720e90adacfe">WebUtils::WebUtils</a></div><div class="ttdeci">WebUtils(QObject *parent=nullptr)</div><div class="ttdoc">Конструктор класу WebUtils. Ініціалізує менеджер мережевих підключень (QNetworkAccessManager).</div><div class="ttdef"><b>Definition</b> webutils.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -130,7 +130,7 @@ $(function(){initNavTree('webutils_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_a9887f6ff463be8023a78c2b50fa1d01.html">OOP2Lab</a></li><li class="navelem"><a href="webutils_8h.html">webutils.h</a></li>
+    <li class="navelem"><a href="dir_ff85ed9a0e9d2854bfc652bef74d34f9.html">LinkManagerCore</a></li><li class="navelem"><a href="webutils_8h.html">webutils.h</a></li>
     <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

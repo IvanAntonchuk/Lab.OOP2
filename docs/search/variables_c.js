@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['qrcodebutton_0',['qrCodeButton',['../class_ui___main_window.html#a59e43d382d686407384ab0c5f502f42d',1,'Ui_MainWindow']]],
-  ['qrlabel_1',['qrLabel',['../class_ui___q_r_dialog.html#a47ae92db87daf3065d6220dc79b99e3a',1,'Ui_QRDialog']]]
+  ['name_0',['name',['../struct_link_data.html#a2fd268077eb58c43a4a6110a9a33cd8f',1,'LinkData']]],
+  ['namelabel_1',['nameLabel',['../class_ui___add_link_dialog.html#a0887f30f2e6c4a5382757e1a77e5db8d',1,'Ui_AddLinkDialog']]],
+  ['namelineedit_2',['nameLineEdit',['../class_ui___add_link_dialog.html#abcf3aebaf95052420cbf6057b91cedea',1,'Ui_AddLinkDialog']]],
+  ['newcontextlineedit_3',['newContextLineEdit',['../class_ui___context_manager_dialog.html#a50037d729bd79e0d15285bf59b4cfbe1',1,'Ui_ContextManagerDialog']]],
+  ['newfolderlineedit_4',['newFolderLineEdit',['../class_ui___folder_manager_dialog.html#a6be2b961096fffa6a5c021c50edc4b57',1,'Ui_FolderManagerDialog']]],
+  ['numeric_5',['NUMERIC',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#ae4c4fd7f09b271a04e142d4d856e6bf6',1,'qrcodegen::QrSegment::Mode']]]
 ];

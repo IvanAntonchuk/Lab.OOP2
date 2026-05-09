@@ -1,0 +1,13 @@
+<map id="qrcodegen::QrCode::QrCode" name="qrcodegen::QrCode::QrCode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="590,51,733,93"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="210,5,352,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="575,46,542,41,443,31,352,28,352,23,443,26,543,36,581,46"/>
+<area shape="rect" id="Node000003" href="$classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="400,51,542,93"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="572,72,543,75,543,69,577,72"/>
+<area shape="rect" id="Node000004" href="$classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,84,352,127"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="583,97,543,108,443,115,353,113,353,108,443,110,542,103,578,98"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="382,52,352,46,352,41,387,51"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="387,87,353,96,352,90,382,88"/>
+<area shape="rect" id="Node000005" href="$class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,92,162,119"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="191,106,162,108,162,103,197,105"/>
+</map>

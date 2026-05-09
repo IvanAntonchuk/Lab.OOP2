@@ -1,6 +1,5 @@
 var dir_a8ac77fc55fe071958ea55b518a8a635 =
 [
-    [ "debug", "dir_5870cbbaa18fce3120314575dfe900fd.html", "dir_5870cbbaa18fce3120314575dfe900fd" ],
     [ "ui_addlinkdialog.h", "ui__addlinkdialog_8h.html", "ui__addlinkdialog_8h" ],
     [ "ui_contextmanagerdialog.h", "ui__contextmanagerdialog_8h.html", "ui__contextmanagerdialog_8h" ],
     [ "ui_exportdialog.h", "ui__exportdialog_8h.html", "ui__exportdialog_8h" ],

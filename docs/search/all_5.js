@@ -1,9 +1,17 @@
 var searchData=
 [
-  ['editbutton_0',['editButton',['../class_ui___main_window.html#ae6e12a959e6201ffb381ca586f7c3341',1,'Ui_MainWindow']]],
-  ['exportbutton_1',['exportButton',['../class_ui___main_window.html#ae036ec755bb27333f0c0ac1113f7472c',1,'Ui_MainWindow']]],
-  ['exportdata_2',['exportData',['../class_csv_export_strategy.html#a84704cea62acb53e6086837442b6d26b',1,'CsvExportStrategy::exportData()'],['../class_html_export_strategy.html#a691e259afb67ac403fe04a856b15623d',1,'HtmlExportStrategy::exportData()'],['../class_i_export_strategy.html#a303aa05c2e2a57096e27f38a0ee1b880',1,'IExportStrategy::exportData()']]],
-  ['exportdialog_3',['ExportDialog',['../class_export_dialog.html',1,'ExportDialog'],['../class_ui_1_1_export_dialog.html',1,'Ui::ExportDialog'],['../class_export_dialog.html#ac592e78d7ff90bbed812d0d4a091e6cb',1,'ExportDialog::ExportDialog()']]],
-  ['exportdialog_2ecpp_4',['exportdialog.cpp',['../exportdialog_8cpp.html',1,'']]],
-  ['exportdialog_2eh_5',['exportdialog.h',['../exportdialog_8h.html',1,'']]]
+  ['fetchtitleasync_0',['fetchTitleAsync',['../class_web_utils.html#a9fe64b4715f54dcebe31e7fc63c158a2',1,'WebUtils']]],
+  ['fetchtitlebutton_1',['fetchTitleButton',['../class_ui___add_link_dialog.html#a998a1f6cdc7323622ba8e9d855db0391',1,'Ui_AddLinkDialog']]],
+  ['filterbutton_2',['filterButton',['../class_ui___main_window.html#ab25be05411355e241d98dd76f610f568',1,'Ui_MainWindow']]],
+  ['filterdialog_3',['FilterDialog',['../class_filter_dialog.html',1,'FilterDialog'],['../class_ui_1_1_filter_dialog.html',1,'Ui::FilterDialog'],['../class_filter_dialog.html#a179e317e1fb3df90a4b2889f3e927bff',1,'FilterDialog::FilterDialog()']]],
+  ['filterdialog_2ecpp_4',['filterdialog.cpp',['../filterdialog_8cpp.html',1,'']]],
+  ['filterdialog_2eh_5',['filterdialog.h',['../filterdialog_8h.html',1,'']]],
+  ['filterlinks_6',['filterLinks',['../class_main_controller.html#a9817cd621c117a5b149b4230ab9b5a26',1,'MainController::filterLinks()'],['../class_link_manager.html#aad2e210868e9de73aa0d54a3826a5240',1,'LinkManager::filterLinks()']]],
+  ['folder_7',['folder',['../struct_link_data.html#a0b3d84e25eab8460477930f4d989f4bd',1,'LinkData']]],
+  ['foldercombobox_8',['folderComboBox',['../class_ui___add_link_dialog.html#a88a3f275877212a495349f263296697c',1,'Ui_AddLinkDialog']]],
+  ['foldermanagerdialog_9',['FolderManagerDialog',['../class_folder_manager_dialog.html',1,'FolderManagerDialog'],['../class_ui_1_1_folder_manager_dialog.html',1,'Ui::FolderManagerDialog'],['../class_folder_manager_dialog.html#a319b8792d54405b512cc618ab092b7f7',1,'FolderManagerDialog::FolderManagerDialog()']]],
+  ['foldermanagerdialog_2ecpp_10',['foldermanagerdialog.cpp',['../foldermanagerdialog_8cpp.html',1,'']]],
+  ['foldermanagerdialog_2eh_11',['foldermanagerdialog.h',['../foldermanagerdialog_8h.html',1,'']]],
+  ['foldertreewidget_12',['folderTreeWidget',['../class_ui___filter_dialog.html#a3d3483c418a9c1d4b38ed17db9b0e0d3',1,'Ui_FilterDialog::folderTreeWidget'],['../class_ui___folder_manager_dialog.html#a94071dede3f221c06d30e9f1998511fd',1,'Ui_FolderManagerDialog::folderTreeWidget']]],
+  ['formatcombobox_13',['formatComboBox',['../class_ui___export_dialog.html#a9a52df0195b10aeb875200aa672cfc3b',1,'Ui_ExportDialog']]]
 ];

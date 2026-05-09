@@ -1,8 +1,8 @@
 #include "teststrategies.h"
-#include "../OOP2Lab/csvexportstrategy.h"
-#include "../OOP2Lab/csvimportstrategy.h"
-#include "../OOP2Lab/htmlexportstrategy.h"
-#include "../OOP2Lab/jsonimportstrategy.h"
+#include "csvexportstrategy.h"
+#include "csvimportstrategy.h"
+#include "htmlexportstrategy.h"
+#include "jsonimportstrategy.h"
 #include <QFile>
 #include <QDir>
 

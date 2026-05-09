@@ -1,5 +1,5 @@
 #include "testwebutils.h"
-#include "../OOP2Lab/webutils.h"
+#include "webutils.h"
 #include <QSignalSpy>
 
 void TestWebUtils::testFetchTitleSuccess() {

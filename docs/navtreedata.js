@@ -33,17 +33,20 @@ var NAVTREE =
       [ "Алфавітний покажчик класів", "classes.html", null ],
       [ "Ієрархія класів", "hierarchy.html", "hierarchy" ],
       [ "Елементи класів", "functions.html", [
-        [ "Всі", "functions.html", null ],
+        [ "Всі", "functions.html", "functions_dup" ],
         [ "Функції", "functions_func.html", null ],
-        [ "Змінні", "functions_vars.html", null ]
+        [ "Змінні", "functions_vars.html", null ],
+        [ "Переліки", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Файли", "files.html", [
       [ "Файли", "files.html", "files_dup" ],
       [ "Елементи файлу", "globals.html", [
-        [ "Всі", "globals.html", "globals_dup" ],
+        [ "Всі", "globals.html", null ],
         [ "Функції", "globals_func.html", null ],
-        [ "Макровизначення", "globals_defs.html", "globals_defs" ]
+        [ "Визначення типів", "globals_type.html", null ],
+        [ "Елементи переліків", "globals_eval.html", null ],
+        [ "Макровизначення", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -52,9 +55,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "addlinkdialog_8cpp.html",
-"hierarchy.html",
-"moc__predefs_8h.html#a6d3e36bb5d7e7ce3eda28fb174e404c6",
-"moc__predefs_8h.html#afb1605528772a5b37f1235cb1b7cf5ca"
+"classqrcodegen_1_1_qr_segment_1_1_mode.html"
 ];
 
 var SYNCONMSG = 'клацніть мишкою, щоб заборонити синхронізацію панелі';

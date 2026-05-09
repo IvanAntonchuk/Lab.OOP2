@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['hascontext_0',['hasContext',['../class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723',1,'LinkManager']]],
-  ['hasfolder_1',['hasFolder',['../class_link_manager.html#aea93ca0b1086aa0be353af197053857e',1,'LinkManager']]]
+  ['generateqr_0',['generateQR',['../class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512',1,'QRDialog']]],
+  ['getalllinks_1',['getAllLinks',['../class_main_controller.html#a4add49632383c41e5cb0b4dc6a901875',1,'MainController']]],
+  ['getcontexts_2',['getContexts',['../class_main_controller.html#af9d01d1f5f17b8a26192c70de40c91d7',1,'MainController::getContexts()'],['../class_link_manager.html#a32e23e3cf7e577ba2e60a7c7f4a31bc7',1,'LinkManager::getContexts()']]],
+  ['getdata_3',['getData',['../classqrcodegen_1_1_qr_segment.html#ac805cd86c99c0871fd16e5d49fc4517a',1,'qrcodegen::QrSegment']]],
+  ['geterrorcorrectionlevel_4',['getErrorCorrectionLevel',['../classqrcodegen_1_1_qr_code.html#a158bfeb79b33f0f7c7325d60a50f5404',1,'qrcodegen::QrCode']]],
+  ['getfolders_5',['getFolders',['../class_main_controller.html#a5b33cec5e34d8a58d44f5e24993e5648',1,'MainController::getFolders()'],['../class_link_manager.html#ae889dd303f95d26fedbeb9f1c7ab1c22',1,'LinkManager::getFolders()']]],
+  ['getlinkdata_6',['getLinkData',['../class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39',1,'AddLinkDialog']]],
+  ['getlinkmanager_7',['getLinkManager',['../class_main_controller.html#a767502c2416198597eb6ccc3cf63a924',1,'MainController']]],
+  ['getlinks_8',['getLinks',['../class_link_manager.html#ae9900029cc29dafe79cbc3c98e8cfdf1',1,'LinkManager']]],
+  ['getmask_9',['getMask',['../classqrcodegen_1_1_qr_code.html#a69de407dc25aa12a5c67d1fb9d0a6d8f',1,'qrcodegen::QrCode']]],
+  ['getmode_10',['getMode',['../classqrcodegen_1_1_qr_segment.html#ac4e4bffedf012d9953f6202b95fc424c',1,'qrcodegen::QrSegment']]],
+  ['getmodebits_11',['getModeBits',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#a0bf62a8b741691614a85c5ed2180a85f',1,'qrcodegen::QrSegment::Mode']]],
+  ['getmodule_12',['getModule',['../classqrcodegen_1_1_qr_code.html#a729c17d33f13d21fb8295c04ef465133',1,'qrcodegen::QrCode']]],
+  ['getnumchars_13',['getNumChars',['../classqrcodegen_1_1_qr_segment.html#a5cfeb0667c8986782e76f013372b2de3',1,'qrcodegen::QrSegment']]],
+  ['getselectedcontexts_14',['getSelectedContexts',['../class_filter_dialog.html#a9232b305c6393f0c9e43215fd95dd220',1,'FilterDialog']]],
+  ['getselectedfolders_15',['getSelectedFolders',['../class_filter_dialog.html#acd02abf5d815780f27bf1ed27ed9ca00',1,'FilterDialog']]],
+  ['getsize_16',['getSize',['../classqrcodegen_1_1_qr_code.html#a1fd72bbd390acc49362eddcfdf93b42b',1,'qrcodegen::QrCode']]],
+  ['gettotalbits_17',['getTotalBits',['../classqrcodegen_1_1_qr_segment.html#ad03817114a3ea5237b79805692db285e',1,'qrcodegen::QrSegment']]],
+  ['getversion_18',['getVersion',['../classqrcodegen_1_1_qr_code.html#a2f473df995c683a0f3e63a6d83b6b2cb',1,'qrcodegen::QrCode']]]
 ];

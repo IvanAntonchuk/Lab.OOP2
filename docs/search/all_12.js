@@ -15,7 +15,7 @@ var searchData=
   ['ui_5fmainwindow_2eh_12',['ui_mainwindow.h',['../ui__mainwindow_8h.html',1,'']]],
   ['ui_5fqrdialog_13',['Ui_QRDialog',['../class_ui___q_r_dialog.html',1,'']]],
   ['ui_5fqrdialog_2eh_14',['ui_qrdialog.h',['../ui__qrdialog_8h.html',1,'']]],
-  ['updatelink_15',['updateLink',['../class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1',1,'LinkManager::updateLink()'],['../class_main_controller.html#ae9f89fb51798b00c17bed1a301b32c82',1,'MainController::updateLink()']]],
+  ['updatelink_15',['updateLink',['../class_main_controller.html#ae9f89fb51798b00c17bed1a301b32c82',1,'MainController::updateLink()'],['../class_link_manager.html#a31d9e88eddeaca193c2be1c7c84e93c1',1,'LinkManager::updateLink()']]],
   ['updatetable_16',['updateTable',['../class_main_window.html#a9b69f07b4af5146ca46b0924f118add1',1,'MainWindow']]],
   ['url_17',['url',['../struct_link_data.html#ade3460e08d460a7829e424521d76385a',1,'LinkData']]],
   ['urllabel_18',['urlLabel',['../class_ui___add_link_dialog.html#ab8a8305958163b46bf2866df50e93940',1,'Ui_AddLinkDialog']]],

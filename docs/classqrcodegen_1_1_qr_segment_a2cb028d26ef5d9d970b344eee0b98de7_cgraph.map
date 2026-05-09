@@ -1,0 +1,7 @@
+<map id="qrcodegen::QrSegment::makeEci" name="qrcodegen::QrSegment::makeEci">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,161,81"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_bit_buffer.html#abeaf5adf83b987fa573c63a1ffad30ad" title=" " alt="" coords="217,5,356,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,45,204,40,199,41,161,50"/>
+<area shape="rect" id="Node000003" href="$classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94" title=" " alt="" coords="209,72,364,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,70,196,78,190,78,161,75"/>
+</map>

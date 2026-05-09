@@ -1,14 +1,14 @@
-<map id="OOP2Lab/iimportstrategy.h" name="OOP2Lab/iimportstrategy.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="240,5,418,32"/>
-<area shape="rect" id="Node000002" href="$csvimportstrategy_8h.html" title=" " alt="" coords="120,80,317,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,39,239,82,237,77,295,42"/>
-<area shape="rect" id="Node000005" href="$jsonimportstrategy_8h.html" title=" " alt="" coords="340,80,540,107"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="361,38,423,79,418,79,360,43"/>
-<area shape="rect" id="Node000003" href="$csvimportstrategy_8cpp.html" title=" " alt="" coords="5,155,216,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,115,131,156,128,152,184,116"/>
-<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title=" " alt="" coords="240,155,418,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="251,113,312,154,307,154,249,118"/>
-<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="411,115,350,156,348,152,406,116"/>
-<area shape="rect" id="Node000006" href="$jsonimportstrategy_8cpp.html" title=" " alt="" coords="442,155,656,181"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="472,113,533,154,527,154,471,118"/>
+<map id="LinkManagerCore/iimportstrategy.h" name="LinkManagerCore/iimportstrategy.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="263,5,486,32"/>
+<area shape="rect" id="Node000002" href="$csvimportstrategy_8h.html" title=" " alt="" coords="120,80,362,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="341,38,266,82,263,77,336,41"/>
+<area shape="rect" id="Node000005" href="$jsonimportstrategy_8h.html" title=" " alt="" coords="386,80,630,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="411,37,487,79,482,79,410,42"/>
+<area shape="rect" id="Node000003" href="$csvimportstrategy_8cpp.html" title=" " alt="" coords="5,155,261,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,115,153,156,151,152,207,116"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title=" " alt="" coords="285,155,464,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="278,112,354,154,348,154,276,117"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="474,114,399,157,397,152,469,115"/>
+<area shape="rect" id="Node000006" href="$jsonimportstrategy_8cpp.html" title=" " alt="" coords="488,155,746,181"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="540,113,600,155,595,154,539,118"/>
 </map>

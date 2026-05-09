@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['relatedurl_0',['relatedUrl',['../struct_link_data.html#acbe187450b8b243dc383fe29cb182e45',1,'LinkData']]],
-  ['relatedurllineedit_1',['relatedUrlLineEdit',['../class_ui___add_link_dialog.html#af77cb5675cedda6cc79724ef4d1038f5',1,'Ui_AddLinkDialog']]],
-  ['resulttextedit_2',['resultTextEdit',['../class_ui___export_dialog.html#a24ebc3defb0ebdd3eff6cb08c46df100',1,'Ui_ExportDialog']]]
+  ['qrcodebutton_0',['qrCodeButton',['../class_ui___main_window.html#a59e43d382d686407384ab0c5f502f42d',1,'Ui_MainWindow']]],
+  ['qrlabel_1',['qrLabel',['../class_ui___q_r_dialog.html#a47ae92db87daf3065d6220dc79b99e3a',1,'Ui_QRDialog']]]
 ];

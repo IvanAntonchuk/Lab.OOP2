@@ -1,4 +1,4 @@
 var contextmanagerdialog_8h =
 [
-    [ "AddLinkDialog", "class_add_link_dialog.html", "class_add_link_dialog" ]
+    [ "ContextManagerDialog", "class_context_manager_dialog.html", "class_context_manager_dialog" ]
 ];

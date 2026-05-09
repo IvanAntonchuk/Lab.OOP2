@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['searchbutton_0',['searchButton',['../class_ui___main_window.html#a8f6c525f90dbfcb49d03c52cb72eeabd',1,'Ui_MainWindow']]],
-  ['searchlineedit_1',['searchLineEdit',['../class_ui___main_window.html#aa811ab89ef93287d38fd8925410982d9',1,'Ui_MainWindow']]],
-  ['searchonlinebutton_2',['searchOnlineButton',['../class_ui___main_window.html#aa7e1db9cf4d4f40ef94045a58c259fd2',1,'Ui_MainWindow']]],
-  ['statusbar_3',['statusbar',['../class_ui___main_window.html#a1687cceb1e2787aa1f83e50433943a91',1,'Ui_MainWindow']]]
+  ['read_0',['read',['../structstbi__io__callbacks.html#a623e46b3a2a019611601409926283a88',1,'stbi_io_callbacks']]],
+  ['relatedurl_1',['relatedUrl',['../struct_link_data.html#acbe187450b8b243dc383fe29cb182e45',1,'LinkData']]],
+  ['relatedurllineedit_2',['relatedUrlLineEdit',['../class_ui___add_link_dialog.html#af77cb5675cedda6cc79724ef4d1038f5',1,'Ui_AddLinkDialog']]],
+  ['resulttextedit_3',['resultTextEdit',['../class_ui___export_dialog.html#a24ebc3defb0ebdd3eff6cb08c46df100',1,'Ui_ExportDialog']]]
 ];

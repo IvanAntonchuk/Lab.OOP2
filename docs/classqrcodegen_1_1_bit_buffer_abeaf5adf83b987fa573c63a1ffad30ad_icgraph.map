@@ -1,0 +1,25 @@
+<map id="qrcodegen::BitBuffer::appendBits" name="qrcodegen::BitBuffer::appendBits">
+<area shape="rect" id="Node000001" title=" " alt="" coords="807,139,946,181"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="610,5,752,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="840,127,802,95,757,62,738,51,738,46,760,58,806,91,846,128"/>
+<area shape="rect" id="Node000006" href="$classqrcodegen_1_1_qr_segment.html#ae2d00f78a60165d70faf5b56e36ae511" title=" " alt="" coords="603,139,759,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="789,160,759,163,759,157,794,160"/>
+<area shape="rect" id="Node000008" href="$classqrcodegen_1_1_qr_segment.html#a32ead40ba58149f5e5fe13a6417d8304" title=" " alt="" coords="603,72,759,115"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="795,133,745,118,746,113,800,133"/>
+<area shape="rect" id="Node000009" href="$classqrcodegen_1_1_qr_segment.html#a2cb028d26ef5d9d970b344eee0b98de7" title=" " alt="" coords="603,205,759,248"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="800,186,746,207,745,202,795,187"/>
+<area shape="rect" id="Node000010" href="$classqrcodegen_1_1_qr_segment.html#a03484cb17296745b303f0bd48b213446" title=" " alt="" coords="603,272,759,315"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="845,191,806,229,760,262,739,274,737,269,757,258,802,225,841,193"/>
+<area shape="rect" id="Node000003" href="$classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="406,68,549,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="593,54,550,70,548,65,598,52"/>
+<area shape="rect" id="Node000004" href="$classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,72,352,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="592,32,501,43,401,59,344,74,342,69,399,53,500,37,597,30"/>
+<area shape="rect" id="Node000005" href="$class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,80,162,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,95,163,96,161,91,196,92"/>
+<area shape="rect" id="Node000007" href="$classqrcodegen_1_1_qr_segment.html#aa587c9cfcb4b28552d5d1e4c05b5b962" title=" " alt="" coords="400,135,555,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="585,159,556,160,556,155,591,158"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="391,130,350,118,350,112,397,129"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="585,92,550,93,549,88,591,91"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="592,121,550,137,548,132,598,119"/>
+<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="608,264,602,262,545,220,500,180,502,175,548,216,605,258,614,265"/>
+</map>

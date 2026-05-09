@@ -7,5 +7,6 @@ var searchData=
   ['linkmanager_2ecpp_4',['linkmanager.cpp',['../linkmanager_8cpp.html',1,'']]],
   ['linkmanager_2eh_5',['linkmanager.h',['../linkmanager_8h.html',1,'']]],
   ['linkstablewidget_6',['linksTableWidget',['../class_ui___main_window.html#a28cd821ef410654855fa53070206e23c',1,'Ui_MainWindow']]],
-  ['loadfromfile_7',['loadFromFile',['../class_link_manager.html#a036575cd02a7381468c7a51e24ec0eac',1,'LinkManager']]]
+  ['loadfromfile_7',['loadFromFile',['../class_link_manager.html#a036575cd02a7381468c7a51e24ec0eac',1,'LinkManager']]],
+  ['low_8',['LOW',['../classqrcodegen_1_1_qr_code.html#a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88',1,'qrcodegen::QrCode']]]
 ];

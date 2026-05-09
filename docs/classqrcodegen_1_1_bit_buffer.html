@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Клас qrcodegen::BitBuffer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 1 (Refactoring)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classqrcodegen_1_1_bit_buffer.html','','classqrcodegen_1_1_bit_buffer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Клас qrcodegen::BitBuffer<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="qrcodegen_8hpp_source.html">qrcodegen.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Схема успадкувань для qrcodegen::BitBuffer</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_bit_buffer__inherit__graph.png" border="0" usemap="#aqrcodegen_1_1_bit_buffer_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="aqrcodegen_1_1_bit_buffer_inherit__map" id="aqrcodegen_1_1_bit_buffer_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,123,134,213"/>
+<area shape="rect" title=" " alt="" coords="9,5,130,75"/>
+<area shape="poly" title=" " alt="" coords="71,87,72,124,67,123,69,92"/>
+</map>
+</div>
+<div class="dynheader">
+Діаграма зв'язків класу qrcodegen::BitBuffer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_bit_buffer__coll__graph.png" border="0" usemap="#aqrcodegen_1_1_bit_buffer_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aqrcodegen_1_1_bit_buffer_coll__map" id="aqrcodegen_1_1_bit_buffer_coll__map">
+<area shape="rect" title=" " alt="" coords="5,123,134,213"/>
+<area shape="rect" title=" " alt="" coords="9,5,130,75"/>
+<area shape="poly" title=" " alt="" coords="71,87,72,124,67,123,69,92"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a22035f0be00f4d956574107fc3bad801" id="r_a22035f0be00f4d956574107fc3bad801"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22035f0be00f4d956574107fc3bad801">BitBuffer</a> ()</td></tr>
+<tr class="memitem:abeaf5adf83b987fa573c63a1ffad30ad" id="r_abeaf5adf83b987fa573c63a1ffad30ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeaf5adf83b987fa573c63a1ffad30ad">appendBits</a> (std::uint32_t val, int len)</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a id="a22035f0be00f4d956574107fc3bad801" name="a22035f0be00f4d956574107fc3bad801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22035f0be00f4d956574107fc3bad801">&#9670;&#160;</a></span>BitBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qrcodegen::BitBuffer::BitBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
+<a id="abeaf5adf83b987fa573c63a1ffad30ad" name="abeaf5adf83b987fa573c63a1ffad30ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeaf5adf83b987fa573c63a1ffad30ad">&#9670;&#160;</a></span>appendBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qrcodegen::BitBuffer::appendBits </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_bit_buffer_abeaf5adf83b987fa573c63a1ffad30ad_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_bit_buffer_abeaf5adf83b987fa573c63a1ffad30ad_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_bit_buffer_abeaf5adf83b987fa573c63a1ffad30ad_icgraph" id="aclassqrcodegen_1_1_bit_buffer_abeaf5adf83b987fa573c63a1ffad30ad_icgraph">
+<area shape="rect" title=" " alt="" coords="807,139,946,181"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="610,5,752,48"/>
+<area shape="poly" title=" " alt="" coords="840,127,802,95,757,62,738,51,738,46,760,58,806,91,846,128"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#ae2d00f78a60165d70faf5b56e36ae511" title=" " alt="" coords="603,139,759,181"/>
+<area shape="poly" title=" " alt="" coords="789,160,759,163,759,157,794,160"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a32ead40ba58149f5e5fe13a6417d8304" title=" " alt="" coords="603,72,759,115"/>
+<area shape="poly" title=" " alt="" coords="795,133,745,118,746,113,800,133"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a2cb028d26ef5d9d970b344eee0b98de7" title=" " alt="" coords="603,205,759,248"/>
+<area shape="poly" title=" " alt="" coords="800,186,746,207,745,202,795,187"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a03484cb17296745b303f0bd48b213446" title=" " alt="" coords="603,272,759,315"/>
+<area shape="poly" title=" " alt="" coords="845,191,806,229,760,262,739,274,737,269,757,258,802,225,841,193"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="406,68,549,111"/>
+<area shape="poly" title=" " alt="" coords="593,54,550,70,548,65,598,52"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,72,352,115"/>
+<area shape="poly" title=" " alt="" coords="592,32,501,43,401,59,344,74,342,69,399,53,500,37,597,30"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,80,162,107"/>
+<area shape="poly" title=" " alt="" coords="192,95,163,96,161,91,196,92"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#aa587c9cfcb4b28552d5d1e4c05b5b962" title=" " alt="" coords="400,135,555,177"/>
+<area shape="poly" title=" " alt="" coords="585,159,556,160,556,155,591,158"/>
+<area shape="poly" title=" " alt="" coords="391,130,350,118,350,112,397,129"/>
+<area shape="poly" title=" " alt="" coords="585,92,550,93,549,88,591,91"/>
+<area shape="poly" title=" " alt="" coords="592,121,550,137,548,132,598,119"/>
+<area shape="poly" title=" " alt="" coords="608,264,602,262,545,220,500,180,502,175,548,216,605,258,614,265"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>LinkManagerCore/<a class="el" href="qrcodegen_8hpp_source.html">qrcodegen.hpp</a></li>
+<li>LinkManagerCore/<a class="el" href="qrcodegen_8cpp.html">qrcodegen.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceqrcodegen.html">qrcodegen</a></li><li class="navelem"><a href="classqrcodegen_1_1_bit_buffer.html">BitBuffer</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

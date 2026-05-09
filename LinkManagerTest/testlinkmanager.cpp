@@ -1,6 +1,6 @@
 #include "testlinkmanager.h"
-#include "../OOP2Lab/linkmanager.h"
-#include "../OOP2Lab/databasemanager.h"
+#include "linkmanager.h"
+#include "databasemanager.h"
 #include <QSqlQuery>
 #include <QDir>
 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jsonimportstrategy_0',['JsonImportStrategy',['../class_json_import_strategy.html',1,'']]]
+  ['iexportstrategy_0',['IExportStrategy',['../class_i_export_strategy.html',1,'']]],
+  ['iimportstrategy_1',['IImportStrategy',['../class_i_import_strategy.html',1,'']]]
 ];

@@ -121,7 +121,7 @@ void AddLinkDialog::on_fetchTitleButton_clicked()
     ui->nameLineEdit->setText("Завантаження...");
 
     WebUtils *webUtils = new WebUtils(this);
-    connect(webUtils, &WebUtils::titleReady, this, [this, webUtils](const QString &url, const QString &title) {
+    connect(webUtils, &WebUtils::titleReady, this, [this, webUtils](const QString & /*url*/, const QString &title) {
         ui->nameLineEdit->setText(title);
         webUtils->deleteLater();
     });

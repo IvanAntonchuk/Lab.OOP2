@@ -1,0 +1,11 @@
+<map id="qrcodegen::QrSegment::getTotalBits" name="qrcodegen::QrSegment::getTotalBits">
+<area shape="rect" id="Node000001" title=" " alt="" coords="590,39,746,81"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="400,39,542,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="572,60,542,63,542,57,577,60"/>
+<area shape="rect" id="Node000003" href="$classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="210,5,352,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,45,352,42,352,36,387,45"/>
+<area shape="rect" id="Node000004" href="$classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,72,352,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="387,75,353,84,352,78,382,76"/>
+<area shape="rect" id="Node000005" href="$class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,80,162,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,94,162,96,162,91,197,93"/>
+</map>

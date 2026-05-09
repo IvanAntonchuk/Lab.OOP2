@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['generatebutton_0',['generateButton',['../class_ui___export_dialog.html#aee54e4c6e2a01e0a30a2d0a551c33e32',1,'Ui_ExportDialog']]],
-  ['generateqr_1',['generateQR',['../class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512',1,'QRDialog']]],
-  ['getalllinks_2',['getAllLinks',['../class_main_controller.html#a4add49632383c41e5cb0b4dc6a901875',1,'MainController']]],
-  ['getcontexts_3',['getContexts',['../class_link_manager.html#a32e23e3cf7e577ba2e60a7c7f4a31bc7',1,'LinkManager::getContexts()'],['../class_main_controller.html#af9d01d1f5f17b8a26192c70de40c91d7',1,'MainController::getContexts()']]],
-  ['getfolders_4',['getFolders',['../class_link_manager.html#ae889dd303f95d26fedbeb9f1c7ab1c22',1,'LinkManager::getFolders()'],['../class_main_controller.html#a5b33cec5e34d8a58d44f5e24993e5648',1,'MainController::getFolders()']]],
-  ['getlinkdata_5',['getLinkData',['../class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39',1,'AddLinkDialog::getLinkData() const'],['../class_add_link_dialog.html#a467521ec79a1fa7f484cc34c0a87ed39',1,'AddLinkDialog::getLinkData() const']]],
-  ['getlinkmanager_6',['getLinkManager',['../class_main_controller.html#a767502c2416198597eb6ccc3cf63a924',1,'MainController']]],
-  ['getlinks_7',['getLinks',['../class_link_manager.html#ae9900029cc29dafe79cbc3c98e8cfdf1',1,'LinkManager']]],
-  ['getselectedcontexts_8',['getSelectedContexts',['../class_filter_dialog.html#a9232b305c6393f0c9e43215fd95dd220',1,'FilterDialog']]],
-  ['getselectedfolders_9',['getSelectedFolders',['../class_filter_dialog.html#acd02abf5d815780f27bf1ed27ed9ca00',1,'FilterDialog']]],
-  ['gridlayout_10',['gridLayout',['../class_ui___filter_dialog.html#ab35c377128b4faa5fdb14cff134d2e6e',1,'Ui_FilterDialog']]]
+  ['hascontext_0',['hasContext',['../class_link_manager.html#a036d1d9ed2cc05e09f21c5115da49723',1,'LinkManager']]],
+  ['hasfolder_1',['hasFolder',['../class_link_manager.html#aea93ca0b1086aa0be353af197053857e',1,'LinkManager']]],
+  ['high_2',['HIGH',['../classqrcodegen_1_1_qr_code.html#a9ac15e987cf5cb71b1662373e6c9fec0ab89de3b4b81c4facfac906edf29aec8c',1,'qrcodegen::QrCode']]],
+  ['horizontallayout_3',['horizontalLayout',['../class_ui___add_link_dialog.html#a66eb684f22c5e24f4a4fffb71accc6ec',1,'Ui_AddLinkDialog::horizontalLayout'],['../class_ui___context_manager_dialog.html#a78fb449c39ed273499a3c4bf543ab8c6',1,'Ui_ContextManagerDialog::horizontalLayout'],['../class_ui___export_dialog.html#a9cfbe8bec6cb1fbafea93c9ccae28a8d',1,'Ui_ExportDialog::horizontalLayout'],['../class_ui___folder_manager_dialog.html#a6f989f8e203f4fac395d8e006d56e3fb',1,'Ui_FolderManagerDialog::horizontalLayout'],['../class_ui___main_window.html#acd6fdc9ebacc4b25b834162380d75ce8',1,'Ui_MainWindow::horizontalLayout']]],
+  ['horizontallayout_5f2_4',['horizontalLayout_2',['../class_ui___add_link_dialog.html#a603802ae4195f022a6b58fdf4d218a18',1,'Ui_AddLinkDialog::horizontalLayout_2'],['../class_ui___folder_manager_dialog.html#a20420587a62457eeaad0b8bfc8da3c64',1,'Ui_FolderManagerDialog::horizontalLayout_2'],['../class_ui___main_window.html#a80867018070156432923d0266cc9fe25',1,'Ui_MainWindow::horizontalLayout_2']]],
+  ['horizontallayout_5f3_5',['horizontalLayout_3',['../class_ui___add_link_dialog.html#a91a7abdeb9468c1fd3f89a2000b3cf4a',1,'Ui_AddLinkDialog::horizontalLayout_3'],['../class_ui___main_window.html#a03ce63974cc69b067c91bbf285cceca8',1,'Ui_MainWindow::horizontalLayout_3']]],
+  ['horizontallayout_5f4_6',['horizontalLayout_4',['../class_ui___add_link_dialog.html#a2dc3a3288ce28b8957570b7fc1175dff',1,'Ui_AddLinkDialog::horizontalLayout_4'],['../class_ui___main_window.html#ae183387a7d233b437a637b403ba39ffd',1,'Ui_MainWindow::horizontalLayout_4']]],
+  ['horizontallayout_5f5_7',['horizontalLayout_5',['../class_ui___add_link_dialog.html#add4054a763cd3b1416761f7f349ec716',1,'Ui_AddLinkDialog::horizontalLayout_5'],['../class_ui___main_window.html#a14c9d4842c3e97e16e7873ef0aecdb1e',1,'Ui_MainWindow::horizontalLayout_5']]],
+  ['horizontallayout_5f6_8',['horizontalLayout_6',['../class_ui___add_link_dialog.html#ac8e7bf5952f859f1602d41974c8e0b0c',1,'Ui_AddLinkDialog']]],
+  ['horizontallayout_5f7_9',['horizontalLayout_7',['../class_ui___add_link_dialog.html#a6ef05f967701515d5a5dd44101d7c9c6',1,'Ui_AddLinkDialog']]],
+  ['htmlexportstrategy_10',['HtmlExportStrategy',['../class_html_export_strategy.html',1,'']]],
+  ['htmlexportstrategy_2ecpp_11',['htmlexportstrategy.cpp',['../htmlexportstrategy_8cpp.html',1,'']]],
+  ['htmlexportstrategy_2eh_12',['htmlexportstrategy.h',['../htmlexportstrategy_8h.html',1,'']]]
 ];

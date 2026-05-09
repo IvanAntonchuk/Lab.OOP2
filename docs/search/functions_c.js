@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['savetofile_0',['saveToFile',['../class_link_manager.html#a763a79116aa8089843463ee2d870ae01',1,'LinkManager']]],
-  ['searchlinks_1',['searchLinks',['../class_link_manager.html#a488d4b69221e34bd5a0c10c1e35eefff',1,'LinkManager::searchLinks()'],['../class_main_controller.html#ab7774f0302233a8dcb96a7d28eaa1b01',1,'MainController::searchLinks()']]],
-  ['setcontexts_2',['setContexts',['../class_add_link_dialog.html#aeef9dfc70406fc54ed3fedf9eb3f5aca',1,'AddLinkDialog::setContexts(const std::vector&lt; std::string &gt; &amp;contexts)'],['../class_add_link_dialog.html#aeef9dfc70406fc54ed3fedf9eb3f5aca',1,'AddLinkDialog::setContexts(const std::vector&lt; std::string &gt; &amp;contexts)']]],
-  ['setfolders_3',['setFolders',['../class_add_link_dialog.html#a772c7a57f847d7cc0a8f2c639f018f36',1,'AddLinkDialog::setFolders(const std::vector&lt; std::string &gt; &amp;folders)'],['../class_add_link_dialog.html#a772c7a57f847d7cc0a8f2c639f018f36',1,'AddLinkDialog::setFolders(const std::vector&lt; std::string &gt; &amp;folders)']]],
-  ['setlinkdata_4',['setLinkData',['../class_add_link_dialog.html#abcd18feaaf38a5a6649ef38c9c4b9dfd',1,'AddLinkDialog::setLinkData(const LinkData &amp;data)'],['../class_add_link_dialog.html#abcd18feaaf38a5a6649ef38c9c4b9dfd',1,'AddLinkDialog::setLinkData(const LinkData &amp;data)']]],
-  ['setlinks_5',['setLinks',['../class_export_dialog.html#a844252e14e649273bcc9415d3b90a37a',1,'ExportDialog']]],
-  ['setselection_6',['setSelection',['../class_filter_dialog.html#aa1d1229e4622166ca39df444ef623c65',1,'FilterDialog']]],
-  ['setupui_7',['setupUi',['../class_ui___add_link_dialog.html#a1e4695419c1eac6038080c2e9da8ed32',1,'Ui_AddLinkDialog::setupUi()'],['../class_ui___context_manager_dialog.html#a32e3b4a81ab5fe9f40861f2ef4a77575',1,'Ui_ContextManagerDialog::setupUi()'],['../class_ui___export_dialog.html#a2798e77d78f7ef8eb993e829fa5c3554',1,'Ui_ExportDialog::setupUi()'],['../class_ui___filter_dialog.html#a8fce8d097a17ffeebbfe45fda4d77c61',1,'Ui_FilterDialog::setupUi()'],['../class_ui___folder_manager_dialog.html#a3720e4ad461048c564a7f2420447cd27',1,'Ui_FolderManagerDialog::setupUi()'],['../class_ui___main_window.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow::setupUi()'],['../class_ui___q_r_dialog.html#a2d67343ff7073b8413196f334f80c621',1,'Ui_QRDialog::setupUi()']]]
+  ['qrcode_0',['QrCode',['../classqrcodegen_1_1_qr_code.html#a566e993f52899733fed8017bf8869b2b',1,'qrcodegen::QrCode']]],
+  ['qrdialog_1',['QRDialog',['../class_q_r_dialog.html#a928462044ba7e86da956b81d4ef4481f',1,'QRDialog']]],
+  ['qrsegment_2',['QrSegment',['../classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94',1,'qrcodegen::QrSegment::QrSegment(const Mode &amp;md, int numCh, const std::vector&lt; bool &gt; &amp;dt)'],['../classqrcodegen_1_1_qr_segment.html#ad584cb1b2c19440f00adade362be5d23',1,'qrcodegen::QrSegment::QrSegment(const Mode &amp;md, int numCh, std::vector&lt; bool &gt; &amp;&amp;dt)']]]
 ];

@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LinkManager: Клас qrcodegen::QrCode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">LinkManager<span id="projectnumber">&#160;Lab 1 (Refactoring)</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Пошук',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classqrcodegen_1_1_qr_code.html','','classqrcodegen_1_1_qr_code-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Завантаження...</div>
+<div class="SRStatus" id="Searching">Пошук...</div>
+<div class="SRStatus" id="NoMatches">Нічого не знайдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Клас qrcodegen::QrCode<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="qrcodegen_8hpp_source.html">qrcodegen.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Діаграма зв'язків класу qrcodegen::QrCode:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code__coll__graph.png" border="0" usemap="#aqrcodegen_1_1_qr_code_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aqrcodegen_1_1_qr_code_coll__map" id="aqrcodegen_1_1_qr_code_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,174,267"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Загальнодоступні типи</h2></td></tr>
+<tr class="memitem:a9ac15e987cf5cb71b1662373e6c9fec0" id="r_a9ac15e987cf5cb71b1662373e6c9fec0"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a> { <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88">LOW</a> = 0
+, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0ac87f3be66ffc3c0d4249f1c2cc5f3cce">MEDIUM</a>
+, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0a8927abb1f5ad5fce6a9eccbcf2b0a12d">QUARTILE</a>
+, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0ab89de3b4b81c4facfac906edf29aec8c">HIGH</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a566e993f52899733fed8017bf8869b2b" id="r_a566e993f52899733fed8017bf8869b2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a> (int ver, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a> ecl, const std::vector&lt; std::uint8_t &gt; &amp;dataCodewords, int msk)</td></tr>
+<tr class="memitem:a2f473df995c683a0f3e63a6d83b6b2cb" id="r_a2f473df995c683a0f3e63a6d83b6b2cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f473df995c683a0f3e63a6d83b6b2cb">getVersion</a> () const</td></tr>
+<tr class="memitem:a1fd72bbd390acc49362eddcfdf93b42b" id="r_a1fd72bbd390acc49362eddcfdf93b42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd72bbd390acc49362eddcfdf93b42b">getSize</a> () const</td></tr>
+<tr class="memitem:a158bfeb79b33f0f7c7325d60a50f5404" id="r_a158bfeb79b33f0f7c7325d60a50f5404"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a158bfeb79b33f0f7c7325d60a50f5404">getErrorCorrectionLevel</a> () const</td></tr>
+<tr class="memitem:a69de407dc25aa12a5c67d1fb9d0a6d8f" id="r_a69de407dc25aa12a5c67d1fb9d0a6d8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69de407dc25aa12a5c67d1fb9d0a6d8f">getMask</a> () const</td></tr>
+<tr class="memitem:a729c17d33f13d21fb8295c04ef465133" id="r_a729c17d33f13d21fb8295c04ef465133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729c17d33f13d21fb8295c04ef465133">getModule</a> (int x, int y) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Загальнодоступні статичні елементи</h2></td></tr>
+<tr class="memitem:a15d9e26d273b8de6d0773e317ebd97d5" id="r_a15d9e26d273b8de6d0773e317ebd97d5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15d9e26d273b8de6d0773e317ebd97d5">encodeText</a> (const char *text, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a> ecl)</td></tr>
+<tr class="memitem:a31efd868a933e2ea62a6f9694bf19606" id="r_a31efd868a933e2ea62a6f9694bf19606"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31efd868a933e2ea62a6f9694bf19606">encodeBinary</a> (const std::vector&lt; std::uint8_t &gt; &amp;data, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a> ecl)</td></tr>
+<tr class="memitem:a78aa108015b15a8b1fd35d042aff34aa" id="r_a78aa108015b15a8b1fd35d042aff34aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78aa108015b15a8b1fd35d042aff34aa">encodeSegments</a> (const std::vector&lt; <a class="el" href="classqrcodegen_1_1_qr_segment.html">QrSegment</a> &gt; &amp;segs, <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a> ecl, int minVersion=1, int maxVersion=40, int mask=-1, bool boostEcl=true)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статичні загальнодоступні данні</h2></td></tr>
+<tr class="memitem:a49443c1e43f8c73b6a5c6069c6b24bd4" id="r_a49443c1e43f8c73b6a5c6069c6b24bd4"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49443c1e43f8c73b6a5c6069c6b24bd4">MIN_VERSION</a> = 1</td></tr>
+<tr class="memitem:ac884bc36ec4765b89540751ad8c7dfa1" id="r_ac884bc36ec4765b89540751ad8c7dfa1"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac884bc36ec4765b89540751ad8c7dfa1">MAX_VERSION</a> = 40</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Опис переліків користувача</h2>
+<a id="a9ac15e987cf5cb71b1662373e6c9fec0" name="a9ac15e987cf5cb71b1662373e6c9fec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac15e987cf5cb71b1662373e6c9fec0">&#9670;&#160;</a></span>Ecc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">qrcodegen::QrCode::Ecc</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Елементи переліків</th></tr><tr><td class="fieldname"><a id="a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88" name="a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88"></a>LOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ac15e987cf5cb71b1662373e6c9fec0ac87f3be66ffc3c0d4249f1c2cc5f3cce" name="a9ac15e987cf5cb71b1662373e6c9fec0ac87f3be66ffc3c0d4249f1c2cc5f3cce"></a>MEDIUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ac15e987cf5cb71b1662373e6c9fec0a8927abb1f5ad5fce6a9eccbcf2b0a12d" name="a9ac15e987cf5cb71b1662373e6c9fec0a8927abb1f5ad5fce6a9eccbcf2b0a12d"></a>QUARTILE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ac15e987cf5cb71b1662373e6c9fec0ab89de3b4b81c4facfac906edf29aec8c" name="a9ac15e987cf5cb71b1662373e6c9fec0ab89de3b4b81c4facfac906edf29aec8c"></a>HIGH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(и)</h2>
+<a id="a566e993f52899733fed8017bf8869b2b" name="a566e993f52899733fed8017bf8869b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566e993f52899733fed8017bf8869b2b">&#9670;&#160;</a></span>QrCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qrcodegen::QrCode::QrCode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ver</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a></td>          <td class="paramname"><span class="paramname"><em>ecl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dataCodewords</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>msk</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a566e993f52899733fed8017bf8869b2b_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a566e993f52899733fed8017bf8869b2b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a566e993f52899733fed8017bf8869b2b_icgraph" id="aclassqrcodegen_1_1_qr_code_a566e993f52899733fed8017bf8869b2b_icgraph">
+<area shape="rect" title=" " alt="" coords="590,51,733,93"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="210,5,352,48"/>
+<area shape="poly" title=" " alt="" coords="575,46,542,41,443,31,352,28,352,23,443,26,543,36,581,46"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="400,51,542,93"/>
+<area shape="poly" title=" " alt="" coords="572,72,543,75,543,69,577,72"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,84,352,127"/>
+<area shape="poly" title=" " alt="" coords="583,97,543,108,443,115,353,113,353,108,443,110,542,103,578,98"/>
+<area shape="poly" title=" " alt="" coords="382,52,352,46,352,41,387,51"/>
+<area shape="poly" title=" " alt="" coords="387,87,353,96,352,90,382,88"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,92,162,119"/>
+<area shape="poly" title=" " alt="" coords="191,106,162,108,162,103,197,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Опис методів компонент</h2>
+<a id="a31efd868a933e2ea62a6f9694bf19606" name="a31efd868a933e2ea62a6f9694bf19606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31efd868a933e2ea62a6f9694bf19606">&#9670;&#160;</a></span>encodeBinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a> qrcodegen::QrCode::encodeBinary </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a></td>          <td class="paramname"><span class="paramname"><em>ecl</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a31efd868a933e2ea62a6f9694bf19606_cgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a31efd868a933e2ea62a6f9694bf19606_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a31efd868a933e2ea62a6f9694bf19606_cgraph" id="aclassqrcodegen_1_1_qr_code_a31efd868a933e2ea62a6f9694bf19606_cgraph">
+<area shape="rect" title=" " alt="" coords="5,72,148,115"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="202,72,344,115"/>
+<area shape="poly" title=" " alt="" coords="147,91,189,92,184,94,149,96"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a566e993f52899733fed8017bf8869b2b" title=" " alt="" coords="406,5,548,48"/>
+<area shape="poly" title=" " alt="" coords="147,69,195,57,296,41,393,32,388,34,297,46,196,63,149,74"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a32ead40ba58149f5e5fe13a6417d8304" title=" " alt="" coords="196,139,351,181"/>
+<area shape="poly" title=" " alt="" coords="142,113,196,132,191,134,141,118"/>
+<area shape="rect" href="classqrcodegen_1_1_bit_buffer.html#abeaf5adf83b987fa573c63a1ffad30ad" title=" " alt="" coords="407,139,546,181"/>
+<area shape="poly" title=" " alt="" coords="341,113,398,133,392,133,340,118"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#ad03817114a3ea5237b79805692db285e" title=" " alt="" coords="399,72,554,115"/>
+<area shape="poly" title=" " alt="" coords="345,91,386,93,381,94,345,96"/>
+<area shape="poly" title=" " alt="" coords="339,69,397,52,392,54,341,74"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94" title=" " alt="" coords="602,135,758,177"/>
+<area shape="poly" title=" " alt="" coords="548,113,597,130,591,129,548,118"/>
+<area shape="poly" title=" " alt="" coords="351,157,394,160,388,160,351,163"/>
+<area shape="poly" title=" " alt="" coords="344,179,399,191,477,198,554,191,602,182,607,182,555,196,477,203,399,196,343,185"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78aa108015b15a8b1fd35d042aff34aa" name="a78aa108015b15a8b1fd35d042aff34aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78aa108015b15a8b1fd35d042aff34aa">&#9670;&#160;</a></span>encodeSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a> qrcodegen::QrCode::encodeSegments </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classqrcodegen_1_1_qr_segment.html">QrSegment</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>segs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a></td>          <td class="paramname"><span class="paramname"><em>ecl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minVersion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxVersion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">40</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>boostEcl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_cgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_cgraph" id="aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_cgraph">
+<area shape="rect" title=" " alt="" coords="5,72,148,115"/>
+<area shape="rect" href="classqrcodegen_1_1_bit_buffer.html#abeaf5adf83b987fa573c63a1ffad30ad" title=" " alt="" coords="204,5,343,48"/>
+<area shape="poly" title=" " alt="" coords="140,69,196,52,192,55,143,74"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#ad03817114a3ea5237b79805692db285e" title=" " alt="" coords="196,72,351,115"/>
+<area shape="poly" title=" " alt="" coords="147,91,183,92,178,94,148,96"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a566e993f52899733fed8017bf8869b2b" title=" " alt="" coords="202,139,344,181"/>
+<area shape="poly" title=" " alt="" coords="142,113,196,133,191,134,141,118"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94" title=" " alt="" coords="399,72,554,115"/>
+<area shape="poly" title=" " alt="" coords="351,91,386,93,381,94,351,96"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_icgraph" id="aclassqrcodegen_1_1_qr_code_a78aa108015b15a8b1fd35d042aff34aa_icgraph">
+<area shape="rect" title=" " alt="" coords="400,39,542,81"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a31efd868a933e2ea62a6f9694bf19606" title=" " alt="" coords="210,5,352,48"/>
+<area shape="poly" title=" " alt="" coords="382,45,352,42,352,36,387,45"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,72,352,115"/>
+<area shape="poly" title=" " alt="" coords="387,75,353,84,352,78,382,76"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,80,162,107"/>
+<area shape="poly" title=" " alt="" coords="191,94,162,96,162,91,197,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15d9e26d273b8de6d0773e317ebd97d5" name="a15d9e26d273b8de6d0773e317ebd97d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d9e26d273b8de6d0773e317ebd97d5">&#9670;&#160;</a></span>encodeText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a566e993f52899733fed8017bf8869b2b">QrCode</a> qrcodegen::QrCode::encodeText </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">Ecc</a></td>          <td class="paramname"><span class="paramname"><em>ecl</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_cgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_cgraph" id="aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,397,148,440"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="202,397,344,440"/>
+<area shape="poly" title=" " alt="" coords="147,416,189,418,184,420,148,421"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_code.html#a566e993f52899733fed8017bf8869b2b" title=" " alt="" coords="406,456,548,499"/>
+<area shape="poly" title=" " alt="" coords="147,438,196,449,297,463,393,474,387,474,296,469,195,455,147,443"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#aa587c9cfcb4b28552d5d1e4c05b5b962" title=" " alt="" coords="196,172,351,215"/>
+<area shape="poly" title=" " alt="" coords="94,395,241,225,245,229,98,399"/>
+<area shape="rect" href="classqrcodegen_1_1_bit_buffer.html#abeaf5adf83b987fa573c63a1ffad30ad" title=" " alt="" coords="610,256,750,299"/>
+<area shape="poly" title=" " alt="" coords="345,422,393,422,446,418,501,408,553,391,582,374,609,354,651,312,656,309,612,357,585,379,555,396,502,414,447,424,393,427,345,427"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#ad03817114a3ea5237b79805692db285e" title=" " alt="" coords="399,339,554,381"/>
+<area shape="poly" title=" " alt="" coords="344,396,388,385,383,387,346,401"/>
+<area shape="poly" title=" " alt="" coords="345,437,393,453,388,452,345,442"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94" title=" " alt="" coords="602,156,758,199"/>
+<area shape="poly" title=" " alt="" coords="537,336,553,325,569,305,578,286,586,266,600,242,635,210,640,207,604,246,590,268,583,288,574,308,556,329,539,341"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a28153ac814d7b3105473a33d6e6734f3" title=" " alt="" coords="399,205,554,248"/>
+<area shape="poly" title=" " alt="" coords="351,203,386,211,381,212,352,209"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a9f2c32b351c0731c08fb170c2320f04d" title=" " alt="" coords="399,5,554,48"/>
+<area shape="poly" title=" " alt="" coords="289,170,334,115,364,85,397,58,407,54,403,58,401,62,368,89,338,119,293,173"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#ae2d00f78a60165d70faf5b56e36ae511" title=" " alt="" coords="399,139,554,181"/>
+<area shape="poly" title=" " alt="" coords="350,178,386,174,381,176,352,183"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a32ead40ba58149f5e5fe13a6417d8304" title=" " alt="" coords="399,72,554,115"/>
+<area shape="poly" title=" " alt="" coords="312,169,398,124,412,120,408,123,400,129,315,174"/>
+<area shape="rect" href="classqrcodegen_1_1_qr_segment.html#a03484cb17296745b303f0bd48b213446" title=" " alt="" coords="399,272,554,315"/>
+<area shape="poly" title=" " alt="" coords="314,213,400,258,413,265,407,265,398,262,313,218"/>
+<area shape="poly" title=" " alt="" coords="532,179,556,191,640,246,634,247,553,196,532,185"/>
+<area shape="poly" title=" " alt="" coords="554,164,589,169,584,170,555,169"/>
+<area shape="poly" title=" " alt="" coords="539,113,556,125,574,146,583,166,590,186,604,209,640,246,635,245,600,212,585,189,578,168,569,149,553,129,539,118"/>
+<area shape="poly" title=" " alt="" coords="530,113,615,149,610,150,530,118"/>
+<area shape="poly" title=" " alt="" coords="554,285,597,283,592,285,555,290"/>
+<area shape="poly" title=" " alt="" coords="530,269,553,258,634,209,639,207,556,262,533,274"/>
+</map>
+</div>
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_icgraph" id="aclassqrcodegen_1_1_qr_code_a15d9e26d273b8de6d0773e317ebd97d5_icgraph">
+<area shape="rect" title=" " alt="" coords="210,5,352,48"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,13,162,40"/>
+<area shape="poly" title=" " alt="" coords="191,27,162,29,162,24,197,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a158bfeb79b33f0f7c7325d60a50f5404" name="a158bfeb79b33f0f7c7325d60a50f5404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a158bfeb79b33f0f7c7325d60a50f5404">&#9670;&#160;</a></span>getErrorCorrectionLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a9ac15e987cf5cb71b1662373e6c9fec0">QrCode::Ecc</a> qrcodegen::QrCode::getErrorCorrectionLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69de407dc25aa12a5c67d1fb9d0a6d8f" name="a69de407dc25aa12a5c67d1fb9d0a6d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69de407dc25aa12a5c67d1fb9d0a6d8f">&#9670;&#160;</a></span>getMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qrcodegen::QrCode::getMask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a729c17d33f13d21fb8295c04ef465133" name="a729c17d33f13d21fb8295c04ef465133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729c17d33f13d21fb8295c04ef465133">&#9670;&#160;</a></span>getModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qrcodegen::QrCode::getModule </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a729c17d33f13d21fb8295c04ef465133_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a729c17d33f13d21fb8295c04ef465133_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a729c17d33f13d21fb8295c04ef465133_icgraph" id="aclassqrcodegen_1_1_qr_code_a729c17d33f13d21fb8295c04ef465133_icgraph">
+<area shape="rect" title=" " alt="" coords="210,5,352,48"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,13,162,40"/>
+<area shape="poly" title=" " alt="" coords="191,27,162,29,162,24,197,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1fd72bbd390acc49362eddcfdf93b42b" name="a1fd72bbd390acc49362eddcfdf93b42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd72bbd390acc49362eddcfdf93b42b">&#9670;&#160;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qrcodegen::QrCode::getSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф викликів для цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="classqrcodegen_1_1_qr_code_a1fd72bbd390acc49362eddcfdf93b42b_icgraph.png" border="0" usemap="#aclassqrcodegen_1_1_qr_code_a1fd72bbd390acc49362eddcfdf93b42b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassqrcodegen_1_1_qr_code_a1fd72bbd390acc49362eddcfdf93b42b_icgraph" id="aclassqrcodegen_1_1_qr_code_a1fd72bbd390acc49362eddcfdf93b42b_icgraph">
+<area shape="rect" title=" " alt="" coords="210,5,352,48"/>
+<area shape="rect" href="class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,13,162,40"/>
+<area shape="poly" title=" " alt="" coords="191,27,162,29,162,24,197,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f473df995c683a0f3e63a6d83b6b2cb" name="a2f473df995c683a0f3e63a6d83b6b2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f473df995c683a0f3e63a6d83b6b2cb">&#9670;&#160;</a></span>getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qrcodegen::QrCode::getVersion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Компонентні дані</h2>
+<a id="ac884bc36ec4765b89540751ad8c7dfa1" name="ac884bc36ec4765b89540751ad8c7dfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac884bc36ec4765b89540751ad8c7dfa1">&#9670;&#160;</a></span>MAX_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qrcodegen::QrCode::MAX_VERSION = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49443c1e43f8c73b6a5c6069c6b24bd4" name="a49443c1e43f8c73b6a5c6069c6b24bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49443c1e43f8c73b6a5c6069c6b24bd4">&#9670;&#160;</a></span>MIN_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qrcodegen::QrCode::MIN_VERSION = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>LinkManagerCore/<a class="el" href="qrcodegen_8hpp_source.html">qrcodegen.hpp</a></li>
+<li>LinkManagerCore/<a class="el" href="qrcodegen_8cpp.html">qrcodegen.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceqrcodegen.html">qrcodegen</a></li><li class="navelem"><a href="classqrcodegen_1_1_qr_code.html">QrCode</a></li>
+    <li class="footer">Створено системою <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

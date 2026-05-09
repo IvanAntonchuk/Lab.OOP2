@@ -1,5 +1,5 @@
 #include "testdatabase.h"
-#include "../OOP2Lab/databasemanager.h"
+#include "databasemanager.h"
 #include <QFile>
 #include <QDir>
 #include <QSqlQuery>

@@ -1,14 +1,14 @@
-<map id="OOP2Lab/iexportstrategy.h" name="OOP2Lab/iexportstrategy.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="20,5,198,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,71,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,35,63,71,59,67,98,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="84,155,141,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,31,115,140,109,139,107,34"/>
-<area shape="rect" id="Node000004" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="146,80,248,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,30,172,69,167,71,124,35"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="185,106,140,147,137,142,180,108"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="167,155,221,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="198,105,197,140,193,138,194,109"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="245,155,319,181"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="212,105,259,145,253,145,211,110"/>
+<map id="LinkManagerCore/iexportstrategy.h" name="LinkManagerCore/iexportstrategy.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,229,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="14,80,79,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,35,71,71,67,67,106,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="92,155,150,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,31,123,140,118,139,115,34"/>
+<area shape="rect" id="Node000004" href="$linkmanager_8h.html" title="Заголовочний файл для управління посиланнями." alt="" coords="154,80,256,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,30,181,69,176,71,132,35"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="193,106,149,147,146,142,188,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="176,155,229,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="206,105,206,140,201,138,203,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="253,155,328,181"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="221,105,267,145,262,145,219,110"/>
 </map>

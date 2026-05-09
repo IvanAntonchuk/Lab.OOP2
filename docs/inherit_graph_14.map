@@ -1,3 +1,7 @@
 <map id="Графічна ієрархія класів" name="Графічна ієрархія класів">
-<area shape="rect" id="Node000000" href="$struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n20_context_manager_dialog_e__t.html" title=" " alt="" coords="5,5,244,64"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,89,32"/>
+<area shape="rect" id="Node000001" href="$classqrcodegen_1_1_bit_buffer.html" title=" " alt="" coords="137,31,276,57"/>
+<area shape="poly" id="edge14_Node000000_Node000001" title=" " alt="" coords="104,25,139,32,134,34,104,30"/>
+<area shape="rect" id="Node000002" href="$classvector.html" title=" " alt="" coords="18,56,76,83"/>
+<area shape="poly" id="edge15_Node000002_Node000001" title=" " alt="" coords="90,60,139,54,134,56,91,65"/>
 </map>

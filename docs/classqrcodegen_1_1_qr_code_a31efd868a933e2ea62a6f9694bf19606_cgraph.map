@@ -1,0 +1,18 @@
+<map id="qrcodegen::QrCode::encodeBinary" name="qrcodegen::QrCode::encodeBinary">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,148,115"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_qr_code.html#a78aa108015b15a8b1fd35d042aff34aa" title=" " alt="" coords="202,72,344,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,91,189,92,184,94,149,96"/>
+<area shape="rect" id="Node000006" href="$classqrcodegen_1_1_qr_code.html#a566e993f52899733fed8017bf8869b2b" title=" " alt="" coords="406,5,548,48"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="147,69,195,57,296,41,393,32,388,34,297,46,196,63,149,74"/>
+<area shape="rect" id="Node000007" href="$classqrcodegen_1_1_qr_segment.html#a32ead40ba58149f5e5fe13a6417d8304" title=" " alt="" coords="196,139,351,181"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="142,113,196,132,191,134,141,118"/>
+<area shape="rect" id="Node000003" href="$classqrcodegen_1_1_bit_buffer.html#abeaf5adf83b987fa573c63a1ffad30ad" title=" " alt="" coords="407,139,546,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,113,398,133,392,133,340,118"/>
+<area shape="rect" id="Node000004" href="$classqrcodegen_1_1_qr_segment.html#ad03817114a3ea5237b79805692db285e" title=" " alt="" coords="399,72,554,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="345,91,386,93,381,94,345,96"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="339,69,397,52,392,54,341,74"/>
+<area shape="rect" id="Node000005" href="$classqrcodegen_1_1_qr_segment.html#aac098af945f0037b853ac89600795e94" title=" " alt="" coords="602,135,758,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="548,113,597,130,591,129,548,118"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="351,157,394,160,388,160,351,163"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="344,179,399,191,477,198,554,191,602,182,607,182,555,196,477,203,399,196,343,185"/>
+</map>

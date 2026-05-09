@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['deletelink_0',['deleteLink',['../class_link_manager.html#a77c4ddf626891a5c65740d35a04dd567',1,'LinkManager::deleteLink()'],['../class_main_controller.html#ac6490100d012fc4a2fab0e9a060f0d22',1,'MainController::deleteLink()']]],
-  ['dragenterevent_1',['dragEnterEvent',['../class_main_window.html#a505572442d73419f3cab4afc8158621c',1,'MainWindow']]],
-  ['dropevent_2',['dropEvent',['../class_main_window.html#af809c2679376142b241371e36aedc279',1,'MainWindow']]]
+  ['clearlinksfolder_0',['clearLinksFolder',['../class_link_manager.html#abb435880358b919c0a7e30a11ad5a520',1,'LinkManager']]],
+  ['close_1',['close',['../class_database_manager.html#a36c8ab027e11aba2464f384b18e814e5',1,'DatabaseManager']]],
+  ['closeevent_2',['closeEvent',['../class_main_window.html#a05fb9d72c044aa3bb7d187b994704e2f',1,'MainWindow']]],
+  ['contextmanagerdialog_3',['ContextManagerDialog',['../class_context_manager_dialog.html#af8944008b2c2de1a3df5fd4c003052dc',1,'ContextManagerDialog']]]
 ];

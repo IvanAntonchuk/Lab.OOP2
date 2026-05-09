@@ -1,0 +1,7 @@
+<map id="qrcodegen::QrSegment::makeSegments" name="qrcodegen::QrSegment::makeSegments">
+<area shape="rect" id="Node000001" title=" " alt="" coords="400,5,555,48"/>
+<area shape="rect" id="Node000002" href="$classqrcodegen_1_1_qr_code.html#a15d9e26d273b8de6d0773e317ebd97d5" title=" " alt="" coords="210,5,352,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,27,352,29,352,24,387,27"/>
+<area shape="rect" id="Node000003" href="$class_q_r_dialog.html#a9d625c7f5212d1d9818f75f5c9e8e512" title="Генерує QR&#45;код із заданого тексту та відображає його на екрані." alt="" coords="5,13,162,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,27,162,29,162,24,197,26"/>
+</map>

@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['buttonbox_0',['buttonBox',['../class_ui___add_link_dialog.html#a1bff9b381bfc92c51c65b1b1e219e811',1,'Ui_AddLinkDialog::buttonBox'],['../class_ui___context_manager_dialog.html#a8d44c9b5ca67344ca458577472cd5d5b',1,'Ui_ContextManagerDialog::buttonBox'],['../class_ui___filter_dialog.html#a9908ac3d3cdbf14cd084458f00cc1868',1,'Ui_FilterDialog::buttonBox'],['../class_ui___folder_manager_dialog.html#a0f8aecdb80ce4f45cf6f4353808927c8',1,'Ui_FolderManagerDialog::buttonBox']]]
+  ['centralwidget_0',['centralwidget',['../class_ui___main_window.html#a356f1cf3ebda15f1fac59467ee081b74',1,'Ui_MainWindow']]],
+  ['clearlinksfolder_1',['clearLinksFolder',['../class_link_manager.html#abb435880358b919c0a7e30a11ad5a520',1,'LinkManager']]],
+  ['close_2',['close',['../class_database_manager.html#a36c8ab027e11aba2464f384b18e814e5',1,'DatabaseManager']]],
+  ['closebutton_3',['closeButton',['../class_ui___export_dialog.html#a72d670c2afcdfed82893bf6454ef5e7f',1,'Ui_ExportDialog']]],
+  ['closeevent_4',['closeEvent',['../class_main_window.html#a05fb9d72c044aa3bb7d187b994704e2f',1,'MainWindow']]],
+  ['comment_5',['comment',['../struct_link_data.html#a0813e777121927d4ab825229d9b273ec',1,'LinkData']]],
+  ['commentlabel_6',['commentLabel',['../class_ui___add_link_dialog.html#ae962ea591b25930110dc1c00861d6e7b',1,'Ui_AddLinkDialog']]],
+  ['commenttextedit_7',['commentTextEdit',['../class_ui___add_link_dialog.html#a6355ab3e80f0356b3e863466eb2e1bc1',1,'Ui_AddLinkDialog']]],
+  ['contextlabel_8',['contextLabel',['../class_ui___add_link_dialog.html#a5b581f3abdba2ffac383ea1cc6d50494',1,'Ui_AddLinkDialog']]],
+  ['contextlistwidget_9',['contextListWidget',['../class_ui___add_link_dialog.html#aeed443fb4f28e17450578ea62f66df0f',1,'Ui_AddLinkDialog::contextListWidget'],['../class_ui___context_manager_dialog.html#a2f88855820dbb5a4b76fb88d1680de3e',1,'Ui_ContextManagerDialog::contextListWidget'],['../class_ui___filter_dialog.html#a86fbcea7ac4c7add7d95fb3ca417b95f',1,'Ui_FilterDialog::contextListWidget']]],
+  ['contextmanagerdialog_10',['ContextManagerDialog',['../class_context_manager_dialog.html',1,'ContextManagerDialog'],['../class_ui_1_1_context_manager_dialog.html',1,'Ui::ContextManagerDialog'],['../class_context_manager_dialog.html#af8944008b2c2de1a3df5fd4c003052dc',1,'ContextManagerDialog::ContextManagerDialog()']]],
+  ['contextmanagerdialog_2ecpp_11',['contextmanagerdialog.cpp',['../contextmanagerdialog_8cpp.html',1,'']]],
+  ['contextmanagerdialog_2eh_12',['contextmanagerdialog.h',['../contextmanagerdialog_8h.html',1,'']]],
+  ['contexts_13',['contexts',['../struct_link_data.html#ac7069bb2a87254adb9b036d2bce415d6',1,'LinkData']]],
+  ['createfolderbutton_14',['createFolderButton',['../class_ui___folder_manager_dialog.html#adc0f08d9313c709f3418e9a4eb8f1026',1,'Ui_FolderManagerDialog']]],
+  ['csvexportstrategy_15',['CsvExportStrategy',['../class_csv_export_strategy.html',1,'']]],
+  ['csvexportstrategy_2ecpp_16',['csvexportstrategy.cpp',['../csvexportstrategy_8cpp.html',1,'']]],
+  ['csvexportstrategy_2eh_17',['csvexportstrategy.h',['../csvexportstrategy_8h.html',1,'']]],
+  ['csvimportstrategy_18',['CsvImportStrategy',['../class_csv_import_strategy.html',1,'']]],
+  ['csvimportstrategy_2ecpp_19',['csvimportstrategy.cpp',['../csvimportstrategy_8cpp.html',1,'']]],
+  ['csvimportstrategy_2eh_20',['csvimportstrategy.h',['../csvimportstrategy_8h.html',1,'']]]
 ];
