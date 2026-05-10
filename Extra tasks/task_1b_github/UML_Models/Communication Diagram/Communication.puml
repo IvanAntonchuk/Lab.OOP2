@@ -1,0 +1,40 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+    BackgroundColor White
+    BorderColor Black
+    roundCorner 10
+}
+skinparam ArrowColor black
+
+title Створення Pull Request (Communication Diagram)
+
+actor "Розробник" as User
+rectangle "<u>:WebAppFrontend</u>" as UI
+rectangle "<u>:PRManagerService</u>" as PRService
+rectangle "<u>:GitStorageRPC</u>" as GitRPC
+rectangle "<u>:RelationalDB</u>" as DB
+rectangle "<u>:CI_Orchestrator</u>" as CI
+
+' Зв'язки з нумерацією викликів
+User -right-> UI : "1: клік 'Create Pull Request'"
+
+UI -down-> PRService : "1.1: createPR(base, head, title)"
+
+PRService -right-> GitRPC : "1.1.1: checkMergeability(baseSha, headSha)\n1.1.2: getCommitsDiff()"
+
+PRService -down-> DB : "1.2: save(new PullRequest)\n1.4: updateStatus(OPEN)"
+
+PRService -left-> CI : "1.3: emitEvent(PR_OPENED_EVENT)"
+
+CI -up-> GitRPC : "1.3.1: read(.github/workflows/)"
+CI -down-> DB : "1.3.2: insertCheckRuns(status: PENDING)"
+
+UI .up.> User : "2: Відображає сторінку нового PR"
+
+' Розташування для кращого вигляду графа
+User -[hidden]down- CI
+GitRPC -[hidden]down- DB
+
+@enduml
