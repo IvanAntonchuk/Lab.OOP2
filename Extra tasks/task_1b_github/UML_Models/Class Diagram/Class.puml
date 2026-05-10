@@ -1,0 +1,124 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam nodesep 50
+skinparam ranksep 50
+
+package "GitHub Domain Model" {
+
+    enum PRStatus {
+        OPEN
+        CLOSED
+        MERGED
+        DRAFT
+    }
+
+    enum IssueState {
+        OPEN
+        CLOSED
+    }
+
+    interface ICommentable {
+        + addComment(c: Comment): void
+        + getComments(): List<Comment>
+    }
+
+    class User {
+        - id: UUID
+        - username: String
+        - email: String
+        - avatarUrl: String
+        + createRepository(name: String): Repository
+        + forkRepository(repo: Repository): Repository
+        + openPullRequest(): PullRequest
+    }
+
+    class Organization {
+        - orgId: UUID
+        - name: String
+        - billingEmail: String
+        + addMember(u: User, role: String): void
+        + removeMember(u: User): void
+    }
+
+    class Repository {
+        - repoId: UUID
+        - name: String
+        - description: String
+        - isPrivate: Boolean
+        - forkCount: Integer
+        - starCount: Integer
+        + cloneRepo(): void
+        + deleteRepo(): void
+        + addCollaborator(u: User): void
+    }
+
+    class Branch {
+        - name: String
+        - isProtected: Boolean
+        + merge(target: Branch): Boolean
+        + deleteBranch(): void
+    }
+
+    class Commit {
+        - sha: String
+        - message: String
+        - timestamp: DateTime
+        - authorEmail: String
+        + getDiff(): String
+        + revert(): Commit
+    }
+
+    class PullRequest {
+        - prNumber: Integer
+        - title: String
+        - description: String
+        - status: PRStatus
+        + merge(): Boolean
+        + closePR(): void
+        + requestReview(u: User): void
+    }
+
+    class Issue {
+        - issueNumber: Integer
+        - title: String
+        - body: String
+        - state: IssueState
+        - labels: List<String>
+        + assignUser(u: User): void
+        + closeIssue(): void
+    }
+
+    class Comment {
+        - commentId: UUID
+        - content: String
+        - createdAt: DateTime
+        + edit(newContent: String): void
+        + delete(): void
+    }
+
+    Organization "1" o-- "0..*" User : members
+    Organization "1" -- "0..*" Repository : owns
+    User "1" -- "0..*" Repository : owns
+
+    Repository "1" *-- "1..*" Branch : contains
+    Repository "1" *-- "0..*" Issue : tracks
+    Repository "1" *-- "0..*" PullRequest : manages
+
+    Branch "1" o-- "0..*" Commit : history
+    
+    PullRequest "1" --> "1" Branch : sourceBranch
+    PullRequest "1" --> "1" Branch : targetBranch
+
+    User "1" -- "0..*" Commit : authors
+    User "1" -- "0..*" Issue : opens/assigns
+    User "1" -- "0..*" PullRequest : creates
+
+    ICommentable <|.. PullRequest
+    ICommentable <|.. Issue
+    ICommentable <|.. Commit
+
+    ICommentable "1" *-- "0..*" Comment : has
+    User "1" -- "0..*" Comment : writes
+}
+@enduml
