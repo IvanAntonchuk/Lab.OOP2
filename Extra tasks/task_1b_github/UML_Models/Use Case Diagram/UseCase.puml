@@ -1,0 +1,63 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam actorStyle hollow
+
+actor "Unregistered User" as Guest
+actor "Registered User" as User
+actor "Contributor" as Contrib
+actor "Repository Owner" as Owner
+actor "Organization Admin" as Admin
+actor "GitHub Actions" as CI <<System>>
+
+Guest <|-- User
+User <|-- Contrib
+Contrib <|-- Owner
+Owner <|-- Admin
+
+rectangle "GitHub Platform" {
+    usecase "Browse Public Repos" as UC_Browse
+    usecase "Clone / Download Repo" as UC_Clone
+    
+    usecase "Star Repository" as UC_Star
+    usecase "Fork Repository" as UC_Fork
+    usecase "Create Issue" as UC_Issue
+    usecase "Create Pull Request" as UC_PR
+    usecase "Compare Branches" as UC_Compare
+    
+    usecase "Push Code" as UC_Push
+    usecase "Trigger Workflow" as UC_Trigger
+    usecase "Review Code" as UC_Review
+    
+    usecase "Merge Pull Request" as UC_Merge
+    usecase "Manage Settings" as UC_Settings
+    usecase "Manage Access" as UC_Access
+    
+    usecase "Execute CI/CD Pipeline" as UC_Tests
+    usecase "Manage Teams & Billing" as UC_Org
+
+    Guest --> UC_Browse
+    Guest --> UC_Clone
+
+    User --> UC_Star
+    User --> UC_Fork
+    User --> UC_Issue
+    User --> UC_PR
+
+    UC_PR ..> UC_Compare : <<include>>
+
+    Contrib --> UC_Push
+    Contrib --> UC_Review
+
+    UC_Push <.. UC_Trigger : <<extend>>
+    UC_Trigger --> CI
+    CI --> UC_Tests
+
+    Owner --> UC_Merge
+    Owner --> UC_Settings
+    Owner --> UC_Access
+
+    Admin --> UC_Org
+}
+@enduml
