@@ -1,0 +1,47 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor black
+skinparam ArrowColor black
+
+title Огляд взаємодії: CI/CD Pipeline (Interaction Overview Diagram)
+
+start
+
+partition "sd [Interaction: Workflow Trigger]" {
+    :Отримання події (Push або PR);
+    :Парсинг конфігурації .yaml;
+    :Розподіл завдань на Runners;
+}
+
+fork
+    partition "ref [Sequence: Code Quality]" {
+        :Завантаження Docker-образу;
+        :Запуск Linter (SonarQube/ESLint);
+        :Збереження звіту про якість;
+    }
+fork again
+    partition "ref [Sequence: Unit Testing]" {
+        :Кешування залежностей;
+        :Компіляція (Build);
+        :Виконання Unit-тестів;
+    }
+end fork
+
+if (Всі перевірки успішні?) then (Так)
+    partition "sd [Interaction: Deployment]" {
+        :Генерація тегу (Release Tag);
+        :Створення архіву артефактів;
+        :Публікація на GitHub Packages;
+    }
+else (Ні)
+    partition "sd [Interaction: Notification]" {
+        :Оновлення статусу коміту на "Failed";
+        :Відправка Email сповіщення автору;
+    }
+    stop
+endif
+
+stop
+@enduml
