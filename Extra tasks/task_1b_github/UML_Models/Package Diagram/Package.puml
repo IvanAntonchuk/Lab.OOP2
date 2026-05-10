@@ -1,0 +1,91 @@
+@startuml
+skinparam packageStyle folder
+skinparam shadowing false
+skinparam nodesep 40
+skinparam ranksep 60
+
+title Детальна логічна структура модулів системи (Package Diagram)
+
+package "com.github.presentation (API Layer)" {
+    package "rest.v3" as RestAPI
+    package "graphql.v4" as GraphQL
+    package "webhooks.delivery" as Webhooks
+}
+
+package "com.github.security (Security Layer)" {
+    package "auth.oauth" as OAuth
+    package "auth.saml" as SAML
+    package "authorization.rbac" as RBAC
+    package "audit.logging" as AuditLog
+}
+
+package "com.github.core (Domain & Business Logic)" {
+    package "domain.entities" as Models
+    package "domain.events" as Events
+    
+    package "services.version_control" as VCS {
+        package "vcs.commits" as CommitMgr
+        package "vcs.branches" as BranchMgr
+        package "vcs.merging" as MergeEngine
+    }
+    
+    package "services.collaboration" as Collab {
+        package "collab.pull_requests" as PREngine
+        package "collab.issues" as IssueTracker
+        package "collab.reviews" as ReviewSystem
+    }
+    
+    package "services.cicd" as Actions {
+        package "cicd.workflows" as WFParser
+        package "cicd.runners" as RunnerDispatch
+    }
+}
+
+package "com.github.infrastructure (Data & External)" {
+    package "persistence.orm" as DB
+    package "storage.git_spokes" as GitStorage
+    package "messaging.kafka" as MessageQueue
+    package "search.elasticsearch" as SearchIndex
+    package "cache.redis" as Cache
+}
+
+RestAPI .down.> OAuth : <<authenticate>>
+RestAPI .down.> RBAC : <<authorize>>
+RestAPI .down.> VCS : <<import>>
+RestAPI .down.> Collab : <<import>>
+
+GraphQL .down.> Models : <<query>>
+GraphQL .down.> RBAC : <<authorize>>
+
+Webhooks .down.> Events : <<listen>>
+
+Collab .left.> VCS : <<use>>
+PREngine .down.> MergeEngine : <<invoke>>
+Actions .up.> VCS : <<checkout_code>>
+
+CommitMgr .down.> Events : <<publish>>
+PREngine .down.> Events : <<publish>>
+WFParser .down.> Events : <<publish>>
+
+VCS .up.> RBAC : <<check_permissions>>
+Collab .up.> RBAC : <<check_permissions>>
+Actions .up.> AuditLog : <<record>>
+
+Models .down.> DB : <<map>>
+
+CommitMgr .down.> GitStorage : <<read/write>>
+BranchMgr .down.> GitStorage : <<read/write>>
+
+PREngine .down.> DB : <<persist>>
+IssueTracker .down.> DB : <<persist>>
+
+Events .down.> MessageQueue : <<route>>
+RunnerDispatch .down.> MessageQueue : <<queue_jobs>>
+
+IssueTracker .down.> SearchIndex : <<index>>
+CommitMgr .down.> SearchIndex : <<index>>
+
+RunnerDispatch .down.> Cache : <<live_logs>>
+RestAPI .down.> Cache : <<rate_limit>>
+
+@enduml
