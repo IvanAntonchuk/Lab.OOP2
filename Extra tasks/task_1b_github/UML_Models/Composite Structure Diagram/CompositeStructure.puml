@@ -1,0 +1,67 @@
+@startuml
+skinparam componentStyle uml2
+skinparam shadowing false
+skinparam nodesep 40
+skinparam ranksep 60
+
+title Внутрішня будова компонента "GitHub Actions Runner" (Composite Structure)
+
+interface "GitHub Actions Service\n(gRPC / HTTPS)" as ExternalAPI
+interface "Host Operating System\n(Process Execution / I/O)" as HostOS
+interface "Container Registry\n(ghcr.io / docker.io)" as Registry
+
+component "Actions Runner Application" as Runner <<Subsystem>> {
+    
+    port "API Gateway Port" as PortAPI
+    port "System Gateway Port" as PortSys
+    port "Network Gateway Port" as PortNet
+    
+    component "Communication Layer" as CommLayer <<Part>> {
+        component "Job Poller" as Poller
+        component "Status Reporter" as Reporter
+        component "Log Streamer" as Streamer
+    }
+    
+    component "Workflow Orchestrator" as Orchestrator <<Part>> {
+        component "Context Builder" as CtxBuilder
+        component "Expression Evaluator" as Evaluator
+        component "Step Runner" as StepRunner
+    }
+    
+    component "Execution Environment" as ExecEnv <<Part>> {
+        component "Shell Executor" as ShellExec
+        component "Container Controller" as ContainerCtrl
+        component "Workspace Manager" as Workspace
+    }
+    
+    PortAPI -down- Poller : "Receive Job Payload"
+    Reporter -up- PortAPI : "Update Run Status"
+    Streamer -up- PortAPI : "Push Live Logs"
+    
+    ContainerCtrl -down- PortSys : "Docker Socket IPC"
+    Workspace -down- PortSys : "File System R/W"
+    ShellExec -down- PortSys : "Spawn Processes"
+    
+    ContainerCtrl -right- PortNet : "Pull Images"
+
+    Poller -right-> CtxBuilder : "Raw Workflow Data"
+    CtxBuilder -down-> Evaluator : "Inject Secrets & Vars"
+    Evaluator -down-> StepRunner : "Parsed Action Steps"
+    
+    StepRunner -down-> ShellExec : "Run bash/pwsh scripts"
+    StepRunner -down-> ContainerCtrl : "Run uses: docker/..."
+    
+    ShellExec -right-> Workspace : "Modify Source Code"
+    ContainerCtrl -right-> Workspace : "Mount Volumes"
+    
+    ShellExec -up-> Streamer : "stdout/stderr"
+    ContainerCtrl -up-> Streamer : "stdout/stderr"
+    
+    StepRunner -up-> Reporter : "Step Success/Fail Result"
+}
+
+ExternalAPI -down- PortAPI
+PortSys -down- HostOS
+PortNet -right- Registry
+
+@enduml
