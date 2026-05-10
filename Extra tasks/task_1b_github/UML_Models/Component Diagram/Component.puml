@@ -1,0 +1,62 @@
+@startuml
+skinparam componentStyle uml2
+skinparam shadowing false
+skinparam nodesep 40
+skinparam ranksep 40
+
+package "Client Tier" {
+    component "Web Browser (SPA)" as WebApp <<Frontend>>
+    component "GitHub Desktop" as DesktopClient <<Client>>
+    component "Git CLI" as GitClient <<CLI>>
+}
+
+package "API Gateway & Load Balancing" {
+    component "API Gateway (HAProxy)" as Gateway <<Gateway>>
+    interface "REST / GraphQL API" as HTTP_API
+    interface "SSH / Git Protocol" as Git_API
+    
+    Gateway -up- HTTP_API
+    Gateway -up- Git_API
+}
+
+package "Backend Microservices" {
+    component "Authentication Service" as AuthService <<Microservice>>
+    component "Git Repository Service" as RepoService <<Microservice>>
+    component "Issue & PR Service" as PRService <<Microservice>>
+    component "Actions Dispatcher" as ActionsService <<Microservice>>
+    component "Code Search Service" as SearchService <<Microservice>>
+}
+
+package "Storage Tier" {
+    database "Metadata DB (MySQL)" as MetaDB <<Database>>
+    database "Git Object Storage" as GitStorage <<File System>>
+    database "Search Index (Elasticsearch)" as ElasticSearch <<Index>>
+    database "Session Cache (Redis)" as Cache <<Cache>>
+}
+
+WebApp ..> HTTP_API : HTTPS
+DesktopClient ..> HTTP_API : HTTPS
+DesktopClient ..> Git_API : SSH / HTTPS
+GitClient ..> Git_API : SSH / HTTPS
+
+Gateway --> AuthService : Route Auth
+Gateway --> RepoService : Route Git Data
+Gateway --> PRService : Route Issues/PRs
+Gateway --> ActionsService : Route CI/CD
+Gateway --> SearchService : Route Queries
+
+AuthService --> MetaDB : Validate Users
+AuthService --> Cache : Check Tokens
+
+RepoService --> GitStorage : R/W Commits & Trees
+RepoService --> MetaDB : Check Repo Meta
+
+PRService --> MetaDB : R/W Issue/PR Data
+PRService --> Cache : Store UI State
+
+ActionsService --> RepoService : Fetch Code
+ActionsService --> MetaDB : Update CI Status
+
+SearchService --> ElasticSearch : Query Code
+RepoService --> ElasticSearch : Update Index
+@enduml
