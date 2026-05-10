@@ -1,0 +1,49 @@
+@startuml
+skinparam shadowing false
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam ArrowColor black
+skinparam defaultFontName Arial
+
+title Життєвий цикл Pull Request (State Machine Diagram)
+
+[*] --> Draft : Створення PR як "Чернетки"
+[*] --> Open : Створення звичайного PR
+
+state "Draft (Чернетка)" as Draft
+state "Open (Відкритий)" as Open
+
+state "Under Review (Процес Рев'ю)" as Review {
+    state "Pending Review\n(Очікує перевірки)" as Pending
+    state "Changes Requested\n(Потрібні зміни)" as Changes
+    state "Approved\n(Схвалено)" as Approved
+
+    [*] --> Pending
+    Pending --> Changes : Рев'юер вимагає правок
+    Changes --> Pending : Автор пушить нові коміти
+    Pending --> Approved : Рев'юер ставить "Approve"
+    Approved --> Pending : Автор пушить нові коміти\n(скидання апруву)
+}
+
+state "Merged (Злитий)" as Merged
+state "Closed (Закритий)" as Closed
+
+Draft --> Open : Натиснуто "Ready for review"
+Open --> Draft : Натиснуто "Convert to draft"
+
+Open --> Review : Призначення рев'юерів
+
+Review --> Merged : Натиснуто "Merge pull request"\n[Всі перевірки успішні]
+Open --> Merged : Натиснуто "Merge pull request"\n[Немає захисту гілки]
+
+Draft --> Closed : Закрито автором
+Open --> Closed : Закрито без злиття
+Review --> Closed : Закрито без злиття
+
+Closed --> Open : Натиснуто "Reopen"
+
+Merged --> [*] : Гілку видалено
+Closed --> [*] : Зміни відхилено назавжди
+@enduml
