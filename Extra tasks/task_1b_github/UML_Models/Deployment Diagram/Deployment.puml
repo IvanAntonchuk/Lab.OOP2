@@ -1,0 +1,82 @@
+@startuml
+skinparam shadowing false
+skinparam componentStyle uml2
+skinparam node {
+    BackgroundColor White
+    BorderColor Black
+}
+
+title GitHub Physical Infrastructure & Deployment Model
+
+frame "Developer Environment" {
+    node "Developer Laptop" <<Device>> {
+        node "OS: Windows/Linux/macOS" {
+            artifact "Git CLI" <<Executable>>
+            artifact "Web Browser" <<Application>>
+            artifact "VS Code / GitHub Desktop" <<IDE>>
+        }
+    }
+}
+
+cloud "Public Internet" as Internet
+
+node "Edge Network (CDN)" as CDN {
+    artifact "SSL Certificate"
+    component "WAF (Web Application Firewall)" as WAF
+    component "Akamai / Fastly Caching" as CacheLayer
+}
+
+node "GitHub Main Data Center (Region)" as DataCenter {
+
+    node "Kubernetes Cluster (Web Tier)" <<Cluster>> {
+        node "Web Server Node (N)" {
+            artifact "GitHub Web Bundle (Ruby/Rails)" as WebApp
+        }
+        node "API Gateway Node" {
+            artifact "API Services (Go/gRPC)" as APIService
+        }
+    }
+
+    node "Background Job Cluster" <<Cluster>> {
+        node "Worker Node (M)" {
+            artifact "Resque Workers" as Workers
+            artifact "Actions Runner" as ActionRunner
+        }
+    }
+
+    node "Git Storage Tier" <<Cluster>> {
+        node "DGit Server (Spokes)" as GitRPC {
+            artifact "Git RPC Backend"
+            storage "Local SSD (Git Objects)" as Disk
+        }
+    }
+
+    node "Database Cluster" <<Cluster>> {
+        database "MySQL Cluster (Primary/Replica)" as MySQL
+        database "Redis (Pub/Sub & Cache)" as Redis
+        database "Elasticsearch Cluster" as ES
+    }
+}
+
+' Relationships
+"Developer Laptop" -- Internet : TCP/IP (443, 22)
+Internet -- CDN : HTTPS / SSH
+CDN -- WAF
+WAF -- CacheLayer
+
+CacheLayer -- APIService : Load Balanced Traffic
+CacheLayer -- WebApp : HTTP Requests
+
+APIService -- Redis : Session State
+WebApp -- MySQL : SQL Queries
+APIService -- GitRPC : gRPC (Git Data)
+
+Workers -- Redis : Job Queue
+Workers -- MySQL : Persistence
+ActionRunner -- GitRPC : Fetch Code
+
+GitRPC -- Disk : Physical I/O
+RepoUpdate ..> ES : Indexing Job
+
+APIService ..> ES : Search Queries
+@enduml
