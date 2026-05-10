@@ -1,0 +1,86 @@
+@startuml
+skinparam shadowing false
+skinparam object {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam nodesep 50
+skinparam ranksep 50
+
+title Знімок системи: Створення та рев'ю Pull Request у репозиторії
+
+object "<u>student: User</u>" as user1 {
+    username = "dev_student"
+    accountTier = "Free"
+    isActive = true
+}
+
+object "<u>maintainer: User</u>" as user2 {
+    username = "senior_reviewer"
+    role = "Project Admin"
+}
+
+object "<u>targetRepo: Repository</u>" as repo {
+    repoId = "554433221"
+    name = "ECommerce_Backend"
+    visibility = "Public"
+    primaryLanguage = "Java"
+}
+
+object "<u>main: Branch</u>" as branchMain {
+    name = "main"
+    isProtected = true
+}
+
+object "<u>featureBranch: Branch</u>" as branchFeat {
+    name = "feature/payment-gateway"
+    isProtected = false
+}
+
+object "<u>baseCommit: Commit</u>" as commit1 {
+    sha = "a1b2c3d9"
+    message = "Initial database schema setup"
+    timestamp = "2026-05-01 10:00:00"
+}
+
+object "<u>newCommit: Commit</u>" as commit2 {
+    sha = "f8e9d0c4"
+    message = "Implement Stripe payment integration"
+    timestamp = "2026-05-10 15:30:00"
+}
+
+object "<u>pr42: PullRequest</u>" as pr {
+    prNumber = 42
+    title = "Add payment gateway integration"
+    status = "OPEN"
+    changedFiles = 12
+    additions = 340
+    deletions = 15
+}
+
+object "<u>approval: Review</u>" as review {
+    status = "APPROVED"
+    content = "Архітектура виглядає добре, тести проходять. Можна зливати."
+    submittedAt = "2026-05-10 18:00:00"
+}
+
+user1 -- repo : forks / contributes
+repo *-- branchMain : has_branch
+repo *-- branchFeat : has_branch
+repo *-- pr : tracks_pr
+
+branchMain o-- commit1 : head_commit
+branchFeat o-- commit2 : head_commit
+
+commit2 --> commit1 : parent_commit
+
+pr --> branchMain : target_branch (base)
+pr --> branchFeat : source_branch (head)
+
+user1 -- pr : created_by
+pr *-- review : has_review
+user2 -- review : reviewed_by
+
+user1 -- commit2 : authored
+
+@enduml
