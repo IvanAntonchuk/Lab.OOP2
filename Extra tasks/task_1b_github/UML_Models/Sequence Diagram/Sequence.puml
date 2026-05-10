@@ -1,0 +1,70 @@
+@startuml
+autonumber
+skinparam shadowing false
+skinparam maxMessageSize 150
+skinparam ParticipantPadding 20
+skinparam defaultFontName Arial
+
+title Процес авторизації користувача (Sequence Diagram)
+
+actor "Користувач\n(Browser)" as User
+participant "Web Server\n(Frontend)" as Web
+participant "Auth Service\n(Microservice)" as Auth
+database "User DB\n(MySQL)" as DB
+database "Session Cache\n(Redis)" as Redis
+
+User -> Web : Введення логіна та пароля (POST /login)
+activate Web
+
+Web -> Auth : ValidateCredentials(email, password)
+activate Auth
+
+Auth -> DB : SELECT hash, is_2fa_enabled FROM users
+activate DB
+DB --> Auth : User Data
+deactivate DB
+
+note over Auth: Перевірка хешу пароля (Bcrypt)
+
+alt Пароль невірний
+    Auth --> Web : 401 Unauthorized
+    Web --> User : Помилка "Incorrect username or password"
+else Пароль вірний
+    
+    alt 2FA Увімкнено
+        Auth --> Web : 202 Accepted (Вимагається 2FA)
+        Web --> User : Відображення форми введення 2FA (TOTP)
+        
+        User -> Web : Введення 6-значного коду (POST /login/2fa)
+        Web -> Auth : Verify2FA(userId, code)
+        
+        Auth -> DB : Отримання 2FA Secret Key
+        activate DB
+        DB --> Auth : Secret Key
+        deactivate DB
+        
+        note over Auth: Валідація TOTP коду за часом
+        
+        alt Код невірний
+            Auth --> Web : 401 Unauthorized
+            Web --> User : Помилка "Invalid two-factor code"
+        end
+    end
+    
+    note over Auth: Успішна перевірка (генеруємо сесію)
+    Auth -> Auth : Generate Secure Session Token
+    
+    Auth -> Redis : SET user_session_token (TTL: 30 days)
+    activate Redis
+    Redis --> Auth : OK
+    deactivate Redis
+    
+    Auth --> Web : 200 OK + Session Data
+deactivate Auth
+
+Web -> Web : Встановлення HTTP-only Cookie
+Web --> User : 302 Redirect to /dashboard
+deactivate Web
+
+end
+@enduml
