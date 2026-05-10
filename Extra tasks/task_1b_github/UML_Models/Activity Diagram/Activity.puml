@@ -1,0 +1,55 @@
+@startuml
+skinparam shadowing false
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor black
+skinparam ArrowColor black
+skinparam defaultFontName Arial
+skinparam wrapWidth 160
+
+title Алгоритм обробки команди "git push" (Компактний варіант)
+
+|Клієнт (Developer)|
+start
+:Виконання `git push` та відправка pack-файлу;
+
+|API & Auth|
+:Прийом з'єднання;
+if (Авторизація та Права доступу?) then (Помилка)
+  :Відмова (401/403);
+  |Клієнт (Developer)|
+  :Помилка доступу;
+  stop
+else (Успіх)
+endif
+
+|Core & Storage|
+:Прийом та валідація Git-об'єктів;
+if (Історія конфліктує?\nnon-fast-forward) then (Так)
+  :Відхилення;
+  |Клієнт (Developer)|
+  :Повідомлення "Updates were rejected";
+  stop
+else (Ні)
+  |Core & Storage|
+  :Запис комітів у ФС;
+  :Оновлення HEAD;
+  
+  fork
+    :Індексація коду\n(Search);
+  fork again
+    :Оновлення стат.\n(Contribution graph);
+  fork again
+    if (Є файли .github/workflows?) then (Так)
+      :Запуск CI/CD\n(Actions Runner);
+    endif
+  fork again
+    if (Push у гілку відкритого PR?) then (Так)
+      :Додавання комітів у PR та сповіщення;
+    endif
+  end fork
+endif
+
+|Клієнт (Developer)|
+:Статус "Everything up-to-date";
+stop
+@enduml
