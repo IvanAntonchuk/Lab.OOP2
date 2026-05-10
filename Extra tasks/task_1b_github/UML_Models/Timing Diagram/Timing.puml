@@ -1,0 +1,50 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+scale 10 as 100 pixels
+
+title Життєвий цикл завдання (Timing Diagram) - Збалансований варіант
+
+robust "Job Status (GitHub)" as Job
+concise "Runner VM" as Runner
+concise "Network" as Net
+
+@0
+Job is Queued
+Runner is Offline
+Net is Idle
+
+@10
+Job is Assigning
+Runner is Booting
+
+@20
+Job is InProgress
+Runner is "Init Context"
+
+@30
+Runner is "Checkout Code"
+Net is "Downloading"
+
+@45
+Runner is "Build & Test"
+Net is Idle
+
+@70
+Runner is "Upload Artifacts"
+Net is "Uploading"
+
+@85
+Job is TearingDown
+Runner is "Cleanup"
+Net is Idle
+
+@95
+Job is Completed
+Runner is Terminated
+
+highlight 30 to 45 : Network I/O
+highlight 45 to 70 : CPU Intensive
+highlight 70 to 85 : Network I/O
+
+@enduml
