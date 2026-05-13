@@ -1,9 +1,6 @@
 # Лабораторна робота №1b: Моделювання з використанням UML
 
-**Студент:** Антончук Іван Дмитрович (Група ІПС-21)  
-**Спеціальність:** 121 Інженерія програмного забезпечення  
-**Дисципліна:** Об'єктно-орієнтоване проєктування  
-**Варіант:** Code repository (на прикладі GitHub)  
+**Тема:** Code repository (на прикладі GitHub)  
 
 ---
 
@@ -63,5 +60,3 @@
 
 **Логіка роботи нової функції (Activity Diagram):** ![Live Architecture Visualizer](<UML_Models/Live Architecture Visualizer Diagram/Feature_LiveUML.png>)
 
----
-**2026 | Taras Shevchenko National University of Kyiv**
