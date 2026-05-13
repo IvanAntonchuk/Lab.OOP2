@@ -1,0 +1,31 @@
+@startuml
+skinparam shadowing false
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor black
+skinparam defaultFontName Arial
+
+title Робота фічі: Live Architecture Visualizer
+
+start
+:Створення Pull Request;
+:Запуск фонового процесу аналізу;
+
+fork
+    :Парсинг змінених файлів\n(напр. .cpp, .h);
+    :Вилучення сигнатур класів\nта залежностей;
+fork again
+    :Аналіз існуючої архітектури\nв гілці main;
+end fork
+
+:Генерація різниці (Diff) \nв архітектурній моделі;
+
+if (Знайдено архітектурні зміни?) then (Так)
+    :Рендеринг UML Class Diagram\n(через PlantUML/Mermaid);
+    :Автоматичне додавання коментаря\nдо PR з візуалізацією змін;
+else (Ні)
+    :Пропуск кроку візуалізації;
+endif
+
+:Очікування Code Review;
+stop
+@enduml
