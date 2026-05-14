@@ -1,0 +1,49 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+autonumber
+
+title Сюжет фільму "Месники: Завершення" (Sequence Diagram)
+
+actor "The Avengers" as Avengers
+participant "Tony Stark" as Tony
+participant "Infinity Stones" as Stones
+actor "Thanos (from 2014)" as Thanos
+participant "Steve Rogers" as Cap
+
+== Етап 1: Хрононаліт ==
+Avengers -> Stones : travelToPast(2012, 2013, 2014)
+activate Stones
+Stones --> Avengers : stonesAcquired()
+deactivate Stones
+
+Avengers -> Avengers : useGauntlet(restoreHalfOfLife)
+note right: Халк повертає всіх, хто зник
+
+== Етап 2: Напад з минулого ==
+Thanos -> Avengers : travelToFuture(2023)
+activate Thanos
+Thanos -> Avengers : attackHeadquarters()
+
+== Етап 3: Фінальна битва ==
+Thanos -> Stones : tryToUseGauntlet()
+note right: Танос хоче знищити всесвіт
+
+Tony -> Thanos : stealStones()
+Tony -> Tony : useGauntlet(destroyThanosArmy)
+
+Stones -> Thanos : turnToDust()
+destroy Thanos
+
+Stones --> Tony : fatalEnergySurge()
+destroy Tony
+note left: Тоні Старк гине, рятуючи всесвіт
+
+== Етап 4: Завершення ==
+Cap -> Stones : returnToOriginalTimelines()
+Stones --> Cap : timelinesRestored()
+
+Cap -> Cap : stayInPastWithPeggy()
+note right: Стів Роджерс старіє в минулому
+
+@enduml
