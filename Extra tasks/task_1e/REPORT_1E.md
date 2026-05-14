@@ -25,7 +25,7 @@
 
 На діаграмі нижче представлено ключові етапи фільму: Хрононаліт, напад Таноса з минулого, фінальну самопожертву Тоні Старка та відновлення часових ліній Стівом Роджерсом.
 
-![Avengers Sequence Diagram](<UML_Models/Avengers_Sequence.png>)
+![Avengers Sequence Diagram](<UML_Diagram/Avenger_Endgame_Diagram.png>)
 
 
 ---
